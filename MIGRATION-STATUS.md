@@ -36,7 +36,7 @@ The first staging copy was created from `D:\awesome-games\Roomwave` into `D:\Roo
 2. Keep product c010 runtime files in `src/runtime/`, `src/config/`, and `src/spine-audit/`; keep production and validation tools in the outer workbench.
 3. Add the external Spine Lab path contract without moving or copying local MCP configuration.
 4. Run a fresh-clone browser and Spine runtime validation.
-5. Commit only after those checks pass.
+5. Before editable mutation, set `C010_SPINE_PROJECT` and run `npm run validate:strict` from `spine_manager`.
 
 ## External Spine environment
 
@@ -48,4 +48,5 @@ Spine Lab is available, use environment variables instead:
 - `SPINE_PROFILE_ROOT` (optional)
 - `SPINE_TOOL_ROOT` (optional metadata)
 - `C010_SPINE_ARCHIVE` (only for source import)
+- `C010_SPINE_PROJECT` (direct path to the editable `.spine` file for validation)
 - `ROOMWAVE_C010_PROJECT` (only for export probes)

@@ -11,7 +11,7 @@
 - 安装方式：`uv sync`
 - 启动检查：stdio server 可正常启动
 - 适合先验证：`inspect_source`、`preview`、`project_info`
-- 当前绑定：`SPINE_BIN` 指向项目内 `SpinePortable.exe`，`SPINE_BRIDGE` 指向 `tools/run-spine-portable-cli.ps1`；CLI 调用统一经过 Portable profile。
+- 当前绑定：`SPINE_BIN`、`SPINE_BRIDGE` 和可选的 `SPINE_PROFILE_ROOT` 指向外部 Spine Lab；Portable 不复制进本仓库。需要验证可编辑源工程时，另用 `C010_SPINE_PROJECT` 指向具体 `.spine` 文件；CLI 调用统一经过 Portable profile。
 - 当前证据：真实 MCP stdio 握手、派生 JSON 导入和派生项目导出均已通过；Codex 命名工具已经恢复连接，旧 server 的 doctor 通过但随后触发 Portable 联网更新，导致本轮 live 导入/导出失败；证据分别在 `runs/foundation-baseline-20261029/mcp-egorfedorov-live-stdio-evidence.json` 和 `runs/foundation-baseline-20261029/mcp-egorfedorov-live-codex-attempt.json`。
 - 桥接修正：`spine_cli.py` 的 Portable 子进程使用独立输入，不继承 MCP 长连接的 stdin；`spine_doctor` 只读取本地 4.3.26 资产和依赖存在性，不启动会触发联网更新的 Portable `--version`；也不在 MCP 工作线程里导入 `psd_tools`。这些边界一起避免具体工具调用卡住。
 - 限制：只验证派生副本，不能把它当作 c010 生产 mutation 入口；当前 Codex 命名工具适配器仍返回 `Transport closed`，所以合同只把服务器 stdio 标为通过，仍把 Codex 适配器标为阻塞。

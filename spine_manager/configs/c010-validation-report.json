@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-30T07:26:39.861Z",
+  "generatedAt": "2026-10-30T09:22:45.944Z",
   "model": "c010_00",
-  "status": "fail",
+  "status": "needs-review",
   "counts": {
     "bones": 310,
     "slots": 141,
@@ -52,15 +52,14 @@
     }
   ],
   "warnings": [
+    "external source project is not configured; set C010_SPINE_PROJECT to the editable .spine file",
     "handTarget ik_arm_r is also targeted by transform constraints: string_2",
     "c010 proof required: moving ik_arm_r also drives string_2/string_3 strap chain",
     "c010 evidence confirms hand movement also moves the strap; independent strap target required",
     "c010 independent visual review is not proven: independent-reviews-present",
     "c010 visual evidence is provisional or rejected; independent review cannot be treated as pass"
   ],
-  "issues": [
-    "manifest source project is missing: source/nikke_4.3.26/derived/c010_roomwave_4.3.26/c010_roomwave_4.3.26.spine"
-  ],
+  "issues": [],
   "nextProofPreset": "hand-only-string-off",
   "pipeline": {
     "humanInTheLoop": false,
@@ -115,6 +114,12 @@
       "editableProjectCount": 1,
       "sourceLayerCount": 0,
       "runtimeExportCount": 332
+    },
+    "sourceProject": {
+      "configured": false,
+      "available": false,
+      "verified": false,
+      "path": null
     },
     "editorAvailability": {
       "status": "editor-present-save-export-verified",

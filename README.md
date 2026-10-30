@@ -26,7 +26,7 @@ node server.cjs
 
 产品代码和运行资源位于 `src/`，资源生产工作台位于外层 `spine_manager/`。根目录只保留服务器、启动脚本和项目说明。服务器会把 `src/` 作为静态资源根目录，所以产品 URL 仍然使用 `/solo/`、`/together/`、`/assets/` 和 `/spine-audit/`。
 
-Spine Portable、原始 `.spine` 工程、NIKKE 源压缩包和本地 MCP 配置不属于这个产品目录。需要运行 Spine 工作台时，通过 `SPINE_BIN`、`SPINE_BRIDGE`、`SPINE_PROFILE_ROOT`、`C010_SPINE_ARCHIVE` 和 `ROOMWAVE_C010_PROJECT` 指向外部 Spine Lab。
+Spine Portable、原始 `.spine` 工程、NIKKE 源压缩包和本地 MCP 配置不属于这个产品目录。需要运行 Spine 工作台时，通过 `SPINE_BIN`、`SPINE_BRIDGE`、`SPINE_PROFILE_ROOT`、`C010_SPINE_ARCHIVE`、`C010_SPINE_PROJECT` 和 `ROOMWAVE_C010_PROJECT` 指向外部 Spine Lab。其中 `C010_SPINE_PROJECT` 直接指向可编辑的 `.spine` 文件；未设置时，普通验证会标记为待提供，严格验证会阻断。
 
 要直接打开 c010 Spine 试作，可执行 `start-roomwave-spine.cmd`；桌面上的 `Roomwave Spine - 启动.cmd` 也是同一个入口。
 

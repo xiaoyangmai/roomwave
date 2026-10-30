@@ -84,6 +84,13 @@ function main() {
   const warnings = [];
   const migrationPending = Boolean(migration?.status?.includes('pending'));
   const resolved = binding.semantics?.roles || {};
+  const configuredSourceProject = process.env.C010_SPINE_PROJECT ? path.resolve(process.env.C010_SPINE_PROJECT) : null;
+  const sourceProjectCheck = {
+    configured: Boolean(configuredSourceProject),
+    available: false,
+    verified: false,
+    path: configuredSourceProject,
+  };
 
   if (runtimePatch.model !== plan.model) issues.push(`runtime patch model mismatch: ${runtimePatch.model || '(unset)'}`);
   if (derivedRigPlan.model !== plan.model) issues.push(`derived rig plan model mismatch: ${derivedRigPlan.model || '(unset)'}`);
@@ -106,9 +113,20 @@ function main() {
     else if (sha256(runtimeFile) !== manifest.runtimeSha256) issues.push(`manifest runtime hash mismatch: ${manifest.runtimeFile}`);
   }
   if (manifest.sourceProject?.file && manifest.sourceProject?.sha256) {
-    const sourceProject = path.join(managerRoot, manifest.sourceProject.file);
-    if (!fs.existsSync(sourceProject)) issues.push(`manifest source project is missing: ${manifest.sourceProject.file}`);
-    else if (sha256(sourceProject) !== manifest.sourceProject.sha256) issues.push(`manifest source project hash mismatch: ${manifest.sourceProject.file}`);
+    const repositorySourceProject = path.join(managerRoot, manifest.sourceProject.file);
+    const sourceProject = configuredSourceProject || repositorySourceProject;
+    if (!fs.existsSync(sourceProject)) {
+      if (configuredSourceProject) issues.push(`configured external source project is missing: ${configuredSourceProject}`);
+      else warnings.push('external source project is not configured; set C010_SPINE_PROJECT to the editable .spine file');
+    } else {
+      sourceProjectCheck.available = true;
+      sourceProjectCheck.path = sourceProject;
+      if (sha256(sourceProject) !== manifest.sourceProject.sha256) {
+        issues.push(`manifest source project hash mismatch: ${sourceProject}`);
+      } else {
+        sourceProjectCheck.verified = true;
+      }
+    }
   } else warnings.push('manifest does not record an editable source project');
 
   const stageIds = new Set();
@@ -208,6 +226,7 @@ function main() {
       handStrapProof: handStrapEvidence ? { interpretation: handStrapEvidence.interpretation, activeStrapDelta: handStrapEvidence.result?.activeDelta?.strap, isolatedStrapDelta: handStrapEvidence.result?.isolatedDelta?.strap } : null,
       handReachabilityProof: handReachabilityEvidence ? { interpretation: handReachabilityEvidence.interpretation, targetDelta: handReachabilityEvidence.result?.targetDelta, visualDelta: handReachabilityEvidence.result?.visualDelta, contactTargetToVisual: handReachabilityEvidence.result?.contactTargetToVisual } : null,
       sourceAvailability: sourceAvailability ? { status: sourceAvailability.status, editableProjectCount: sourceAvailability.editableProject?.length || 0, sourceLayerCount: sourceAvailability.sourceLayers?.length || 0, runtimeExportCount: sourceAvailability.runtimeExports?.length || 0 } : null,
+      sourceProject: sourceProjectCheck,
       editorAvailability: editorAvailability ? { status: editorAvailability.status, requiredEditorVersion: editorAvailability.requiredEditorVersion } : null,
       visualReview: {
         manifestStatus: reviewManifest?.reviewStatus || null,
