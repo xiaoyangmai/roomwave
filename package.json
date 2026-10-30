@@ -1,0 +1,10 @@
+{
+  "name": "roomwave-public-mirror",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Local Roomwave frontend mirror with a small local API backend.",
+  "scripts": {
+    "start": "node server.cjs",
+    "serve": "node server.cjs"
+  }
+}

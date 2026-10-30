@@ -1,0 +1,18 @@
+:root { --roomwave-bar-height: 48px; --live-frame-height: calc(100dvh - var(--roomwave-bar-height)); }
+@media (min-width:601px),(orientation:landscape) {
+  :root { --live-frame-height:min(calc(100dvh - 48px),calc(480px * 16 / 9)); --live-frame-width:min(480px,calc((100dvh - 48px) * 9 / 16)); }
+}
+body:has(.live-room-feed) { padding-top:var(--roomwave-bar-height); box-sizing:border-box; }
+.roomwave-bar { position:fixed; top:0; left:50%; transform:translateX(-50%); width:var(--live-frame-width); height:48px; padding:0 10px; box-sizing:border-box; display:flex; align-items:center; justify-content:space-between; gap:8px; z-index:70; color:#fff; background:#17151f; font:11px/1.2 system-ui,sans-serif; }
+.roomwave-brand { display:flex; align-items:center; gap:5px; color:#fff; text-decoration:none; font-size:13px; letter-spacing:-.3px; }
+.roomwave-brand svg { width:19px; height:24px; stroke:#ff639c; stroke-width:2.5; stroke-linecap:round; fill:none; }
+.roomwave-presence { text-align:center; white-space:nowrap; display:grid; gap:3px; }
+.roomwave-presence strong { color:#ff72a7; font-size:8px; letter-spacing:1px; }
+.roomwave-presence span { color:#dad6e6; font-size:10px; }
+.roomwave-mode { color:#eee6ff; border:1px solid #ffffff30; border-radius:18px; padding:7px 9px; text-decoration:none; font-size:10px; white-space:nowrap; }
+.roomwave-bar[data-connected=false] .roomwave-presence strong { color:#e6be79; }
+#roomwave-notice { position:fixed; z-index:100; left:50%; top:65px; transform:translateX(-50%); width:max-content; max-width:80vw; padding:10px 16px; border:1px solid #ffffff30; border-radius:24px; color:white; background:#252131ec; font:12px/1.4 system-ui; box-shadow:0 4px 20px #0004; pointer-events:none; }
+html[data-roomwave-mode=together] :is(.baking-undo,.baking-clear,.baking-arrangements,#visits-pill,.dock-wallet,[data-wardrobe-tab=stella],[data-wardrobe-tab=characters],#reset-open,#hand-upgrade-status,#hand-upgrade-open) { display:none!important; }
+html[data-roomwave-mode=together] #wardrobe-open { min-width:44px; width:auto; }
+html[data-roomwave-mode=together] #reaction-label { display:none!important; }
+@media(max-width:340px) { .roomwave-brand b {font-size:11px} .roomwave-mode {padding:7px 5px;font-size:9px} }

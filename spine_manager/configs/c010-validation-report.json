@@ -1,0 +1,181 @@
+{
+  "generatedAt": "2026-10-30T07:26:39.861Z",
+  "model": "c010_00",
+  "status": "fail",
+  "counts": {
+    "bones": 310,
+    "slots": 141,
+    "skins": 3,
+    "events": 1,
+    "animations": 10,
+    "ik": 6,
+    "transform": 60,
+    "path": 0,
+    "attachments": 283,
+    "activeAttachments": 3,
+    "weightedAttachments": 212,
+    "meshAttachments": 264,
+    "atlasRegions": 328,
+    "attachmentTypes": {
+      "_MeshAttachment": 264,
+      "_PointAttachment": 3,
+      "_RegionAttachment": 16
+    }
+  },
+  "handTarget": "ik_arm_r",
+  "handVisual": "l_hand_1",
+  "derivedRigPlan": {
+    "status": "ready-for-editable-rig-mutation",
+    "handIkType": "two-bone-ik",
+    "candidateChains": [
+      [
+        "r_arm_3",
+        "l_arm_2"
+      ]
+    ]
+  },
+  "handIk": {
+    "name": "ik_arm_r",
+    "controls": [
+      "l_arm_2"
+    ],
+    "target": "ik_arm_r",
+    "mix": 1
+  },
+  "sharedTransformConstraints": [
+    {
+      "name": "string_2",
+      "target": "ik_arm_r",
+      "mixRotate": 1,
+      "mixX": 1,
+      "mixY": 1
+    }
+  ],
+  "warnings": [
+    "handTarget ik_arm_r is also targeted by transform constraints: string_2",
+    "c010 proof required: moving ik_arm_r also drives string_2/string_3 strap chain",
+    "c010 evidence confirms hand movement also moves the strap; independent strap target required",
+    "c010 independent visual review is not proven: independent-reviews-present",
+    "c010 visual evidence is provisional or rejected; independent review cannot be treated as pass"
+  ],
+  "issues": [
+    "manifest source project is missing: source/nikke_4.3.26/derived/c010_roomwave_4.3.26/c010_roomwave_4.3.26.spine"
+  ],
+  "nextProofPreset": "hand-only-string-off",
+  "pipeline": {
+    "humanInTheLoop": false,
+    "stages": [
+      "dependencies",
+      "forensic",
+      "rig-plan",
+      "texture",
+      "mutate",
+      "startup",
+      "runtime",
+      "review",
+      "release"
+    ],
+    "maxRepairRoundsPerFailure": 3,
+    "imageAdapter": "image-model-edit-api",
+    "imageAdapterCapabilities": [
+      "reference_images",
+      "masked_edit",
+      "transparent_output"
+    ],
+    "hardInvariantCount": 6,
+    "spineCapabilityContract": {
+      "id": "roomwave-spine-4.3-capability-contract",
+      "version": {
+        "editor": "4.3.26",
+        "export": "4.3.26",
+        "runtime": "4.3.13",
+        "compatibility_rule": "editor and export must stay on 4.3; runtime must be an explicitly tested 4.3 runtime; do not infer compatibility from a file extension",
+        "migration_evidence": "configs/c010-version-migration.json"
+      },
+      "capabilityCount": 10,
+      "validationGateCount": 8,
+      "unknownPolicy": "unknown blocks promotion; resolve by running the smallest reproducible probe and recording its evidence"
+    },
+    "calibrationStatus": "pending",
+    "manifestStatus": "baseline-4.3.26-exported-runtime-round-trip-pass",
+    "manifestFileCount": 8,
+    "handStrapProof": {
+      "interpretation": "shared-target-confirmed",
+      "activeStrapDelta": 82.55962808690761,
+      "isolatedStrapDelta": 12.468414198027382
+    },
+    "handReachabilityProof": {
+      "interpretation": "hand-reachable",
+      "targetDelta": 131.95407482351595,
+      "visualDelta": 130.3219126676297,
+      "contactTargetToVisual": 10.889730005217434
+    },
+    "sourceAvailability": {
+      "status": "editable-source-available",
+      "editableProjectCount": 1,
+      "sourceLayerCount": 0,
+      "runtimeExportCount": 332
+    },
+    "editorAvailability": {
+      "status": "editor-present-save-export-verified",
+      "requiredEditorVersion": "4.3.26"
+    },
+    "visualReview": {
+      "manifestStatus": "independent-reviews-present",
+      "independent": true,
+      "decision": "review",
+      "confidence": 0.84,
+      "sameRunAdjudication": null,
+      "sameRunAdjudicationFile": null
+    },
+    "traceAnalysis": {
+      "status": "pass",
+      "actions": [
+        {
+          "type": "delight",
+          "interpretation": "reaction_without_hand_contact",
+          "targetVisualGapPx": 5.777576726102864,
+          "visualFollowRatio": 3.0653915728932684,
+          "strapDeltaPx": 1.763790106811196
+        },
+        {
+          "type": "banana",
+          "interpretation": "reaction_without_hand_contact",
+          "targetVisualGapPx": 5.843263289975978,
+          "visualFollowRatio": 2.7170190094068167,
+          "strapDeltaPx": 2.011711836382208
+        },
+        {
+          "type": "fan_hold",
+          "interpretation": "hold_visual_stable",
+          "targetVisualGapPx": 11.97111900569469,
+          "visualFollowRatio": 1.0261644644500838,
+          "strapDeltaPx": 4.813995148544094
+        },
+        {
+          "type": "foam_wipe",
+          "interpretation": "provisional_motion_consistent",
+          "targetVisualGapPx": 11.080341622796748,
+          "visualFollowRatio": 1.0240448412218626,
+          "strapDeltaPx": 5.483714079793982
+        },
+        {
+          "type": "water_splash",
+          "interpretation": "provisional_motion_consistent",
+          "targetVisualGapPx": 14.856807381633613,
+          "visualFollowRatio": 0.937797975102985,
+          "strapDeltaPx": 2.2685942832981425
+        }
+      ]
+    },
+    "runtimePatch": {
+      "mode": "runtime-isolation-fallback",
+      "releaseStatus": "provisional-runtime-only",
+      "sourceUnmodified": true
+    }
+  },
+  "visualReview": {
+    "enabled": true,
+    "requiresDisagreementGate": true
+  }
+}

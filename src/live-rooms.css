@@ -1,0 +1,64 @@
+/* Each room owns a viewport; native scrolling also preserves touch momentum. */
+:root {
+  --live-room-nav-space: 0px;
+  --live-frame-width: 100vw;
+  --live-frame-height: 100dvh;
+  --room-edge: 12px;
+  --room-top: max(10px, env(safe-area-inset-top));
+  --room-bottom: max(10px, env(safe-area-inset-bottom));
+}
+
+/* Rooms keep the same portrait composition when the device turns sideways.
+   Upright phones use their available space; wider screens frame a 9:16 room. */
+@media (min-width: 601px), (orientation: landscape) {
+  :root {
+    --live-frame-width: min(480px, calc(100dvh * 9 / 16));
+    --live-frame-height: min(100dvh, calc(480px * 16 / 9));
+  }
+}
+
+html:has(.live-room-feed), body:has(.live-room-feed) {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.live-room-feed {
+  position: relative;
+  width: var(--live-frame-width);
+  height: var(--live-frame-height);
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  overscroll-behavior-y: contain;
+  overflow-anchor: none;
+  scrollbar-width: none;
+  outline: none;
+}
+
+.live-room-feed::-webkit-scrollbar { display: none; }
+.live-room-feed.is-dialog-open { overflow-y: hidden; }
+.live-room-feed.is-wrapping { scroll-snap-type: none; touch-action: none; }
+.live-room-feed.is-wrapping > .live-room-panel { pointer-events: none; }
+
+.live-room-panel {
+  container: live-room / size;
+  position: relative;
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+#stream-room .app-shell {
+  height: 100%;
+  min-height: 0;
+  padding-top: var(--live-room-nav-space);
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+
+#stream-room .stage-camera, #stream-room .stage-svg { min-height: 0; }
+.live-room-panel[inert] *, .live-room-panel[inert] *::before, .live-room-panel[inert] *::after { animation-play-state: paused !important; }

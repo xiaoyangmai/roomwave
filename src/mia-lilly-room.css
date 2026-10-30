@@ -1,0 +1,275 @@
+/* Mia & Lilly owns its composition. No selectors below alter the original room. */
+#mia-lilly-room .ml-shell {
+  --ml-blue: #46779e;
+  --ml-pink: #a54173;
+  position: relative;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) 28px 44px auto;
+  gap: 4px;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: calc(var(--room-top) + 44px) var(--room-edge) var(--room-bottom);
+  overflow: hidden;
+  color: var(--room-label);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(180deg, #41395608 35%, #efe4f136), url('assets/rooms-v1/room-balcony.lossless.webp') center / cover;
+  isolation: isolate;
+}
+#mia-lilly-room .ml-shell *, #mia-lilly-room .ml-shell *::before, #mia-lilly-room .ml-shell *::after { box-sizing: border-box; }
+#mia-lilly-room [hidden] { display: none !important; }
+#mia-lilly-room button { font-family: inherit; cursor: pointer; touch-action: manipulation; }
+#mia-lilly-room :is(.ml-profile, .ml-sound, .ml-controls, .ml-mood, .ml-art-status, .ml-rescue) {
+  color: var(--room-label);
+  background: var(--room-chrome);
+  border: 1px solid var(--room-border);
+  box-shadow: var(--room-glass-shadow);
+  -webkit-backdrop-filter: var(--room-glass-filter);
+  backdrop-filter: var(--room-glass-filter);
+  text-shadow: 0 1px 0 #ffffff30;
+}
+
+#mia-lilly-room .ml-header {
+  position: absolute;
+  inset: var(--room-top) var(--room-edge) auto;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  height: 40px;
+  pointer-events: none;
+}
+#mia-lilly-room .ml-profile {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  max-width: calc(100% - 88px);
+  height: 40px;
+  padding: 3px 8px;
+  border-radius: 22px;
+  white-space: nowrap;
+}
+#mia-lilly-room .ml-profile > span { display: grid; place-items: center; width: 22px; flex: 0 0 22px; font-size: 20px; }
+#mia-lilly-room .ml-profile .room-host-name { font-size: 14px; }
+#mia-lilly-room .ml-profile .room-type { margin-top: 1px; font-size: 10px; }
+#mia-lilly-room .ml-profile > b {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  min-width: 40px;
+  height: 26px;
+  padding: 0 6px;
+  border: 1px solid #ffbdd38c;
+  border-radius: 7px;
+  color: #fff;
+  background: linear-gradient(145deg, #c93472, #ad235e);
+  box-shadow: inset 0 1px 0 #ffffff47, 0 2px 6px #a51a4e1f;
+  text-shadow: 0 1px 2px #65092929;
+  font: 800 10px/1 'Segoe UI', system-ui, sans-serif;
+  letter-spacing: .35px;
+}
+#mia-lilly-room .ml-sound {
+  display: grid;
+  place-items: center;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  min-height: 40px;
+  margin-left: 44px;
+  padding: 10px;
+  border-radius: 50%;
+  pointer-events: auto;
+}
+#mia-lilly-room .ml-sound svg { width: 20px; height: 20px; }
+#live-room-feed #mia-lilly-room .room-music-control { top: 0; right: 44px; }
+#live-room-feed #mia-lilly-room .room-music-control .room-music-open { width: 40px; height: 40px; min-height: 40px; border-radius: 50%; }
+#live-room-feed #mia-lilly-room .room-music-control .room-music-open::before { font-size: 20px; }
+#live-room-feed #mia-lilly-room .room-music-control .room-music-settings { right: -44px; }
+
+/* A reserved row keeps speech below the complete poses and mood controls. */
+#mia-lilly-room .ml-dialogue { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: 6px; min-height: 0; z-index: 4; }
+#mia-lilly-room .ml-speech {
+  position: relative;
+  margin: 0;
+  padding: 5px 7px;
+  border: 1px solid #cbbbc9;
+  border-radius: 11px;
+  color: var(--room-label);
+  background: #fffaf6;
+  box-shadow: 0 3px 10px #20182b26;
+  font-size: 10px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  align-self: center;
+  visibility: hidden;
+}
+#mia-lilly-room .ml-speech.is-visible { visibility: visible; }
+#mia-lilly-room .ml-speech[data-speaker='mia'] { grid-column: 1; grid-row: 1; }
+#mia-lilly-room .ml-speech[data-speaker='lilly'] { grid-column: 2; grid-row: 1; }
+#mia-lilly-room .ml-speech::after {
+  content: '';
+  position: absolute;
+  left: calc(50% - 5px);
+  top: -6px;
+  width: 10px;
+  height: 10px;
+  border: solid #cbbbc9;
+  border-width: 0 1px 1px 0;
+  background: #fffaf6;
+  transform: rotate(225deg);
+}
+#mia-lilly-room .ml-stage { position: relative; min-width: 0; min-height: 0; }
+#mia-lilly-room .ml-cast { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; height: 100%; }
+#mia-lilly-room .ml-character { position: relative; display: grid; grid-template-rows: minmax(0, 1fr) auto; min-width: 0; min-height: 0; }
+#mia-lilly-room .ml-sprite { position: relative; display: flex; align-items: end; justify-content: center; width: 100%; height: 100%; min-height: 0; transform-origin: center bottom; transition: transform .28s ease; }
+#mia-lilly-room .ml-sprite img {
+  display: block;
+  flex: 0 0 170%;
+  width: 170%;
+  max-width: none;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  user-select: none;
+  -webkit-user-drag: none;
+  filter: drop-shadow(0 5px 6px #222a4522);
+}
+#mia-lilly-room .ml-character[data-character='lilly']:is([data-pose='gesturePrepare'], [data-pose='gestureExtend']) .ml-sprite img { transform: scaleX(-1); }
+/* Move the painted sprites, keeping the named mood strips in their two columns. */
+#mia-lilly-room .ml-shell[data-rescue-target='mia'] .ml-character[data-character='mia'] .ml-sprite { transform: translateX(calc(50% + 3px)); z-index: 3; }
+#mia-lilly-room .ml-shell[data-rescue-target='lilly'] .ml-character[data-character='lilly'] .ml-sprite { transform: translateX(calc(-50% - 3px)); z-index: 3; }
+#mia-lilly-room .ml-shell[data-rescue-target='mia'] .ml-character[data-character='lilly'] .ml-sprite { transform: translateX(12%) scale(.82); }
+#mia-lilly-room .ml-shell[data-rescue-target='lilly'] .ml-character[data-character='mia'] .ml-sprite { transform: translateX(-12%) scale(.82); }
+#mia-lilly-room .ml-mood { position: relative; z-index: 4; display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; width: min(100%, 184px); justify-self: center; padding: 3px 7px; border-radius: 10px; }
+#mia-lilly-room .ml-mood-heading { display: flex; align-items: center; justify-content: space-between; gap: 7px; }
+#mia-lilly-room .ml-mood strong { font-size: 11px; line-height: 1.3; color: var(--ml-blue); }
+#mia-lilly-room .ml-character[data-character='lilly'] .ml-mood strong { color: var(--ml-pink); }
+#mia-lilly-room [data-mood-label] { color: var(--room-muted); font-size: 9px; line-height: 1.3; }
+#mia-lilly-room .ml-mood [role='meter'] { grid-column: 1 / -1; height: 3px; overflow: hidden; border-radius: 5px; background: #34537324; }
+#mia-lilly-room [data-mood-fill] { display: block; height: 100%; border-radius: inherit; background: #79acce; transition: width .2s; }
+#mia-lilly-room .ml-character[data-character='lilly'] [data-mood-fill] { background: #da8eb6; }
+#mia-lilly-room .ml-character.is-selected .ml-mood { border-color: var(--room-selected-border); }
+#mia-lilly-room .ml-effect { position: absolute; bottom: 25%; left: 0; width: 50%; z-index: 5; opacity: 0; text-align: center; font-size: 36px; pointer-events: none; }
+#mia-lilly-room .ml-effect[data-character='lilly'] { left: 50%; }
+#mia-lilly-room .ml-effect .ml-gift-icon { display: inline-block; width: 44px; height: 44px; }
+#mia-lilly-room .ml-shell[data-rescue-target='mia'] .ml-effect[data-character='mia'],
+#mia-lilly-room .ml-shell[data-rescue-target='lilly'] .ml-effect[data-character='lilly'] { left: 25%; }
+#mia-lilly-room .ml-effect.show { opacity: 1; animation: ml-gift-float .85s ease-out both; }
+@keyframes ml-gift-float { from { transform: translateY(12px) scale(.8); } to { transform: translateY(-22px) scale(1.1); } }
+
+#mia-lilly-room .ml-feedback { position: relative; display: grid; place-items: center; height: 28px; min-height: 28px; z-index: 6; }
+#mia-lilly-room .ml-reaction-status { margin: 0; color: var(--room-label); font-size: 10px; font-weight: 600; line-height: 1.3; text-align: center; text-shadow: 0 1px 2px #fff; }
+#mia-lilly-room .ml-feedback:has(.ml-rescue:not([hidden])) .ml-reaction-status { visibility: hidden; }
+#mia-lilly-room .ml-rescue { position: absolute; inset: 0; display: flex; justify-content: center; align-items: center; gap: 6px; padding: 2px 7px; border-radius: 10px; font-size: 9px; }
+#mia-lilly-room .ml-rescue-time { display: grid; place-items: center; min-width: 22px; min-height: 22px; padding: 2px 4px; border-radius: 9px; color: var(--room-label); background: #ffffff80; font-size: 11px; font-weight: 800; }
+#mia-lilly-room .ml-rescue-score { flex: none; font-size: 11px; }
+#mia-lilly-room .ml-rescue-message { max-width: 220px; line-height: 1.3; }
+#mia-lilly-room .ml-bottom { position: relative; min-height: 0; z-index: 8; }
+#live-room-feed #mia-lilly-room .ml-controls { position: relative; padding: 5px; border-radius: 20px; }
+#mia-lilly-room .ml-tray-heading { position: absolute; bottom: calc(100% + 12px); right: 0; }
+/* The selector and named gifts are self-explanatory; keep their group names accessible. */
+#mia-lilly-room :is(.ml-tray-heading h2, .ml-target-selector legend, .ml-target-help) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+#mia-lilly-room .ml-queue { display: inline-block; padding: 4px 7px; border-radius: 10px; color: var(--room-muted); background: var(--room-chrome); font-size: 10px; }
+#mia-lilly-room .ml-shell:has(.ml-queue:not([hidden])) .ml-reaction-status { padding-right: 72px; }
+#mia-lilly-room .ml-target-selector { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; min-width: 0; margin: 0 0 3px; padding: 0; border: 0; }
+#mia-lilly-room .ml-target-selector button, #mia-lilly-room .ml-gifts button, #mia-lilly-room .ml-art-status button {
+  min-width: 0;
+  min-height: 40px;
+  padding: 4px;
+  border: 1px solid var(--room-border);
+  border-radius: 14px;
+  color: var(--room-label);
+  background: var(--room-control);
+  box-shadow: inset 0 1px 0 #ffffff80, 0 2px 5px #14243d0a;
+  transition: background .15s, border-color .15s, transform .15s;
+}
+#mia-lilly-room .ml-target-selector button { font-size: 12px; font-weight: 650; }
+#mia-lilly-room .ml-target-selector button[aria-pressed='true'] { color: var(--room-glass-accent); background: var(--room-glass-selected); border-color: var(--room-selected-border); box-shadow: inset 0 1px 0 #ffffffb3, 0 0 0 1px rgb(var(--room-accent-rgb) / .12); }
+#mia-lilly-room .ml-gifts { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
+#mia-lilly-room .ml-gifts button { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; height: 58px; min-height: 58px; padding: 3px 1px 11px; }
+#mia-lilly-room .ml-gifts button > span { display: grid; place-items: center; font-size: 26px; line-height: 1; }
+#mia-lilly-room .ml-gifts button :is(svg, img) { width: 28px; height: 28px; object-fit: contain; }
+#mia-lilly-room .ml-gifts button > b { font-size: 11px; font-weight: 650; line-height: 1.2; white-space: nowrap; }
+#mia-lilly-room .ml-gifts button > small { position: absolute; bottom: 2px; left: 0; right: 0; font-size: 8px; line-height: 8px; color: var(--room-muted); }
+#mia-lilly-room .ml-controls:has(.ml-target-help:not([hidden])) .ml-tray-heading { visibility: hidden; }
+/* Locked rescues identify the actual receiver in the existing selector. */
+#mia-lilly-room .ml-shell:has(.ml-rescue:not([hidden])) .ml-target-selector button { opacity: 1; background: var(--room-control); color: var(--room-muted); border-color: var(--room-border); box-shadow: inset 0 1px 0 #ffffff80, 0 2px 5px #14243d0a; }
+#mia-lilly-room .ml-shell[data-recipient='mia']:has(.ml-rescue:not([hidden])) [data-ml-target='mia'],
+#mia-lilly-room .ml-shell[data-recipient='lilly']:has(.ml-rescue:not([hidden])) [data-ml-target='lilly'] { color: var(--room-glass-accent); background: var(--room-glass-selected); border-color: var(--room-selected-border); box-shadow: inset 0 1px 0 #ffffffb3, 0 0 0 1px rgb(var(--room-accent-rgb) / .12); }
+#mia-lilly-room button:disabled { cursor: default; opacity: .55; }
+#mia-lilly-room button:active:not(:disabled) { transform: scale(.97); }
+#mia-lilly-room .ml-art-status { position: absolute; z-index: 20; top: 44%; left: 50%; display: flex; flex-direction: column; align-items: center; gap: 10px; width: min(290px, 85%); padding: 14px; border-radius: 18px; font-size: 12px; text-align: center; transform: translate(-50%, -50%); }
+
+@container live-room (max-width: 350px) {
+  #mia-lilly-room .ml-profile { padding-inline: 6px; gap: 4px; }
+  #mia-lilly-room .ml-profile > span { display: none; }
+  #mia-lilly-room .ml-gifts { gap: 3px; }
+  #mia-lilly-room .ml-gifts button > b { font-size: 9px; }
+  #mia-lilly-room .ml-speech { font-size: 9px; }
+}
+@container live-room (max-height: 680px) {
+  #mia-lilly-room .ml-shell { grid-template-rows: minmax(0, 1fr) 26px 40px auto; gap: 3px; }
+  #mia-lilly-room .ml-speech { padding: 4px 6px; }
+  #mia-lilly-room .ml-feedback { height: 26px; min-height: 26px; }
+  #mia-lilly-room .ml-gifts button { height: 54px; min-height: 54px; }
+  #mia-lilly-room .ml-gifts button :is(svg, img) { width: 25px; height: 25px; }
+}
+@media (hover: hover) {
+  #mia-lilly-room :is(.ml-gifts, .ml-target-selector) button:hover:not(:disabled) { background: var(--room-hover); border-color: var(--room-selected-border); box-shadow: 0 4px 12px #24344c14, inset 0 1px 0 #fff; }
+  #mia-lilly-room .ml-target-selector button[aria-pressed='true']:hover:not(:disabled) { background: var(--room-glass-selected); }
+}
+@container live-room (max-height: 480px) {
+  #mia-lilly-room .ml-shell { --room-edge: 4px; padding-top: calc(var(--room-top) + 44px); grid-template-rows: minmax(0, 1fr) 24px 34px auto; gap: 3px; }
+  #live-room-feed #mia-lilly-room .ml-header { height: 40px; gap: 4px; }
+  #mia-lilly-room .ml-profile { height: 32px; max-width: calc(100% - 68px); gap: 4px; padding: 3px 5px; }
+  #mia-lilly-room .ml-profile .room-host-name { font-size: 10px; }
+  #mia-lilly-room .ml-profile .room-type { font-size: 8px; }
+  #mia-lilly-room .ml-profile > b { height: 20px; padding: 0 4px; font-size: 7px; }
+  #live-room-feed #mia-lilly-room .ml-sound { width: 40px; height: 40px; min-height: 40px; flex-basis: 40px; margin-left: 44px; padding: 10px; }
+  #mia-lilly-room .ml-sound svg { width: 17px; height: 17px; }
+  #live-room-feed #mia-lilly-room .room-music-control { top: 0; right: 44px; }
+  #live-room-feed #mia-lilly-room .room-music-control .room-music-open { width: 40px; height: 40px; min-height: 40px; }
+  #live-room-feed #mia-lilly-room .room-music-control .room-music-open::before { font-size: 16px; }
+  #live-room-feed #mia-lilly-room .room-music-control .room-music-settings { right: -44px; }
+  #mia-lilly-room .ml-dialogue { gap: 6px; padding-top: 4px; }
+  #mia-lilly-room .ml-speech { padding: 4px 5px; border-radius: 10px; font-size: 9px; line-height: 1.25; }
+  #mia-lilly-room .ml-speech::after { top: -4px; left: calc(50% - 3px); width: 6px; height: 6px; }
+  #mia-lilly-room .ml-mood { gap: 2px; padding: 2px 5px; border-radius: 8px; }
+  #mia-lilly-room .ml-mood-heading { gap: 3px; }
+  #mia-lilly-room .ml-mood strong { font-size: 9px; }
+  #mia-lilly-room [data-mood-label] { font-size: 7px; }
+  #mia-lilly-room .ml-mood [role='meter'] { height: 3px; }
+  #mia-lilly-room .ml-feedback { height: 24px; min-height: 24px; }
+  #mia-lilly-room .ml-reaction-status { min-height: 11px; font-size: 8px; }
+  #mia-lilly-room .ml-rescue { gap: 4px; padding: 3px 5px; border-radius: 10px; font-size: 8px; }
+  #mia-lilly-room .ml-rescue-time { min-width: 20px; min-height: 20px; padding: 2px; font-size: 10px; }
+  #mia-lilly-room .ml-rescue-score { font-size: 10px; }
+  #live-room-feed #mia-lilly-room .ml-controls { padding: 2px; border-radius: 12px; }
+  #live-room-feed #mia-lilly-room .ml-target-selector { gap: 3px; margin-bottom: 3px; }
+  #live-room-feed #mia-lilly-room .ml-target-selector button { min-height: 40px; padding: 4px; border-radius: 9px; font-size: 9px; }
+  #live-room-feed #mia-lilly-room .ml-gifts { gap: 1px; }
+  #mia-lilly-room .ml-gifts button { height: 48px; min-height: 48px; gap: 2px; padding: 3px 1px 10px; border-radius: 9px; }
+  #mia-lilly-room .ml-gifts button > span { font-size: 20px; }
+  #mia-lilly-room .ml-gifts button :is(svg, img) { width: 20px; height: 20px; }
+  #mia-lilly-room .ml-gifts button > b { font-size: 8px; }
+  #mia-lilly-room .ml-gifts button > small { bottom: 2px; font-size: 6px; line-height: 7px; }
+  #mia-lilly-room .ml-queue { padding: 3px 5px; font-size: 7px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #mia-lilly-room *, #mia-lilly-room *::before, #mia-lilly-room *::after { animation: none !important; transition: none !important; }
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-29T00:17:14Z",
+  "package": "@esotericsoftware/spine-canvas@4.3.13",
+  "stagingDirectory": "artifacts/migration-4.3-runtime/node_modules/@esotericsoftware/spine-canvas",
+  "vendorFile": "spine-audit/c010/vendor/spine-canvas-4.3.13.min.js",
+  "vendorSha256": "416BE22CCC6CA7F8312DDD8C93DCF155757E27709119EF902D628D9FBCABD92A",
+  "vendorBytes": 195308,
+  "activeRuntimeUnchanged": true,
+  "status": "staged-awaiting-4.3-export-round-trip"
+}

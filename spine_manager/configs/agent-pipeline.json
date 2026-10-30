@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "pipeline": "roomwave-spine-expert-loop",
+  "humanInTheLoop": false,
+  "maxRepairRoundsPerFailure": 3,
+  "publishPolicy": "all-gates-required",
+  "fourGates": [
+    {"id": "G1", "name": "deterministic-runtime-and-semantic", "hard": true},
+    {"id": "G2", "name": "motion-and-time", "hard": true},
+    {"id": "G3", "name": "structure-garment-and-material", "hard": true},
+    {"id": "G4", "name": "human-visual-review", "hard": false}
+  ],
+  "visualReviewRoles": ["motion-animator", "technical-artist", "art-director", "product-reviewer", "adversarial-reviewer", "review-adjudicator"],
+  "executionModel": {
+    "orchestrator": "tools/run-pipeline.mjs",
+    "runArtifactRoot": "artifacts/runs/<runId>",
+    "stageLogsAreIsolated": true,
+    "legacyEvidenceIsShared": true,
+    "sharedEvidenceMayNotRelease": true,
+    "releaseMergeRequired": true,
+    "goalTurnLedger": "artifacts/goal-loop/ledger.jsonl",
+    "fiveTurnCheckpoint": "tools/checkpoint-review.mjs"
+  },
+  "stages": [
+    {
+      "id": "dependencies",
+      "agent": "DependencyRunner",
+      "writes": "artifacts/dependencies/<runId>",
+      "inputs": ["configs/dependencies.json", "package.json"],
+      "outputs": ["dependency-check.json"],
+      "validator": "required versions present; install only when missing or out of range"
+    },
+    {
+      "id": "forensic",
+      "agent": "Forensic",
+      "writes": "artifacts/forensic/<runId>",
+      "inputs": ["model files", "atlas", "runtime version"],
+      "outputs": ["model-manifest.json", "constraint-graph.json"],
+      "validator": "schema + hash + name resolution"
+    },
+    {
+      "id": "rig-plan",
+      "agent": "RigPlanner",
+      "writes": "artifacts/rig-plan/<runId>",
+      "inputs": ["model-manifest.json", "constraint-graph.json", "action matrix"],
+      "outputs": ["rig-plan.json", "semantic-binding.proposed.json"],
+      "validator": "no undeclared shared targets"
+    },
+    {
+      "id": "texture",
+      "agent": "TextureProducer",
+      "writes": "artifacts/texture/<runId>",
+      "inputs": ["approved source layers", "masks", "image-provider request", "seed or request-id family"],
+      "outputs": ["candidate images", "candidate-score.json", "generation-metadata.json", "texture-gate-report.json"],
+      "validator": "python tools/check-texture-gates.py plus independent identity/material review"
+    },
+    {
+      "id": "mutate",
+      "agent": "Mutator",
+      "writes": "artifacts/mutate/<runId>",
+      "inputs": ["rig-plan.json", "approved candidates", "editable spine project"],
+      "outputs": ["derived project", "exported skeleton", "export manifest"],
+      "validator": "Spine CLI export + JSON round-trip + runtime load"
+    },
+    {
+      "id": "startup",
+      "agent": "StartupRunner",
+      "writes": "artifacts/startup/<runId>",
+      "inputs": ["Roomwave server entrypoint", "temporary port", "c010 route"],
+      "outputs": ["startup-report.json", "server-log.txt"],
+      "validator": "cold server start, default Solo route, c010 room markers, original Gaming room marker, process cleanup"
+    },
+    {
+      "id": "runtime",
+      "agent": "RuntimeRunner",
+      "writes": "artifacts/runtime/<runId>",
+      "inputs": ["export manifest", "runtime patch if provisional", "semantic actions", "fixed camera", "seed"],
+      "outputs": ["frame trace", "keyframes", "console log", "metrics"],
+      "validator": "startup-smoke plus hand-only, strap-only, gun-only, interrupt and recovery"
+    },
+    {
+      "id": "review",
+      "agent": "AdversarialReviewer",
+      "writes": "artifacts/review/<runId>",
+      "inputs": ["spec", "runtime evidence", "candidate scores"],
+      "outputs": ["review.json", "visual-review.json", "role-review/*.json", "adjudication.json", "failure-labels.json", "disagreement.json"],
+      "validator": "G2/G3/G4 layered multimodal scoring; generation rationale excluded; FACT/INFERENCE/UNKNOWN required; disagreement gate"
+    },
+    {
+      "id": "release",
+      "agent": "Release",
+      "writes": "artifacts/release/<runId>",
+      "inputs": ["all previous artifacts"],
+      "outputs": ["release manifest", "rollback pointer"],
+      "validator": "all gates pass and no blocked labels"
+    }
+  ],
+  "failureLabels": [
+    "shared_target",
+    "wrong_hand_side",
+    "unreachable_ik",
+    "mesh_stretch",
+    "alpha_bleed",
+    "identity_drift",
+    "version_mismatch",
+    "missing_source",
+    "runtime_regression",
+    "blocked_visual_uncertainty"
+  ],
+  "stopConditions": [
+    "same failure label repeats three times without score improvement",
+    "no editable .spine project for a required mutation",
+    "runtime and export major.minor versions differ",
+    "hard visual or structural gate fails",
+    "evidence is incomplete or contradictory",
+    "visual reviewers disagree beyond the configured gate"
+  ],
+  "completionStates": {
+    "runtime-usable": "cold-start, default room routing, gaming_c010 room routing, shared Gaming actions, legacy Gaming comparison, current 4.0 runtime smoke and semantic actions pass",
+    "mutation-ready": "project-local editor or CLI can perform a controlled derived export",
+    "migration-validated": "4.3 candidate has independent save/export and matching 4.3 runtime round-trip evidence",
+    "release-ready": "G1/G2/G3 hard gates, G4 multi-role visual review, rollback manifest and startup evidence pass"
+  },
+  "knownDeferredGates": [
+    "identity_embedding",
+    "material_similarity",
+    "model_assisted_review",
+    "independent_visual_review",
+    "cli_or_editor_export_round_trip",
+    "cli_activation_or_editor_export_probe",
+    "interrupt_and_recovery",
+    "rollback_manifest",
+    "four_gate_adjudication"
+  ]
+}

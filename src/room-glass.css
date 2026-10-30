@@ -1,0 +1,293 @@
+/* June's soft glass material, tinted by the artwork in each room. */
+:root, .live-room-panel {
+  --room-surface: 238 241 248;
+  --room-wash: 206 218 236;
+  --room-accent-rgb: 74 100 140;
+  --room-chrome: rgb(var(--room-surface) / .97);
+  --room-control: linear-gradient(145deg, rgb(var(--room-surface) / .78), rgb(var(--room-wash) / .4));
+  --room-border: rgb(var(--room-surface) / .72);
+  --room-label: #243246;
+  --room-muted: #4b5d73;
+  --room-glass-filter: blur(18px) saturate(150%);
+  --room-glass-shadow: 0 6px 20px #14243d1a, inset 0 1px 0 #ffffff80;
+  --room-glass-selected: linear-gradient(135deg, rgb(var(--room-surface) / .96), rgb(var(--room-wash) / .88));
+  --room-glass-accent: rgb(var(--room-accent-rgb));
+  --room-selected-border: rgb(var(--room-accent-rgb) / .6);
+  --room-hover: linear-gradient(135deg, rgb(var(--room-surface) / .95), rgb(var(--room-wash) / .66));
+  --room-popover: linear-gradient(135deg, rgb(var(--room-surface) / .97), rgb(var(--room-wash) / .94));
+}
+/* Keep the same contrast and hierarchy while picking up each wallpaper's palette. */
+#gaming-room, #gaming-seated-room {
+  --room-surface: 240 230 255;
+  --room-wash: 199 169 239;
+  --room-accent-rgb: 101 58 151;
+  --room-label: #352248;
+  --room-muted: #624a78;
+}
+#baking-room {
+  --room-surface: 255 240 216;
+  --room-wash: 237 194 148;
+  --room-accent-rgb: 144 78 37;
+  --room-label: #4a3025;
+  --room-muted: #735440;
+}
+#workout-room, #dog-room {
+  --room-surface: 239 245 224;
+  --room-wash: 193 211 173;
+  --room-accent-rgb: 73 104 67;
+  --room-label: #2d3b2d;
+  --room-muted: #526348;
+}
+#fortune-room {
+  --room-surface: 243 229 245;
+  --room-wash: 211 172 213;
+  --room-accent-rgb: 115 67 117;
+  --room-label: #3c2847;
+  --room-muted: #705174;
+}
+#karaoke-room {
+  --room-surface: 255 239 229;
+  --room-wash: 224 191 200;
+  --room-accent-rgb: 133 73 95;
+  --room-label: #47303e;
+  --room-muted: #745664;
+}
+#stream-room, #mia-lilly-room {
+  --room-surface: 239 235 255;
+  --room-wash: 204 197 233;
+  --room-accent-rgb: 91 74 137;
+  --room-label: #332b48;
+  --room-muted: #605575;
+}
+#stream-room:has([data-room="bedroom"]) {
+  --room-surface: 255 236 239;
+  --room-wash: 235 192 205;
+  --room-accent-rgb: 138 69 96;
+  --room-label: #482d3a;
+  --room-muted: #735263;
+}
+#stream-room:has([data-room="cafe"]) {
+  --room-surface: 255 241 223;
+  --room-wash: 231 202 171;
+  --room-accent-rgb: 132 85 53;
+  --room-label: #463429;
+  --room-muted: #725843;
+}
+#stream-room:has([data-room="beach"]) {
+  --room-surface: 229 248 244;
+  --room-wash: 176 218 212;
+  --room-accent-rgb: 40 111 111;
+  --room-label: #254344;
+  --room-muted: #456569;
+}
+#stream-room:has([data-room="halloween"]) {
+  --room-surface: 255 237 214;
+  --room-wash: 233 185 151;
+  --room-accent-rgb: 133 74 45;
+  --room-label: #443044;
+  --room-muted: #715167;
+}
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  :root, .live-room-panel { --room-chrome: linear-gradient(135deg, rgb(var(--room-surface) / .82), rgb(var(--room-wash) / .57)); }
+}
+
+/* One softly lit surface for floating controls, cards, and room information. */
+#live-room-feed :is(
+  .host-profile, .dog-profile, .gaming-profile, .seated-title, .workout-profile, .baking-profile, .fortune-profile, .karaoke-profile,
+  .sound-button, .dog-sound, .gaming-sound, .seated-sound, .workout-sound, .baking-sound, .fortune-sound, .karaoke-sound,
+  .live-bar .viewer-pill, .host-profile .like-pill,
+  .gift-dock, .dog-gifts, .gaming-controls, .seated-controls, .workout-exercises, .baking-gifts, .fortune-gifts, .karaoke-listening,
+  .karaoke-audience > button,
+  .workout-rep-card, .baking-summary, .baking-finish, .reaction-label,
+  .sprite-loading, .dog-art-status, .gaming-art-status, .seated-status, .workout-art-status, .baking-art-status, .fortune-art-status, .karaoke-art-status
+) {
+  color: var(--room-label);
+  background: var(--room-chrome);
+  border-color: var(--room-border);
+  box-shadow: var(--room-glass-shadow);
+  -webkit-backdrop-filter: var(--room-glass-filter);
+  backdrop-filter: var(--room-glass-filter);
+  text-shadow: 0 1px 0 #ffffff30;
+}
+
+/* Pressable layers catch light without becoming another opaque block. */
+#live-room-feed :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts) > button,
+#live-room-feed :is(.baking-tray-navigation button, .baking-tools button, .fortune-again, .recipient-controls #take-turns, .karaoke-skip, .seated-variant) {
+  color: var(--room-label);
+  background: var(--room-control);
+  border-color: var(--room-border);
+  box-shadow: inset 0 1px 0 #ffffff80, 0 2px 5px #14243d0a;
+}
+#live-room-feed :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts, .karaoke-audience) > button:is([aria-pressed="true"], .is-playing),
+#live-room-feed .recipient-controls #take-turns[aria-pressed="true"] {
+  background: var(--room-glass-selected);
+  color: var(--room-glass-accent);
+  border-color: var(--room-selected-border);
+  box-shadow: inset 0 1px 0 #ffffffb3, 0 0 0 1px rgb(var(--room-accent-rgb) / .12);
+}
+
+/* Existing room-specific pale labels need ink colors on the new material. */
+#live-room-feed :is(
+  #recipient-label, .dock-wallet > span, .dock-wallet > span strong,
+  .dog-gifts h2, .workout-exercise-heading h2, .baking-gifts h2, .karaoke-song-name,
+  .workout-rep-card strong, .workout-cue, .baking-finish strong,
+  .fortune-reading strong, .fortune-reading p
+) { color: var(--room-label); text-shadow: none; }
+#live-room-feed :is(
+  .dock-wallet small, .host-profile #like-count, .host-profile .like-pill small,
+  .dog-fetch-count, .workout-set-count, .baking-queue, .baking-cake-count,
+  .workout-rep-card small, .workout-pose-name, .baking-finish small,
+  .karaoke-audience > button > small
+) { color: var(--room-muted); text-shadow: none; }
+#live-room-feed .host-profile .like-pill > span:first-child { color: #a32d60; }
+#live-room-feed .karaoke-glow-icon { color: #92671a; text-shadow: 0 0 8px #fff2b8; }
+/* Dialogue stays opaque, like a speech balloon, separate from the glass controls. */
+#live-room-feed :is(.bubble, .gaming-speech, .seated-speech, .workout-speech, .baking-speech, .fortune-reading, .karaoke-speech) {
+  color: var(--room-label);
+  background: #fffaf6;
+  border-color: #cbbbc9;
+  box-shadow: 0 3px 10px #20182b26;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  text-shadow: none;
+}
+#live-room-feed :is(.bubble, .gaming-speech, .seated-speech, .workout-speech, .baking-speech, .karaoke-speech)::after,
+#live-room-feed .fortune-reading::before {
+  background: #fffaf6;
+  border-color: #cbbbc9;
+}
+#live-room-feed :is(.gaming-need, .gaming-camera-label, .seated-cam-label) {
+  color: var(--room-label);
+  background: var(--room-chrome);
+  border-color: var(--room-border);
+  box-shadow: var(--room-glass-shadow);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+}
+#live-room-feed :is(.gaming-need span, .gaming-need b, .gaming-camera-label b, .seated-cam-label b) { color: var(--room-label); }
+#live-room-feed .gaming-need meter { background: #4155771f; }
+#live-room-feed :is(.sprite-loading, .dog-art-status, .gaming-art-status, .seated-status, .workout-art-status, .baking-art-status, .fortune-art-status, .karaoke-art-status) button {
+  color: var(--room-label);
+  background: #ffffffb3;
+  border-color: #ffffffd1;
+  box-shadow: inset 0 1px 0 #fff;
+}
+
+/* Keep live/active signals distinct from the neutral glass. */
+#live-room-feed :is(.host-profile .live-pill, .dog-live-badge, .gaming-live-badge, .seated-live-badge, .workout-live, .baking-profile > b, .fortune-live, .karaoke-live) {
+  color: #fff;
+  background: linear-gradient(145deg, #c93472, #ad235e);
+  border-color: #ffbdd38c;
+  box-shadow: inset 0 1px 0 #ffffff47, 0 2px 6px #a51a4e1f;
+  text-shadow: 0 1px 2px #65092929;
+}
+#live-room-feed .stage-camera .rescue-system {
+  color: var(--room-label);
+  background: var(--room-chrome);
+  border-color: #aaa0e4cc;
+  box-shadow: var(--room-glass-shadow);
+  -webkit-backdrop-filter: var(--room-glass-filter);
+  backdrop-filter: var(--room-glass-filter);
+}
+#live-room-feed .stage-camera .rescue-system.urgent { background: linear-gradient(135deg,#fff6dcf0,#ffdfabab); border-color:#c18b31; }
+#live-room-feed .stage-camera .rescue-system.safe { background: linear-gradient(135deg,#eefff5f0,#b9e7d0ab); border-color:#4f9775; }
+#live-room-feed .stage-camera .rescue-system.locked { background: var(--room-glass-selected); border-color:#b66388; }
+#live-room-feed .stage-camera .rescue-system .rescue-score { color: var(--room-label); background:#ffffff80; border-color:#ffffffab; }
+
+/* The music shortcut and its popover use exactly the same material as mute. */
+#live-room-feed .room-music-control { color: var(--room-label); }
+#live-room-feed .room-music-control .room-music-open,
+#live-room-feed .room-music-control .room-music-settings {
+  color: var(--room-label);
+  background: var(--room-chrome);
+  border-color: var(--room-border);
+  box-shadow: var(--room-glass-shadow);
+  -webkit-backdrop-filter: var(--room-glass-filter);
+  backdrop-filter: var(--room-glass-filter);
+}
+#live-room-feed .room-music-control .room-music-open[aria-expanded=true] {
+  background: var(--room-glass-selected);
+  color: var(--room-glass-accent);
+  border-color: var(--room-selected-border);
+}
+#live-room-feed .room-music-control .room-music-settings {
+  background: var(--room-popover);
+  border-radius: 22px;
+  box-shadow: 0 16px 48px #13233b33, inset 0 1px 0 #fff;
+}
+body .room-music-settings :is(select, .room-music-close) {
+  color: var(--room-label);
+  background: var(--room-control);
+  border-color: var(--room-border);
+  box-shadow: inset 0 1px 0 #fff, 0 2px 6px #21334b0d;
+}
+#live-room-feed select option, body .room-music-settings select option { color: var(--room-label); background: rgb(var(--room-surface)); }
+#live-room-feed :is(button, select, input):focus-visible, body .room-music-control :focus-visible { outline-color: var(--room-glass-accent); }
+
+/* Frost the shop shell as well, retaining stronger surfaces for dense content. */
+.wardrobe-dialog, .reset-dialog {
+  background: linear-gradient(135deg,#fffffff5,#edf2fae6);
+  color: var(--room-label);
+  border-color: var(--room-border);
+  box-shadow: 0 24px 80px #101f384d, inset 0 1px 0 #fff;
+  -webkit-backdrop-filter: blur(28px) saturate(150%);
+  backdrop-filter: blur(28px) saturate(150%);
+}
+.wardrobe-dialog :is(.studio-header, .wardrobe-controls, .studio-footer) { background: #ffffff70; border-color: #ffffffa6; }
+.wardrobe-dialog :is(.closet-card, .closet-card.is-equipped, .wardrobe-wallet, .wardrobe-tools select) { background: #ffffff9e; box-shadow: inset 0 1px 0 #fff, 0 3px 10px #24395208; }
+.wardrobe-dialog .closet-art { background: #f5f6fb80; }
+
+@media (hover: hover) {
+  #live-room-feed :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts, .karaoke-audience) > button:hover:not(:disabled),
+  #live-room-feed :is(.karaoke-skip, .baking-tray-navigation button, .baking-tools button, .fortune-again):hover:not(:disabled) {
+    background: var(--room-hover);
+    border-color: var(--room-selected-border);
+    box-shadow: 0 4px 12px #24344c14, inset 0 1px 0 #fff;
+  }
+  #live-room-feed :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts, .karaoke-audience) > button:is([aria-pressed="true"], .is-playing):hover:not(:disabled) { background: var(--room-glass-selected); border-color:var(--room-selected-border); }
+}
+
+/* A solid fallback keeps the same hierarchy when transparency is disabled. */
+@media (prefers-reduced-transparency: reduce) {
+  :root, .live-room-panel { --room-chrome: rgb(var(--room-surface)); --room-control: rgb(var(--room-surface)); --room-glass-filter: none; --room-glass-selected: rgb(var(--room-wash)); --room-hover: rgb(var(--room-wash)); }
+  #live-room-feed .room-music-control .room-music-settings, .wardrobe-dialog, .reset-dialog { background:rgb(var(--room-surface)); -webkit-backdrop-filter:none; backdrop-filter:none; }
+}
+@media (prefers-contrast: more) {
+  :root, #live-room-feed .live-room-panel { --room-chrome: #f5f7fa; --room-control: #fff; --room-border: #73839a; --room-label: #243246; --room-muted:#34475e; --room-glass-filter:none; --room-hover: #fff; --room-glass-selected: rgb(var(--room-wash)); }
+}
+/* Rounded capsules and quiet detail surfaces finish the shared material. */
+#live-room-feed :is(.host-profile, .dog-profile, .gaming-profile, .seated-title, .workout-profile, .baking-profile, .fortune-profile, .karaoke-profile) { border-radius: 26px; }
+#live-room-feed :is(.sound-button, .dog-sound, .gaming-sound, .seated-sound, .workout-sound, .baking-sound, .fortune-sound, .karaoke-sound),
+#live-room-feed .room-music-control .room-music-open { border-radius: 50%; }
+#live-room-feed :is(.gift-dock, .dog-gifts, .gaming-controls, .seated-controls, .workout-exercises, .baking-gifts, .fortune-gifts, .karaoke-listening, .ml-controls) { border-radius: 20px; border-width: 1px; padding: 10px; }
+#live-room-feed .karaoke-audience > button { border-radius: 18px; }
+#live-room-feed :is(.fortune-reading-title, .workout-pose-name, .workout-cue, .baking-cake-count, .baking-finish-copy span) { color: var(--room-muted); }
+#live-room-feed :is(.baking-progress-copy, .baking-finish-copy strong, .gaming-need label) { color: var(--room-label); }
+#live-room-feed :is(.gaming-inputs b, .seated-inputs b) { color:var(--room-muted); background:var(--room-control); border-color:var(--room-border); }
+#live-room-feed :is(.gaming-inputs b, .seated-inputs b).is-on { color:var(--room-glass-accent); background:var(--room-glass-selected); border-color:var(--room-selected-border); }
+#live-room-feed .baking-another { color:var(--room-label); background:var(--room-control); border-color:var(--room-border); box-shadow:inset 0 1px 0 #fff; }
+#live-room-feed .baking-another:hover:not(:disabled) { background:var(--room-hover); }
+#live-room-feed #baking-room .baking-actions button:is([data-baking-action='finish'], [data-baking-action='newCake']) {
+  background: var(--room-glass-selected);
+  border-color: var(--room-selected-border);
+  color: var(--room-glass-accent);
+}
+#live-room-feed #baking-room .baking-actions button:is([data-baking-action='finish'], [data-baking-action='newCake']) b { color: inherit; }
+#live-room-feed #baking-room .baking-actions button:is([data-baking-action='finish'], [data-baking-action='newCake']):is([aria-pressed='true'], :hover:not(:disabled)) {
+  background: var(--room-hover);
+  border-color: var(--room-glass-accent);
+  color: var(--room-glass-accent);
+}
+#live-room-feed .baking-actions { scrollbar-color:#ffffff9c transparent; }
+#live-room-feed .gaming-need meter::-webkit-meter-bar, #live-room-feed #baking-progress::-webkit-progress-bar { background:#4155771f; border-color:transparent; }
+#live-room-feed :is(#baking-progress, .workout-progress) { background:#4155771f; }
+#live-room-feed .workout-profile > svg { stroke: var(--room-muted); }
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  #live-room-feed *, .wardrobe-dialog, .reset-dialog { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+  #live-room-feed .stage-camera .rescue-system.urgent { background: #fff0d1; }
+  #live-room-feed .stage-camera .rescue-system.safe { background: #d6f3e3; }
+}
+@media (prefers-contrast: more) {
+  #live-room-feed :is(button, select, input) { border-color: var(--room-border) !important; }
+  #live-room-feed .room-music-control .room-music-settings, .wardrobe-dialog, .reset-dialog { background: #f4f6fa; border-color: var(--room-border); }
+}

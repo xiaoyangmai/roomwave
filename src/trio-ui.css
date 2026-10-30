@@ -1,0 +1,132 @@
+/* The main live room keeps its portrait cast and compact shared chrome. */
+.character.is-offstage,.bubble[hidden],.floor-shadow ellipse[hidden] { display:none!important; }
+#stream-room .recipient-controls { display:flex; align-items:center; min-width:0; }
+#live-room-feed #stream-room .recipient-controls #take-turns { min-height:44px; min-width:40px; width:40px; padding:5px 3px; border:1px solid var(--room-border); border-radius:12px; color:var(--room-label); background:var(--room-control); font:650 11px/1 "Segoe UI",system-ui,sans-serif; }
+#live-room-feed #stream-room .recipient-controls #take-turns[aria-pressed="true"] { color:#fff; background:#7651a8; border-color:#cbb3e4; box-shadow:inset 0 1px 0 #ffffff40,0 0 0 1px #7651a830; }
+#stream-room .recipient-controls #take-turns[aria-disabled="true"] { opacity:.6; cursor:default; }
+#stream-room .character .name-tag rect { fill:rgb(var(--room-surface) / .94); stroke:var(--room-selected-border); stroke-width:1.5; }
+#stream-room .character .name-tag text { fill:var(--room-label); }
+#stream-room .character .mood-name { font-size:14px; letter-spacing:.35px; }
+#stream-room .character.gift-selected .name-tag rect { fill:var(--room-glass-accent); stroke:rgb(var(--room-surface)); stroke-width:2; filter:drop-shadow(0 2px 4px #35234d30); }
+#stream-room .character.gift-selected .name-tag text { fill:#fff; }
+#stream-room .name-tag .mood-track { stroke:rgb(var(--room-accent-rgb) / .22); }
+.bubble-stella { left:50%; }
+/* Keep the shared room materials and shapes while giving the cast more space. */
+#live-room-feed #stream-room .host-profile .host-avatar { font-size:20px; color:var(--room-glass-accent); background:transparent; }
+#live-room-feed #stream-room .gift-dock { grid-template-columns:40px minmax(0,1fr); align-items:center; gap:5px; padding:6px; border-radius:20px; }
+#stream-room .dock-heading { display:grid; grid-template-columns:minmax(0,1fr); align-items:center; gap:0; padding:0; }
+/* Keep the existing state hooks without reserving HUD space for counters. */
+#live-room-feed #stream-room :is(.dock-wallet, .like-pill, .viewer-pill)[hidden] { display:none; }
+#live-room-feed #stream-room .gift-buttons { grid-column:2; grid-row:1; min-width:0; gap:4px; }
+#live-room-feed #stream-room .gift-buttons > button { min-height:60px; height:60px; padding:5px 2px; gap:3px; border-radius:14px; }
+#live-room-feed #stream-room .gift-buttons > button > b { font-size:11px; line-height:1.2; }
+#live-room-feed #stream-room .gift-icon { width:30px; height:30px; }
+@media (hover:hover) {
+  #live-room-feed #stream-room .recipient-controls #take-turns:hover:not([aria-disabled="true"]) { background:var(--room-hover); border-color:var(--room-selected-border); }
+  #live-room-feed #stream-room .recipient-controls #take-turns[aria-pressed="true"]:hover:not([aria-disabled="true"]) { background:#7651a8; border-color:#cbb3e4; }
+}
+/* Speech uses a dedicated row between the camera and gifts, including rescues. */
+#stream-room .stream-dialogue {
+  --speech-columns: 2;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--speech-columns), minmax(0, 1fr));
+  align-items: center;
+  gap: 10px;
+  min-height: 54px;
+  margin: 0 var(--room-edge);
+  padding: 5px 0 7px;
+  z-index: 8;
+  pointer-events: none;
+}
+#stream-room .stream-dialogue .bubble {
+  position: relative;
+  grid-row: 1;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  translate: none;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 6px 9px;
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: center;
+  transform: translateY(5px) scale(.96);
+}
+#stream-room .stream-dialogue .bubble.show { transform: none; }
+#stream-room .stream-dialogue .bubble::after {
+  top: -6px;
+  right: auto;
+  bottom: auto;
+  left: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
+  transform: rotate(225deg);
+}
+#stream-room .stream-dialogue[data-focused="true"] .bubble { width: max-content; max-width: min(100%, 320px); justify-self: center; }
+@container live-room (max-height: 680px) {
+  #stream-room .stream-dialogue { min-height: 48px; gap: 8px; }
+  #stream-room .stream-dialogue .bubble { padding: 5px 7px; font-size: 11px; }
+  #live-room-feed #stream-room .gift-buttons > button { min-height:56px; height:56px; }
+  #live-room-feed #stream-room .gift-icon { width:27px; height:27px; }
+}
+@container live-room (max-width: 350px) {
+  #live-room-feed #stream-room .gift-buttons > button > b { font-size:10px; }
+}
+@container live-room (orientation: portrait) and (max-height: 480px) {
+  #live-room-feed #stream-room .app-shell { --room-edge:4px; }
+  #live-room-feed #stream-room .gift-dock { grid-template-columns:28px minmax(0,1fr); padding:2px; gap:3px; border-radius:14px; }
+  #live-room-feed #stream-room .gift-buttons { gap:1px; }
+  #live-room-feed #stream-room .gift-buttons > button { min-height:44px; height:44px; padding:3px 1px; gap:2px; border-radius:9px; }
+  #live-room-feed #stream-room .gift-buttons > button > b { font-size:8px; }
+  #live-room-feed #stream-room .gift-icon { width:20px; height:20px; }
+  #stream-room .stream-dialogue { min-height: 40px; gap: 6px; padding: 4px 0 6px; }
+  #stream-room .stream-dialogue .bubble { padding: 5px 6px; border-radius: 10px; font-size: 9px; line-height: 1.25; }
+  #stream-room .stream-dialogue .bubble::after { top: -4px; left: calc(50% - 3px); width: 6px; height: 6px; }
+  #live-room-feed #stream-room .recipient-controls #take-turns { min-width:28px; width:28px; min-height:36px; padding:4px 1px; border-radius:9px; font-size:9px; }
+}
+.wardrobe-dialog[data-section="stella"] .wardrobe-tabs button[aria-pressed="true"] { background:#927049; }
+.wardrobe-dialog[data-section="stella"] .closet-card.is-equipped { border-color:#c19b68; box-shadow:0 0 0 3px #c19b6818; }
+.wardrobe-dialog .wardrobe-tabs { display:flex; flex-wrap:wrap; }
+.dock-wallet>span { flex-direction:column; align-items:flex-end; gap:2px; }
+.wardrobe-dialog .wardrobe-wallet { flex-direction:column; align-items:flex-end; gap:2px; }
+.wardrobe-dialog .wardrobe-wallet span { display:block; font-size:12px; white-space:nowrap; }
+#wardrobe-wallet-help { margin:0; padding:8px 20px; flex:none; color:#665273; background:#faf7fc; border-bottom:1px solid #e7ddee; font-size:12px; line-height:1.4; }
+.closet-card.is-upgrade .closet-art { display:grid; place-items:center; }
+.closet-card.is-upgrade .upgrade-sprite { width:100%; height:100%; object-fit:contain; }
+.closet-card.is-upgrade .closet-caption p { margin:0 0 10px; font-size:12px; line-height:1.4; color:#6b5b75; text-align:center; }
+.settings-link { padding:8px; min-height:40px; border:1px solid #c7b4d7; border-radius:8px; color:#66466f; background:#f4eff8; cursor:pointer; font:600 13px system-ui,sans-serif; }
+.settings-link[hidden] { display:none; }
+#hand-upgrade-status { margin-top:12px; }
+.wardrobe-dialog[data-layout="list"] .closet-card.is-upgrade { grid-template-rows:minmax(112px,auto); }
+@media (max-width:370px) {
+  .studio-header { gap:7px; }
+  .studio-header h2 { font-size:18px; }
+  .wardrobe-dialog .wardrobe-wallet { padding:5px 7px; }
+  .wardrobe-dialog .wardrobe-wallet strong { font-size:16px; }
+}
+
+@media (orientation:portrait) {
+  .wardrobe-dialog .wardrobe-tabs button { padding:7px 13px; }
+}
+@container live-room (orientation:portrait) {
+  #stream-room .cast-framing { transform-box:view-box; transform-origin:0px 250px; transform:scale(1.4); }
+  #stream-room .character .name-tag { transform:translate(-64px,265px); }
+}
+@media (orientation:landscape) and (max-height:560px) {
+  /* Short screens need a horizontal outfit card instead of a collapsing art row. */
+  .wardrobe-dialog:not([data-section="rooms"])[data-layout="rail"] .closet-collection { align-items:flex-start; padding:4px 12px; overflow-y:auto; }
+  .wardrobe-dialog:not([data-section="rooms"])[data-layout="rail"] .closet-card { height:auto; min-height:88px; grid-template-columns:68px minmax(0,1fr) 112px; grid-template-rows:auto; align-items:center; gap:10px; padding:8px; }
+  .wardrobe-dialog:not([data-section="rooms"])[data-layout="rail"] .closet-art { height:68px; padding:4px; }
+  .wardrobe-dialog:not([data-section="rooms"])[data-layout="rail"] .closet-caption { text-align:left; }
+  .wardrobe-dialog:not([data-section="rooms"])[data-layout="rail"] .closet-card h3 { margin:2px 0 0; font-size:16px; text-align:left; }
+  .wardrobe-dialog[data-section="rooms"] .closet-card.is-upgrade { grid-column:1/-1; grid-template-columns:68px minmax(0,1fr) 170px; grid-template-rows:auto; min-height:88px; height:auto; gap:12px; align-items:center; padding:8px 12px; }
+  .wardrobe-dialog[data-section="rooms"][data-layout="rail"] .closet-card.is-upgrade { flex-basis:min(90vw,620px); }
+  .wardrobe-dialog[data-section="rooms"] .closet-card.is-upgrade .closet-art { height:68px; padding:0; }
+  .wardrobe-dialog[data-section="rooms"] .closet-card.is-upgrade h3 { text-align:left; margin:2px 0 4px; font-size:15px; }
+  .wardrobe-dialog[data-section="rooms"] .closet-card.is-upgrade .closet-caption p { text-align:left; margin:0; }
+  .wardrobe-dialog[data-section="rooms"] .closet-card.is-upgrade .closet-caption small { text-align:left; }
+}

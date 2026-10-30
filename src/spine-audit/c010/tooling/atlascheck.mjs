@@ -1,0 +1,1 @@
+import fs from 'node:fs'; import {TextureAtlas} from '@esotericsoftware/spine-core'; const t=new TextureAtlas(fs.readFileSync('C:/Users/mi/Desktop/NIKKE_Spine_10/c010/c010_00.atlas','utf8')); console.log(t.findRegion('acc_1')); console.log(t.regions.slice(0,10).map(x=>x.name));

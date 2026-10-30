@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 1,
+  "model": "c010_00",
+  "source": {
+    "root": "D:\\awesome-games\\Roomwave\\spine_manager\\source\\nikke_4.0.47\\c010_00",
+    "spineVersion": "4.0.47",
+    "auditFiles": [
+      "c010_00.skel"
+    ]
+  },
+  "semantics": {
+    "note": "Names are model-specific candidates. armVisualLeft/Right require one visual confirmation because source bone names are mirrored relative to setup-pose screen position.",
+    "roles": {
+      "root": {
+        "candidates": [
+          "root"
+        ],
+        "resolved": "root",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "torso": {
+        "candidates": [
+          "body_2",
+          "body_1",
+          "center"
+        ],
+        "resolved": "body_2",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "neck": {
+        "candidates": [
+          "neck_1"
+        ],
+        "resolved": "neck_1",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "head": {
+        "candidates": [
+          "head"
+        ],
+        "resolved": "head",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "faceTarget": {
+        "candidates": [
+          "face_con",
+          "face_con_re"
+        ],
+        "resolved": "face_con",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "bodyTarget": {
+        "candidates": [
+          "body_con",
+          "body_con_re"
+        ],
+        "resolved": "body_con",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "pelvisTarget": {
+        "candidates": [
+          "pelvis_con",
+          "pelvis_con_re"
+        ],
+        "resolved": "pelvis_con",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "armVisualRight": {
+        "candidates": [
+          "shoulder_l",
+          "l_arm_1",
+          "r_arm_2",
+          "r_hand_1"
+        ],
+        "resolved": "shoulder_l",
+        "status": "available",
+        "needsVisualConfirmation": true
+      },
+      "armVisualLeft": {
+        "candidates": [
+          "shoulder_r",
+          "r_arm_1",
+          "r_arm_3",
+          "l_arm_2",
+          "l_hand_1"
+        ],
+        "resolved": "shoulder_r",
+        "status": "available",
+        "needsVisualConfirmation": true
+      },
+      "handTarget": {
+        "candidates": [
+          "ik_arm_r"
+        ],
+        "resolved": "ik_arm_r",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "gun": {
+        "candidates": [
+          "gun"
+        ],
+        "resolved": "gun",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "mouth": {
+        "candidates": [
+          "lip_3"
+        ],
+        "resolved": "lip_3",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "eyeLeft": {
+        "candidates": [
+          "eye_l",
+          "eye_l_ball"
+        ],
+        "resolved": null,
+        "status": "missing",
+        "needsVisualConfirmation": false
+      },
+      "eyeRight": {
+        "candidates": [
+          "eye_r",
+          "eye_r_ball"
+        ],
+        "resolved": null,
+        "status": "missing",
+        "needsVisualConfirmation": false
+      },
+      "browLeft": {
+        "candidates": [
+          "l_brow",
+          "r_brow"
+        ],
+        "resolved": "l_brow",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "browRight": {
+        "candidates": [
+          "r_brow",
+          "l_brow"
+        ],
+        "resolved": "r_brow",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "hairFront": {
+        "candidates": [
+          "f_hair_1",
+          "face_top"
+        ],
+        "resolved": "f_hair_1",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "hairBranches": {
+        "candidates": [
+          "f_hair_1",
+          "f_hair_1_d2",
+          "f_hair_1_d4",
+          "f_hair_1_d",
+          "f_hair_1_d3",
+          "f_hair_1_d5",
+          "f_hair_2",
+          "f_hair_3",
+          "f_hair_4",
+          "f_hair_5",
+          "f_hair_6",
+          "f_hair_7",
+          "f_hair_8",
+          "f_hair_9",
+          "f_hair_10",
+          "f_hair_11",
+          "r_hair_4",
+          "r_hair_5",
+          "r_hair_6",
+          "r_hair_7",
+          "r_hair_8",
+          "r_hair_9",
+          "r_hair_3",
+          "r_hair_10",
+          "r_hair_11",
+          "r_hair_12",
+          "r_hair_13",
+          "r_hair_14",
+          "r_hair_15",
+          "r_hair_16",
+          "r_hair_17",
+          "r_hair_18",
+          "r_hair_19",
+          "r_hair_20",
+          "r_hair_21",
+          "r_hair_22",
+          "r_hair_23",
+          "r_hair_24",
+          "r_hair_25",
+          "r_hair_26",
+          "r_hair_27",
+          "r_hair_28",
+          "r_hair_29",
+          "r_hair_30",
+          "r_hair_31",
+          "r_hair_32",
+          "r_hair_33",
+          "r_hair_34",
+          "r_hair_35",
+          "r_hair_36",
+          "r_hair_37",
+          "r_hair_38",
+          "r_hair_1_1",
+          "r_hair_1_2",
+          "r_hair_1_3",
+          "r_hair_1_5",
+          "r_hair_1_4",
+          "r_hair_1_6",
+          "r_hair_1_7",
+          "r_hair_2",
+          "r_hair_39",
+          "r_hair_40",
+          "r_hair_41",
+          "r_hair_42",
+          "r_hair_43",
+          "r_hair_44",
+          "l_hair_4_1",
+          "l_hair_4_2",
+          "l_hair_4_3",
+          "l_hair_4_4",
+          "l_hair_4_5",
+          "l_hair_4_7",
+          "l_hair_4_8",
+          "l_hair_4_9",
+          "l_hair_4_10",
+          "l_hair_4_11",
+          "l_hair_4_12",
+          "l_hair_4_13",
+          "l_hair_4_14",
+          "l_hair_4_15",
+          "l_hair_3_1",
+          "l_hair_3_2",
+          "l_hair_3_3",
+          "l_hair_3_4",
+          "l_hair_3_5",
+          "l_hair_3_7",
+          "l_hair_3_8",
+          "l_hair_3_6",
+          "l_hair_1",
+          "l_hair_2",
+          "l_hair_3",
+          "l_hair_4",
+          "l_hair_5",
+          "l_hair_6",
+          "l_hair_7",
+          "l_hair_8",
+          "r_hair_r",
+          "r_hair_r2",
+          "r_hair_r3",
+          "r_hair_r4",
+          "r_hair_r5",
+          "r_hair_45",
+          "r_hair_46",
+          "r_hair_47",
+          "r_hair_48",
+          "r_hair_49",
+          "r_hair_50",
+          "r_hair_51",
+          "r_hair_52",
+          "r_hair_53",
+          "r_hair_54",
+          "r_hair_55",
+          "r_hair_56",
+          "l_hair_9",
+          "l_hair_10",
+          "l_hair_11",
+          "l_hair_12",
+          "l_hair_13",
+          "l_hair_14",
+          "l_hair_15",
+          "l_hair_16",
+          "l_hair_17",
+          "l_hair_18",
+          "l_hair_19",
+          "l_hair_20",
+          "l_hair_21",
+          "l_hair_22",
+          "l_hair_23",
+          "l_hair_24",
+          "l_hair_25",
+          "l_hair_26",
+          "l_hair_27",
+          "l_hair_28",
+          "l_hair_29",
+          "l_hair_30",
+          "l_hair_31",
+          "l_hair_32",
+          "l_hair_33",
+          "l_hair_34",
+          "l_hair_35",
+          "l_hair_36",
+          "l_hair_37",
+          "l_hair_38",
+          "l_hair_39",
+          "l_hair_3_9",
+          "l_hair_3_10",
+          "l_hair_3_11",
+          "l_hair_3_12",
+          "l_hair_3_13",
+          "l_hair_3_14",
+          "l_hair_40"
+        ],
+        "resolved": "f_hair_1",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "fingers": {
+        "candidates": [
+          "l_hand_1",
+          "r_hand_1",
+          "r_finger_1",
+          "r_finger_2",
+          "r_hand_3",
+          "r_hand_2",
+          "r_finger_3",
+          "r_finger_4",
+          "r_finger_5",
+          "r_finger_6",
+          "r_finger_7",
+          "r_finger_8",
+          "r_finger_9",
+          "r_finger_11",
+          "r_finger_12",
+          "r_finger_10",
+          "l_b_hand_07",
+          "l_b_hand_7",
+          "l_b_hand_03",
+          "l_b_hand_3",
+          "l_hand_2",
+          "l_b_hand_05",
+          "l_b_hand_5",
+          "l_b_hand_06",
+          "l_b_hand_6",
+          "l_b_hand_8",
+          "l_b_hand_04",
+          "l_b_hand_4"
+        ],
+        "resolved": "l_hand_1",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "handVisual": {
+        "candidates": [
+          "l_hand_1",
+          "l_b_hand_07",
+          "l_b_hand_03"
+        ],
+        "resolved": "l_hand_1",
+        "status": "available",
+        "needsVisualConfirmation": true,
+        "note": "可见手部锚点；与 handTarget 分开记录"
+      }
+    },
+    "actionChannels": {
+      "base": {
+        "source": "existing animation",
+        "animation": "idle",
+        "loop": true
+      },
+      "face": {
+        "targetRole": "faceTarget",
+        "method": "transform-or-attachment",
+        "expressions": [
+          "idle",
+          "surprised",
+          "focused",
+          "relieved"
+        ]
+      },
+      "handContact": {
+        "targetRole": "handTarget",
+        "method": "IK target bone",
+        "targetCandidates": [
+          "face_con",
+          "controller_anchor",
+          "foam_anchor"
+        ]
+      },
+      "secondaryMotion": {
+        "targetRoles": [
+          "hairBranches",
+          "fingers"
+        ],
+        "method": "physics-or-procedural-spring",
+        "phase": "after initial pose proof"
+      },
+      "foam": {
+        "renderer": "Canvas/Pixi overlay in prototype",
+        "anchors": [
+          "head",
+          "hairFront",
+          "faceTarget",
+          "torso",
+          "handTarget"
+        ]
+      }
+    }
+  },
+  "prototype": {
+    "baseAnimation": "idle",
+    "generatedAction": "foam_wipe",
+    "duration": 2.4,
+    "driver": "runtime IK target + face target + overlay effect",
+    "phases": [
+      {
+        "at": 0,
+        "name": "notice",
+        "face": "surprised",
+        "handTarget": "rest"
+      },
+      {
+        "at": 0.55,
+        "name": "reach",
+        "face": "focused",
+        "handTarget": "face"
+      },
+      {
+        "at": 1.25,
+        "name": "wipe",
+        "face": "focused",
+        "handTarget": "face"
+      },
+      {
+        "at": 2,
+        "name": "recover",
+        "face": "relieved",
+        "handTarget": "rest"
+      }
+    ],
+    "acceptance": [
+      "idle animation remains active",
+      "hand target follows a generated path",
+      "face target receives expression signal",
+      "foam overlay is tied to semantic anchor",
+      "same seed produces same path"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "policy": "provider-agnostic-reference-edit",
+  "primary": {
+    "adapter": "image-model-edit-api",
+    "input": ["source_rgba", "mask", "reference_images", "pose_spec", "prompt"],
+    "output": ["candidate_rgba", "provider_metadata"],
+    "requiredCapabilities": ["reference_images", "masked_edit", "transparent_output"],
+    "seedPolicy": "record-if-supported; otherwise record-request-id-and-output-hash"
+  },
+  "maskSources": [
+    "source_alpha",
+    "spine_attachment_bounds",
+    "spine_attachment_mesh",
+    "generated_mask_then_opencv_verified"
+  ],
+  "deterministicPostProcess": [
+    "composite_only_inside_mask",
+    "alpha_edge_cleanup",
+    "color_profile_normalization",
+    "pixel_and_boundary_metrics"
+  ],
+  "optionalAdapters": ["photoshop-script", "krita-script", "local-node-workflow"],
+  "notRequiredByDefault": ["SAM2", "ComfyUI", "ControlNet"],
+  "fallback": {
+    "onLowConfidence": "reject-and-regenerate",
+    "onRepeatedFailure": "use-action-specific-prerender-or-block"
+  }
+}

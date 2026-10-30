@@ -1,0 +1,20 @@
+.room-music-control { position: fixed; z-index: 35; right: max(12px,env(safe-area-inset-right)); top: max(78px,calc(env(safe-area-inset-top) + 70px)); color: #493b4b; font: 600 13px/1.4 system-ui,sans-serif; }
+.room-music-control[hidden], .room-music-settings[hidden] { display: none !important; }
+.room-music-control button, .room-music-control select { font: inherit; cursor: pointer; }
+.room-music-open { min-height: 38px; border: 1px solid #e6d2db; border-radius: 22px; padding: 7px 13px; background: #fff9f4ed; color: #614458; box-shadow: 0 3px 13px #2d19302b; }
+.room-music-open:hover { background: #fff; }
+.room-music-settings { position: absolute; top: calc(100% + 8px); right: 0; width: min(290px,calc(100vw - 24px)); max-height: calc(100dvh - 140px); overflow-y: auto; overscroll-behavior: contain; padding: 15px; box-sizing: border-box; display: grid; gap: 10px; background: #fffaf7; border: 1px solid #ddc6d6; border-radius: 18px; box-shadow: 0 10px 35px #20132340; }
+.room-music-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.room-music-heading strong { font-size: 16px; }
+.room-music-close { border: 0; border-radius: 9px; width: 34px; height: 34px; background: #f3e7ee; color: #614458; font-size: 22px !important; }
+.room-music-settings select { width: 100%; min-width: 0; min-height: 42px; padding: 8px; border: 1px solid #cab5c4; border-radius: 9px; background: white; color: #493b4b; }
+.room-music-control :focus-visible { outline: 3px solid #c6639a; outline-offset: 3px; }
+.room-music-control :disabled { cursor: default; opacity: .6; }
+body:has(dialog[open]) .room-music-control { visibility: hidden; }
+@media (orientation: landscape) and (max-height: 500px) { .room-music-control { top: 65px; } .room-music-settings { max-height: calc(100dvh - 120px); } }
+/* Keep the music shortcut clear of the workout counter and baking speech. */
+body:is([data-live-room="workout"],[data-live-room="baking"]) .room-music-control{top:max(12px,env(safe-area-inset-top));right:max(65px,calc(env(safe-area-inset-right) + 65px))}
+body:is([data-live-room="workout"],[data-live-room="baking"]) .room-music-open{width:40px;height:40px;min-height:40px;padding:0;font-size:0;display:grid;place-items:center}
+body:is([data-live-room="workout"],[data-live-room="baking"]) .room-music-open::before{content:'♫';font-size:22px;line-height:1}
+body:is([data-live-room="workout"],[data-live-room="baking"]) .room-music-settings{right:-52px;max-height:calc(100dvh - 80px)}
+@media(max-width:360px){body[data-live-room="workout"] .workout-live{display:none}}

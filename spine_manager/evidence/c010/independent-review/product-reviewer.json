@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "runId": "c010-20261029T070423Z",
+  "role": "product-reviewer",
+  "decision": "review",
+  "confidence": 0.84,
+  "summary": "gaming_c010 的小游戏→角色→按钮层级清楚，活动按钮和语音气泡能说明因果，窄屏按钮未溢出。水动作意图清楚，泡沫和风扇可读但遮挡降低完成感。",
+  "scores": {"action_readability":4,"hand_contact_plausibility":3,"identity_and_costume_consistency":5,"occlusion_and_layer_order":3,"overall_human_view":4,"motion_naturalness":3,"interaction_clarity":5},
+  "findings": [
+    {"id":"P43-01","severity":"positive","frame":"gaming-c010-idle-clean.png","evidence":"小游戏、角色画面、五按钮的产品层级稳定。","impact":"直播房间可用性清楚。"},
+    {"id":"P43-02","severity":"review","frame":"gaming-c010-foam-contact-clean.png","evidence":"泡沫接触点与前发叠加。","impact":"用户可能看不清擦拭发生的位置。"},
+    {"id":"P43-03","severity":"review","frame":"gaming-c010-fan-hold-clean.png","evidence":"风扇旋涡压在脸部中央。","impact":"动作清楚但遮挡表情。"}
+  ],
+  "unknown": ["关键帧不能证明完整直播节奏和所有中间帧","长按与快速重复输入的视觉连续性未完全覆盖","音效和动作节奏的整体一致性仍需复核"],
+  "recommendations": [{"priority":"P1","action":"移开泡沫和风扇效果后再做一次产品观感复核"}]
+}

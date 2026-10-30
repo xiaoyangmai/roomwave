@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "roomwave://spine-studio/spine-4.3-capability-contract.schema.json",
+  "title": "Spine 4.3 Capability Contract",
+  "type": "object",
+  "required": ["schema_version", "contract_id", "version_boundary", "support_levels", "surfaces", "capabilities", "validation_gates", "unknown_policy", "mutation_policy"],
+  "properties": {
+    "schema_version": {"type": "integer", "const": 1},
+    "contract_id": {"type": "string", "const": "roomwave-spine-4.3-capability-contract"},
+    "status": {"type": "string"},
+    "scope": {"type": "string"},
+    "authority": {"type": "object"},
+    "version_boundary": {
+      "type": "object",
+      "required": ["editor", "export", "runtime", "compatibility_rule"],
+      "properties": {
+        "editor": {"type": "string", "const": "4.3.26"},
+        "export": {"type": "string", "const": "4.3.26"},
+        "runtime": {"type": "string", "const": "4.3.13"},
+        "compatibility_rule": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "support_levels": {
+      "type": "object",
+      "required": ["full", "partial", "read_only", "not_supported", "unknown"],
+      "additionalProperties": {"type": "string"}
+    },
+    "surfaces": {"type": "object", "minProperties": 5},
+    "capabilities": {
+      "type": "array",
+      "minItems": 10,
+      "items": {
+        "type": "object",
+        "required": ["id", "spine_scope", "support", "invariants", "evidence"],
+        "properties": {
+          "id": {"type": "string"},
+          "spine_scope": {"type": "string"},
+          "support": {"$ref": "#/$defs/operationSupport"},
+          "invariants": {"type": "array", "items": {"type": "string"}},
+          "evidence": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": true
+      }
+    },
+    "validation_gates": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["id", "hard", "checks"],
+        "properties": {
+          "id": {"type": "string"},
+          "hard": {"type": "boolean"},
+          "checks": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": true
+      }
+    },
+    "unknown_policy": {"type": "string"},
+    "mutation_policy": {"type": "string"}
+  },
+  "$defs": {
+    "supportLevel": {"enum": ["full", "partial", "read_only", "not_supported", "unknown"]},
+    "operationSupport": {
+      "type": "object",
+      "required": ["inspect", "mutate", "export_roundtrip", "pose_validate"],
+      "additionalProperties": false,
+      "properties": {
+        "inspect": {"$ref": "#/$defs/surfaceSupport"},
+        "mutate": {"$ref": "#/$defs/surfaceSupport"},
+        "export_roundtrip": {"$ref": "#/$defs/surfaceSupport"},
+        "pose_validate": {"$ref": "#/$defs/surfaceSupport"}
+      }
+    },
+    "surfaceSupport": {
+      "type": "object",
+      "required": ["native_project", "exported_skeleton", "runtime", "portable_cli", "local_mcp"],
+      "additionalProperties": false,
+      "properties": {
+        "native_project": {"$ref": "#/$defs/supportLevel"},
+        "exported_skeleton": {"$ref": "#/$defs/supportLevel"},
+        "runtime": {"$ref": "#/$defs/supportLevel"},
+        "portable_cli": {"$ref": "#/$defs/supportLevel"},
+        "local_mcp": {"$ref": "#/$defs/supportLevel"}
+      }
+    }
+  },
+  "additionalProperties": true
+}

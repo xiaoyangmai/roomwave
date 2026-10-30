@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Roomwave · c010 Spine 试作</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #100d18; color: #f6f0ff; }
+    main { width: min(1160px, 100%); margin: 0 auto; padding: 20px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+    h1 { margin: 0; font-size: clamp(20px, 4vw, 30px); }
+    p { color: #c4b8d6; margin: 6px 0 0; }
+    a, button { color: inherit; }
+    a { color: #e8bfff; }
+    .grid { display: grid; grid-template-columns: minmax(320px, 1fr) minmax(280px, 360px); gap: 16px; }
+    .card { background: #1a1526; border: 1px solid #3a2b4e; border-radius: 16px; padding: 14px; box-shadow: 0 16px 40px #08060d66; }
+    .stage { display: grid; place-items: center; min-height: 700px; background: radial-gradient(circle at 50% 32%, #493363, #171120 68%); }
+    canvas { display: block; width: min(100%, 720px); height: auto; aspect-ratio: 3 / 4; border-radius: 12px; border: 1px solid #5f4a7c; background: transparent; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    button { border: 1px solid #74559d; border-radius: 9px; background: #2b1f3d; padding: 8px 11px; cursor: pointer; }
+    button:hover, button.active { background: #7049a5; }
+    button:disabled { opacity: .55; cursor: wait; }
+    .label { margin: 16px 0 7px; color: #d9c9ef; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; padding: 11px; border-radius: 10px; background: #100c18; color: #d9cced; font: 12px/1.55 ui-monospace, Consolas, monospace; }
+    .warn { color: #ffd487; }
+    @media (max-width: 820px) { main { padding: 12px; } .grid { grid-template-columns: 1fr; } .stage { min-height: auto; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div><h1>Roomwave · c010 Spine 试作</h1><p>语义动作先接入 Roomwave，模型原始文件保持只读。</p></div>
+    <a href="/solo/">回到 Solo 房间</a>
+  </header>
+  <div class="grid">
+    <section class="card stage">
+      <canvas id="stage" width="720" height="960" aria-label="c010 Spine 角色"></canvas>
+      <p id="debugLegend">蓝色：手部目标　绿色：可见手部　粉色：脸部目标　黄色：背带观测点</p>
+      <div class="toolbar" id="animationButtons"></div>
+      <div class="toolbar"><button id="foamButton" disabled>生成 foam_wipe</button><button id="waterButton" disabled>生成 water_splash</button><button id="resetButton" disabled>回到 idle</button></div>
+    </section>
+    <aside class="card">
+      <div class="label">运行状态</div><pre id="status">正在加载模型…</pre>
+      <div class="label">动作轨迹</div><pre id="trace">等待动作…</pre>
+      <div class="label">当前证据边界</div>
+      <pre class="warn">这是 Roomwave 的运行时试作，不代表背带隔离已通过。源工程/导出为 Spine 4.0.47，当前 Canvas runtime 为 4.0.31（同一 4.0 大版本）；若迁移到 4.3，必须另存工程并重新导出后再验收。</pre>
+    </aside>
+  </div>
+</main>
+<script src="../../spine-audit/c010/vendor/spine-canvas-4.0.31.min.js"></script>
+<script type="module">
+  import { SpineCharacterAdapter } from '/runtime/roomwave-spine.js';
+  const canvas = document.querySelector('#stage');
+  const status = document.querySelector('#status');
+  const trace = document.querySelector('#trace');
+  const animationButtons = document.querySelector('#animationButtons');
+  const foamButton = document.querySelector('#foamButton');
+  const waterButton = document.querySelector('#waterButton');
+  const resetButton = document.querySelector('#resetButton');
+  const debugLegend = document.querySelector('#debugLegend');
+  const debug = new URLSearchParams(location.search).get('debug') !== '0';
+  const adapter = new SpineCharacterAdapter({
+    canvas,
+    debug,
+    manifest: {
+      model: 'c010_00',
+      skeleton: '../../spine-audit/c010/model/c010_00.skel',
+      atlas: '../../spine-audit/c010/model/c010_00.atlas',
+      texture: '../../spine-audit/c010/model/c010_00.png',
+      textures: ['../../spine-audit/c010/model/c010_00.png', '../../spine-audit/c010/model/c010_00_2.png'],
+      skin: '00',
+      binding: '../../spine-audit/c010/semantic-binding.json',
+      audit: '../../spine-audit/c010/audit-report.json',
+      patch: '/config/c010-runtime-patch.json'
+    },
+    onTrace(sample) {
+      if (!sample.type && sample.phase === 'idle') return;
+      trace.textContent = JSON.stringify({
+        type: sample.type,
+        phase: sample.phase,
+        t: Number(sample.t.toFixed(3)),
+        foam: Number(sample.foam.toFixed(3)),
+        hand: sample.hand ? { x: Number(sample.hand.x.toFixed(1)), y: Number(sample.hand.y.toFixed(1)), bone: sample.hand.bone } : null,
+        handVisual: sample.handVisual ? { x: Number(sample.handVisual.x.toFixed(1)), y: Number(sample.handVisual.y.toFixed(1)), bone: sample.handVisual.bone } : null,
+        face: sample.face ? { x: Number(sample.face.x.toFixed(1)), y: Number(sample.face.y.toFixed(1)), bone: sample.face.bone } : null,
+        strap: sample.strap ? { x: Number(sample.strap.x.toFixed(1)), y: Number(sample.strap.y.toFixed(1)), bone: sample.strap.bone } : null
+      }, null, 2);
+    }
+  });
+  window.RoomwaveSpineC010 = adapter;
+  debugLegend.textContent = debug ? '蓝色：手部目标　绿色：可见手部　粉色：脸部目标　黄色：背带观测点' : '干净画面：不显示调试标记';
+  let last = performance.now();
+  function resize() { const box = canvas.getBoundingClientRect(); adapter.resize(box.width, box.height, window.devicePixelRatio || 1); }
+  function frame(now) { adapter.update(Math.min(.05, (now - last) / 1000)); last = now; requestAnimationFrame(frame); }
+  function addAnimation(name) { const button = document.createElement('button'); button.textContent = name; button.addEventListener('click', () => { adapter.setAnimation(name, true); document.querySelectorAll('#animationButtons button').forEach(item => item.classList.toggle('active', item === button)); }); animationButtons.append(button); }
+  function enableButtons(enabled) { [foamButton, waterButton, resetButton].forEach(button => { button.disabled = !enabled; }); }
+  foamButton.addEventListener('click', () => adapter.playSemantic({ type: 'foam_wipe', intensity: .85, seed: 17 }));
+  waterButton.addEventListener('click', () => adapter.playSemantic({ type: 'water_splash', intensity: .9, seed: 23 }));
+  resetButton.addEventListener('click', () => adapter.resetToIdle());
+  new ResizeObserver(resize).observe(canvas);
+  try {
+    await adapter.load();
+    resize();
+    for (const animation of adapter.data.animations) addAnimation(animation.name);
+    status.textContent = `模型：${adapter.manifest.model}\n导出：${adapter.audit.audits.find(item => item.file === 'c010_00.skel')?.skeleton?.version || 'unknown'}\n骨骼：${adapter.data.bones.length}\n插槽：${adapter.data.slots.length}\n动画：${adapter.data.animations.length}\n手部目标：${adapter.getAnchor('handTarget')?.bone || '缺失'}\n可见手部：${adapter.getAnchor('handVisual')?.bone || '缺失'}\n脸部目标：${adapter.getAnchor('faceTarget')?.bone || '缺失'}\n背带观测：${adapter.getAnchor('strapTarget')?.bone || '缺失'}\n运行时补丁：${adapter.patchStatus}\n\n原始模型文件未修改。`;
+    enableButtons(true);
+    requestAnimationFrame(frame);
+  } catch (error) {
+    status.textContent = `加载失败：${error.message}`;
+    console.error(error);
+  }
+</script>
+</body>
+</html>

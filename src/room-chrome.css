@@ -1,0 +1,335 @@
+/* Shared livestream chrome. Scene art and room-specific interactions remain local. */
+:root {
+  --room-chrome: rgba(19, 23, 38, .91);
+  --room-control: #273046;
+  --room-border: rgba(207, 216, 242, .24);
+  --room-label: #f8f8ff;
+  --room-muted: #c2c9dc;
+  --room-accent: #f23e84;
+}
+
+#live-room-feed :is(.live-bar, .dog-live-header, .gaming-topline, .seated-header, .workout-header, .baking-header, .fortune-header, .karaoke-header) {
+  position: absolute;
+  z-index: 500;
+  inset: var(--room-top, max(10px, env(safe-area-inset-top))) var(--room-edge, 12px) auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  height: 52px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  pointer-events: none;
+}
+
+#live-room-feed :is(.host-profile, .dog-profile, .gaming-profile, .seated-title, .workout-profile, .baking-profile, .fortune-profile, .karaoke-profile) {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  max-width: calc(100% - 100px);
+  height: 52px;
+  padding: 5px 7px;
+  color: var(--room-label);
+  background: var(--room-chrome);
+  border: 1px solid var(--room-border);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px #0a0c202b;
+  font: 700 14px/1.2 "Segoe UI", system-ui, sans-serif;
+  letter-spacing: 0;
+  white-space: nowrap;
+  pointer-events: auto;
+}
+
+#live-room-feed :is(.room-heading, .host-stack, .dog-profile > span:not(.dog-avatar, .dog-live-badge), .seated-title-copy, .karaoke-profile > div) {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+  text-shadow: none;
+}
+#live-room-feed :is(.room-host-name, .host-stack > b, .dog-profile strong, .gaming-profile > strong, .seated-title strong, .workout-profile > strong, .baking-profile > strong, .fortune-profile > strong, .karaoke-profile strong) {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--room-label);
+  font: 700 14px/1.25 "Segoe UI", system-ui, sans-serif;
+  letter-spacing: -.2px;
+}
+#live-room-feed :is(.room-type, .dog-profile small, .seated-title small, .karaoke-profile > div > span) {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 2px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: var(--room-muted);
+  font: 500 10px/1.2 "Segoe UI", system-ui, sans-serif;
+  letter-spacing: .2px;
+  white-space: nowrap;
+}
+
+#live-room-feed :is(.host-avatar, .dog-avatar, .gaming-profile > span:first-child, .seated-title > span:first-child, .workout-profile > svg, .baking-profile > span:first-child, .fortune-profile > span:first-child, .karaoke-avatar) {
+  display: flex;
+  flex: 0 0 28px;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: 0;
+  border-width: 0;
+  font-size: 22px;
+  line-height: 1;
+}
+#live-room-feed .live-bar .host-profile .host-avatar { font-size: 10px; }
+#live-room-feed .dog-avatar svg { width: 21px; height: 21px; }
+
+#live-room-feed :is(.host-profile .live-pill, .dog-live-badge, .gaming-live-badge, .seated-live-badge, .workout-live, .baking-profile > b, .fortune-live, .karaoke-live) {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 26px;
+  min-height: 26px;
+  margin: 0;
+  padding: 0 6px;
+  border: 1px solid #ff8db544;
+  border-radius: 7px;
+  background: #d82a6d;
+  color: #fff;
+  box-shadow: none;
+  font: 800 10px/1 "Segoe UI", system-ui, sans-serif;
+  letter-spacing: .35px;
+  white-space: nowrap;
+}
+
+/* The empty 44px slot before mute belongs to the common music control. */
+#live-room-feed :is(.sound-button, .dog-sound, .gaming-sound, .seated-sound, .workout-sound, .baking-sound, .fortune-sound, .karaoke-sound) {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  margin: 0 0 0 50px;
+  padding: 10px;
+  border: 1px solid var(--room-border);
+  border-radius: 14px;
+  background: var(--room-chrome);
+  color: var(--room-label);
+  box-shadow: 0 4px 16px #0a0c202b;
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+#live-room-feed :is(.sound-button, .dog-sound, .gaming-sound, .seated-sound, .workout-sound, .baking-sound, .fortune-sound, .karaoke-sound) .ui-icon { width: 22px; height: 22px; }
+
+/* Only Karaoke has a song picker beside its audio button. */
+#live-room-feed .live-room-panel:not([data-live-room-panel="karaoke"]) :is(.sound-button,.ml-sound,.dog-sound,.gaming-sound,.seated-sound,.workout-sound,.baking-sound,.fortune-sound) { margin-left: 0; }
+
+/* Likes and audience remain available without squeezing the room title. */
+#live-room-feed .host-profile .like-pill {
+  position: absolute;
+  top: 58px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 11px;
+  border: 1px solid var(--room-border);
+  border-radius: 14px;
+  background: var(--room-chrome);
+  color: #ffb8d1;
+  font: 600 12px/1 "Segoe UI", system-ui, sans-serif;
+  pointer-events: auto;
+}
+#live-room-feed .live-bar .viewer-pill {
+  position: absolute;
+  top: 58px;
+  right: 0;
+  height: 44px;
+  margin: 0;
+  padding: 0 11px;
+  border: 1px solid var(--room-border);
+  border-radius: 14px;
+  background: var(--room-chrome);
+  color: var(--room-label);
+  font-size: 12px;
+}
+
+#live-room-feed :is(.gift-dock, .dog-gifts, .gaming-controls, .seated-controls, .workout-exercises, .baking-gifts, .fortune-gifts, .karaoke-listening) {
+  color: var(--room-label);
+  background: var(--room-chrome);
+  border: 1px solid var(--room-border);
+  border-radius: 18px;
+  box-shadow: 0 6px 22px #090d2433;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+#live-room-feed :is(.gift-dock, .dog-gifts, .workout-exercises, .baking-gifts) { padding: 10px; }
+#live-room-feed :is(.gaming-controls, .seated-controls) { border-radius: 20px; }
+#live-room-feed .fortune-gifts { padding: 7px; }
+#live-room-feed :is(.dog-gifts-heading h2, .workout-exercise-heading h2, .baking-gifts h2) { font: 700 13px/1.25 "Segoe UI", system-ui, sans-serif; }
+#live-room-feed :is(.dog-fetch-count, .workout-set-count, .baking-queue) { color: var(--room-muted); font-size: 10px; }
+#live-room-feed :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts, .karaoke-audience) { gap: 6px; }
+
+#live-room-feed :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts, .karaoke-audience) > button {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 0;
+  min-height: 72px;
+  height: auto;
+  max-height: none;
+  padding: 8px 3px;
+  border: 1px solid var(--room-border);
+  border-radius: 14px;
+  color: var(--room-label);
+  background: var(--room-control);
+  box-shadow: inset 0 1px 0 #ffffff08;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background .15s, border-color .15s, transform .15s;
+}
+#live-room-feed :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts, .karaoke-audience) > button > b {
+  display: block;
+  max-width: 100%;
+  color: inherit;
+  font: 650 12px/1.2 "Segoe UI", system-ui, sans-serif;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+#live-room-feed :is(.gaming-actions, .seated-gifts, .baking-actions, .fortune-gifts, .karaoke-audience) > button > span {
+  display: grid;
+  place-items: center;
+  font-size: 29px;
+  line-height: 1;
+}
+#live-room-feed :is(.gift-icon, .workout-actions button > svg, .dog-actions button > img) { width: 35px; height: 35px; min-height: 0; max-height: none; object-fit: contain; }
+#live-room-feed .baking-actions button > span img { width: 35px; height: 30px; }
+#live-room-feed .baking-actions button > small { color: var(--room-muted); font-size: 8px; }
+#live-room-feed .baking-actions button { flex-basis: 83px; touch-action: pan-x pan-y pinch-zoom; }
+#live-room-feed .fortune-gift-card { width: 22px; height: 29px; }
+#live-room-feed .fortune-gift-card svg { width: 21px; height: 26px; }
+#live-room-feed .karaoke-audience > button { min-height: 52px; flex-direction: row; gap: 7px; }
+#live-room-feed .karaoke-audience > button > span { font-size: 23px; }
+#live-room-feed .karaoke-audience > button > small { color: var(--room-muted); }
+#live-room-feed :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts, .karaoke-audience) > button:is([aria-pressed="true"], .is-playing) {
+  padding: 8px 3px;
+  border: 1px solid #ff81b1;
+  background: #542d4c;
+  color: #fff;
+  box-shadow: 0 0 0 1px #ef589e35, inset 0 1px 0 #ffffff12;
+  opacity: 1;
+}
+#live-room-feed :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts, .karaoke-audience) > button:disabled:not([aria-pressed="true"], .is-playing) { opacity: .5; cursor: default; }
+#live-room-feed :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts, .karaoke-audience) > button:active:not(:disabled) { transform: scale(.97); }
+
+#live-room-feed :is(.baking-tray-navigation button, .baking-tools button, .fortune-again, .recipient-controls #take-turns, .karaoke-skip, .seated-variant) {
+  min-height: 44px;
+  border: 1px solid var(--room-border);
+  border-radius: 14px;
+  background: var(--room-control);
+  color: var(--room-label);
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+#live-room-feed .baking-tray-navigation button { width: 44px; height: 44px; }
+#live-room-feed .baking-tools button { padding: 6px 11px; font-size: 11px; }
+#live-room-feed .fortune-followup { height: 44px; }
+#live-room-feed .fortune-again { font-size: 12px; }
+#live-room-feed .recipient-controls #take-turns[aria-pressed="true"] { background: #b81759; border-color: #ed91b4; }
+#live-room-feed :is(button, select, input):focus-visible { outline: 3px solid #a8e8ff; outline-offset: 2px; }
+
+@media (hover: hover) {
+  #live-room-feed :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts, .karaoke-audience) > button:hover:not(:disabled) {
+    background: #34415a;
+    border-color: #f193b9;
+    transform: translateY(-1px);
+  }
+}
+
+@container live-room (max-width: 350px) {
+  #live-room-feed :is(.host-profile, .dog-profile, .gaming-profile, .seated-title, .workout-profile, .baking-profile, .fortune-profile, .karaoke-profile) { gap: 5px; padding-inline: 7px; }
+  #live-room-feed :is(.host-avatar, .dog-avatar, .gaming-profile > span:first-child, .seated-title > span:first-child, .workout-profile > svg, .baking-profile > span:first-child, .fortune-profile > span:first-child, .karaoke-avatar) { display: none; }
+  #live-room-feed :is(.room-host-name, .host-stack > b, .dog-profile strong, .gaming-profile > strong, .seated-title strong, .workout-profile > strong, .baking-profile > strong, .fortune-profile > strong, .karaoke-profile strong) { font-size: 13px; }
+  #live-room-feed :is(.gift-buttons, .gaming-actions, .seated-gifts, .fortune-gifts) > button > b { font-size: 11px; }
+  #live-room-feed :is(.gift-dock, .dog-gifts, .workout-exercises, .baking-gifts) { padding: 8px; }
+}
+
+@container live-room (orientation: landscape) and (max-height: 600px) {
+  #live-room-feed :is(.host-profile, .dog-profile, .gaming-profile, .seated-title, .workout-profile, .baking-profile, .fortune-profile, .karaoke-profile) { min-width: 200px; }
+  #live-room-feed :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts) > button {
+    min-height: 52px;
+    padding: 5px 3px;
+    gap: 4px;
+  }
+  #live-room-feed :is(.gift-buttons, .gaming-actions, .seated-gifts) > button { flex-direction: row; }
+  #live-room-feed :is(.workout-actions, .fortune-gifts) > button { flex-direction: row; }
+  #live-room-feed :is(.gift-icon, .workout-actions button > svg, .dog-actions button > img) { width: 27px; height: 27px; }
+  #live-room-feed :is(.gaming-actions, .seated-gifts, .baking-actions, .fortune-gifts) > button > span { font-size: 24px; }
+  #live-room-feed :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts) > button > b { font-size: 11px; }
+  #live-room-feed :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts) > button:is([aria-pressed="true"], .is-playing) { padding: 5px 3px; }
+  #live-room-feed .karaoke-audience > button { min-height: 44px; }
+}
+
+/* A sideways device still shows a portrait room. Compact the chrome in that
+   short frame so controls leave the same breathing room around the artwork. */
+@container live-room (orientation: portrait) and (max-height: 480px) {
+  #live-room-feed .live-room-panel :is(.live-bar, .dog-live-header, .gaming-topline, .seated-header, .workout-header, .baking-header, .fortune-header, .karaoke-header, .ml-header) { height: 34px; gap: 4px; }
+  #live-room-feed .live-room-panel :is(.host-profile, .dog-profile, .gaming-profile, .seated-title, .workout-profile, .baking-profile, .fortune-profile, .karaoke-profile, .ml-profile) {
+    max-width: calc(100% - 68px);
+    height: 34px;
+    gap: 4px;
+    padding: 3px 6px;
+    border-radius: 18px;
+  }
+  #live-room-feed .live-room-panel :is(.room-host-name, .host-stack > b, .dog-profile strong, .gaming-profile > strong, .seated-title strong, .workout-profile > strong, .baking-profile > strong, .fortune-profile > strong, .karaoke-profile strong, .ml-profile > strong) { font-size: 10px; }
+  #live-room-feed .live-room-panel :is(.room-type, .dog-profile small, .seated-title small, .karaoke-profile > div > span) { font-size: 7px; margin-top: 1px; letter-spacing: 0; }
+  #live-room-feed .live-room-panel :is(.host-avatar, .dog-avatar, .gaming-profile > span:first-child, .seated-title > span:first-child, .workout-profile > svg, .baking-profile > span:first-child, .fortune-profile > span:first-child, .karaoke-avatar, .ml-profile > span) { display: none; }
+  #live-room-feed .live-room-panel :is(.host-profile .live-pill, .dog-live-badge, .gaming-live-badge, .seated-live-badge, .workout-live, .baking-profile > b, .fortune-live, .karaoke-live, .ml-profile > b) { min-width: 25px; height: 18px; min-height: 18px; padding: 0 3px; font-size: 7px; border-radius: 5px; }
+  #live-room-feed .live-room-panel .host-profile .live-pill.wardrobe-open { width: 28px; min-width: 28px; height: 28px; min-height: 28px; padding: 0 3px; border-radius: 9px; }
+  #live-room-feed .live-room-panel :is(.sound-button, .dog-sound, .gaming-sound, .seated-sound, .workout-sound, .baking-sound, .fortune-sound, .karaoke-sound, .ml-sound) { flex-basis: 30px; width: 30px; height: 30px; min-width: 30px; min-height: 30px; margin-left: 34px; padding: 7px; }
+  #live-room-feed .live-room-panel :is(.sound-button, .dog-sound, .gaming-sound, .seated-sound, .workout-sound, .baking-sound, .fortune-sound, .karaoke-sound, .ml-sound) svg { width: 15px; height: 15px; }
+  #live-room-feed .live-room-panel :is(.host-profile .like-pill, .live-bar .viewer-pill) { top: 38px; height: 27px; min-height: 27px; padding: 0 7px; border-radius: 10px; font-size: 8px; }
+  #live-room-feed .live-room-panel :is(.host-profile .like-pill, .live-bar .viewer-pill) .ui-icon { width: 14px; height: 14px; }
+
+  #live-room-feed .live-room-panel :is(.gift-dock, .dog-gifts, .gaming-controls, .seated-controls, .workout-exercises, .baking-gifts, .fortune-gifts, .karaoke-listening, .ml-controls) { padding: 6px; border-radius: 14px; }
+  #live-room-feed .live-room-panel :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts, .karaoke-audience, .ml-gifts) { gap: 4px; }
+  #live-room-feed .live-room-panel :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts, .karaoke-audience) > button {
+    min-height: 46px;
+    height: auto;
+    padding: 5px 2px;
+    gap: 3px;
+    border-radius: 9px;
+  }
+  #live-room-feed .live-room-panel :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts, .karaoke-audience, .ml-gifts) > button > b { font-size: 8px; }
+  #live-room-feed .live-room-panel :is(.gaming-actions, .seated-gifts, .baking-actions, .fortune-gifts, .karaoke-audience, .ml-gifts) > button > span { font-size: 20px; }
+  #live-room-feed .live-room-panel :is(.gift-icon, .workout-actions button > svg, .dog-actions button > img, .seated-gifts button > span svg, .ml-gifts button svg, .ml-gifts button img) { width: 20px; height: 20px; }
+  #live-room-feed .live-room-panel .baking-actions button > span img { width: 24px; height: 20px; }
+  #live-room-feed .live-room-panel .baking-actions button { flex-basis: 58px; }
+  #live-room-feed .live-room-panel .baking-actions button > small { font-size: 6px; }
+  #live-room-feed .live-room-panel .fortune-gift-card { width: 15px; height: 20px; }
+  #live-room-feed .live-room-panel .fortune-gift-card svg { width: 14px; height: 18px; }
+  #live-room-feed .live-room-panel :is(.gift-buttons, .dog-actions, .gaming-actions, .seated-gifts, .workout-actions, .baking-actions, .fortune-gifts, .karaoke-audience) > button:is([aria-pressed="true"], .is-playing) { padding: 5px 2px; }
+  #live-room-feed .live-room-panel :is(.dog-gifts-heading h2, .workout-exercise-heading h2, .baking-gifts h2) { font-size: 9px; }
+  #live-room-feed .live-room-panel :is(.dog-fetch-count, .workout-set-count, .baking-queue) { font-size: 7px; }
+  #live-room-feed .live-room-panel :is(.baking-tray-navigation button, .baking-tools button, .recipient-controls #take-turns, .karaoke-skip, .seated-variant) { min-height: 28px; border-radius: 9px; font-size: 8px; }
+  #live-room-feed .live-room-panel .baking-tray-navigation button { width: 28px; height: 28px; }
+  #live-room-feed .live-room-panel .baking-tools button { padding: 4px 7px; }
+  #live-room-feed .live-room-panel .ml-target-selector { gap: 3px; margin-bottom: 5px; }
+  #live-room-feed .live-room-panel .ml-target-selector button { min-height: 28px; padding: 4px 3px; border-radius: 9px; font-size: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #live-room-feed button { transition: none; }
+}

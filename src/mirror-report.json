@@ -1,0 +1,1616 @@
+{
+  "origin": "https://roomwave-live.sagan1122.chatgpt.site/",
+  "entry": "https://roomwave-live.sagan1122.chatgpt.site/together/",
+  "downloaded_count": 263,
+  "failed_count": 7,
+  "downloaded": [
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/favicon.svg",
+      "path": "favicon.svg",
+      "content_type": "image/svg+xml",
+      "bytes": "246"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/gaming-room.css?v=shared-live-1",
+      "path": "gaming-room.css",
+      "content_type": "text/css",
+      "bytes": "8642"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/trio-ui.css?v=compact-gift-row-2",
+      "path": "trio-ui.css",
+      "content_type": "text/css",
+      "bytes": "9142"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/dressing-room.css?v=cast-shop-1",
+      "path": "dressing-room.css",
+      "content_type": "text/css",
+      "bytes": "15122"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/live-rooms.css?v=continuous-loop-2",
+      "path": "live-rooms.css",
+      "content_type": "text/css",
+      "bytes": "1903"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/gaming-seated-room.css?v=lilac-star-1",
+      "path": "gaming-seated-room.css",
+      "content_type": "text/css",
+      "bytes": "5822"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/studio-ui.css?v=shared-live-1",
+      "path": "studio-ui.css",
+      "content_type": "text/css",
+      "bytes": "18795"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/together/",
+      "path": "together\\index.html",
+      "content_type": "text/html",
+      "bytes": "22893"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/",
+      "path": "index.html",
+      "content_type": "text/html",
+      "bytes": "22893"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/workout-room.css?v=brooke-safe-area-feet-1",
+      "path": "workout-room.css",
+      "content_type": "text/css",
+      "bytes": "14186"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/baking-room.css?v=baking-room-snap-1",
+      "path": "baking-room.css",
+      "content_type": "text/css",
+      "bytes": "22098"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/styles.css?v=shared-live-1",
+      "path": "styles.css",
+      "content_type": "text/css",
+      "bytes": "52457"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/fortune-room.css?v=fortune-reading-timeout-1",
+      "path": "fortune-room.css",
+      "content_type": "text/css",
+      "bytes": "13591"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/karaoke-room.css?v=june-fullbody-restored-1",
+      "path": "karaoke-room.css",
+      "content_type": "text/css",
+      "bytes": "7426"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/room-layout.css?v=song-picker-1",
+      "path": "room-layout.css",
+      "content_type": "text/css",
+      "bytes": "10862"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/room-music.css?v=song-picker-1",
+      "path": "room-music.css",
+      "content_type": "text/css",
+      "bytes": "2594"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/room-glass.css?v=song-picker-1",
+      "path": "room-glass.css",
+      "content_type": "text/css",
+      "bytes": "15763"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/mia-lilly-room.css?v=shared-room-ui-3",
+      "path": "mia-lilly-room.css",
+      "content_type": "text/css",
+      "bytes": "16901"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/room-chrome.css?v=matching-live-badge-1",
+      "path": "room-chrome.css",
+      "content_type": "text/css",
+      "bytes": "18423"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/roomwave.css",
+      "path": "roomwave.css",
+      "content_type": "text/css",
+      "bytes": "2249"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/roomwave-codec.js",
+      "path": "roomwave-codec.js",
+      "content_type": "text/javascript",
+      "bytes": "1139"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/workout-room-state.js",
+      "path": "workout-room-state.js",
+      "content_type": "text/javascript",
+      "bytes": "14736"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/baking-room-state.js",
+      "path": "baking-room-state.js",
+      "content_type": "text/javascript",
+      "bytes": "16405"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/gaming-seated-state.js",
+      "path": "gaming-seated-state.js",
+      "content_type": "text/javascript",
+      "bytes": "34644"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/mia-lilly-room-state.js",
+      "path": "mia-lilly-room-state.js",
+      "content_type": "text/javascript",
+      "bytes": "16921"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/music-catalog.js?v=june-playlist-2",
+      "path": "music-catalog.js",
+      "content_type": "text/javascript",
+      "bytes": "1747"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/fortune-room-state.js",
+      "path": "fortune-room-state.js",
+      "content_type": "text/javascript",
+      "bytes": "21828"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/casual-standing.lossless.webp",
+      "path": "assets\\stella-v1\\casual-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "575400"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/collection-v1/lily-weekend-standing.lossless.webp",
+      "path": "assets\\collection-v1\\lily-weekend-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "852246"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/collection-v1/mia-weekend-standing.lossless.webp",
+      "path": "assets\\collection-v1\\mia-weekend-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "578756"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/rooms-v1/room-balcony.lossless.webp",
+      "path": "assets\\rooms-v1\\room-balcony.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1742792"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stream-controls-v1/camera-hand-v1.lossless.webp",
+      "path": "assets\\stream-controls-v1\\camera-hand-v1.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "555236"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/roomwave-shared.js",
+      "path": "roomwave-shared.js",
+      "content_type": "text/javascript",
+      "bytes": "10449"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/roomwave-engine.js?v=june-playlist-2",
+      "path": "roomwave-engine.js",
+      "content_type": "text/javascript",
+      "bytes": "10558"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/outfit-data.js?v=wardrobe-1",
+      "path": "outfit-data.js",
+      "content_type": "text/javascript",
+      "bytes": "16299"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/classic-swim-data.js?v=swim-2",
+      "path": "classic-swim-data.js",
+      "content_type": "text/javascript",
+      "bytes": "14797"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/halloween-data.js?v=halloween-1",
+      "path": "halloween-data.js",
+      "content_type": "text/javascript",
+      "bytes": "16435"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/detailed-data.js?v=evening-1",
+      "path": "detailed-data.js",
+      "content_type": "text/javascript",
+      "bytes": "16415"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/nun-data.js?v=nun-1",
+      "path": "nun-data.js",
+      "content_type": "text/javascript",
+      "bytes": "6639"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/rezero-data.js?v=rezero-1",
+      "path": "rezero-data.js",
+      "content_type": "text/javascript",
+      "bytes": "16464"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/qipao-data.js?v=qipao-1",
+      "path": "qipao-data.js",
+      "content_type": "text/javascript",
+      "bytes": "16256"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/swim-sprite-data.js?v=swim-1",
+      "path": "swim-sprite-data.js",
+      "content_type": "text/javascript",
+      "bytes": "14494"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/duo-sprite-data.js?v=polish-3",
+      "path": "duo-sprite-data.js",
+      "content_type": "text/javascript",
+      "bytes": "29028"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/cozy-maid-data.js?v=cozy-1",
+      "path": "cozy-maid-data.js",
+      "content_type": "text/javascript",
+      "bytes": "32456"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/hanger-data.js?v=hangers-1",
+      "path": "hanger-data.js",
+      "content_type": "text/javascript",
+      "bytes": "2101"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/leather-data.js?v=leather-1",
+      "path": "leather-data.js",
+      "content_type": "text/javascript",
+      "bytes": "16843"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/lower-bow-data.js?v=holiday-bows-1",
+      "path": "lower-bow-data.js",
+      "content_type": "text/javascript",
+      "bytes": "2841"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/ballet-data.js?v=ballet-1",
+      "path": "ballet-data.js",
+      "content_type": "text/javascript",
+      "bytes": "16860"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/yoga-data.js?v=stream-controls-1",
+      "path": "yoga-data.js",
+      "content_type": "text/javascript",
+      "bytes": "17379"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/catgirl-data.js?v=catgirl-1",
+      "path": "catgirl-data.js",
+      "content_type": "text/javascript",
+      "bytes": "16925"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/collection-data.js?v=collection-1",
+      "path": "collection-data.js",
+      "content_type": "text/javascript",
+      "bytes": "50102"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/holiday-data.js?v=holidays-1",
+      "path": "holiday-data.js",
+      "content_type": "text/javascript",
+      "bytes": "33544"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/stella-spacesuit-data.js?v=space-1",
+      "path": "stella-spacesuit-data.js",
+      "content_type": "text/javascript",
+      "bytes": "37783"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/stella-lilac-data.js?v=lilac-1",
+      "path": "stella-lilac-data.js",
+      "content_type": "text/javascript",
+      "bytes": "50965"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/stella-swimsuit-data.js?v=swimsuit-1",
+      "path": "stella-swimsuit-data.js",
+      "content_type": "text/javascript",
+      "bytes": "80941"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/stella-data.js?v=stella-1",
+      "path": "stella-data.js",
+      "content_type": "text/javascript",
+      "bytes": "142702"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/stella-hanger-data.js?v=bikini-1",
+      "path": "stella-hanger-data.js",
+      "content_type": "text/javascript",
+      "bytes": "951"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/duo-sprite.js?v=shared-live-1",
+      "path": "duo-sprite.js",
+      "content_type": "text/javascript",
+      "bytes": "17675"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/sprite-status.js?v=balcony-loading-1",
+      "path": "sprite-status.js",
+      "content_type": "text/javascript",
+      "bytes": "777"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/stella-bikini-data.js?v=bikini-actions-2",
+      "path": "stella-bikini-data.js",
+      "content_type": "text/javascript",
+      "bytes": "5437"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/user-audio.js?v=1",
+      "path": "user-audio.js",
+      "content_type": "text/javascript",
+      "bytes": "1701"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/stella-onepiece-data.js?v=onepiece-actions-2",
+      "path": "stella-onepiece-data.js",
+      "content_type": "text/javascript",
+      "bytes": "51552"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/voice-data.js?v=stream-controls-1",
+      "path": "voice-data.js",
+      "content_type": "text/javascript",
+      "bytes": "4562"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/voices.js?v=four-rooms-1",
+      "path": "voices.js",
+      "content_type": "text/javascript",
+      "bytes": "7105"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/mood.js?v=stella-trio-1",
+      "path": "mood.js",
+      "content_type": "text/javascript",
+      "bytes": "8363"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/live-rooms.js?v=continuous-loop-2-cast-shop-1",
+      "path": "live-rooms.js",
+      "content_type": "text/javascript",
+      "bytes": "13889"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/stream-dialogue.js?v=stella-trio-1",
+      "path": "stream-dialogue.js",
+      "content_type": "text/javascript",
+      "bytes": "8034"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/stream-life.js?v=four-rooms-1",
+      "path": "stream-life.js",
+      "content_type": "text/javascript",
+      "bytes": "6247"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/camera-moment.js?v=four-rooms-1",
+      "path": "camera-moment.js",
+      "content_type": "text/javascript",
+      "bytes": "3096"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/gaming-camera-effects.js?v=bubble-stack-1",
+      "path": "gaming-camera-effects.js",
+      "content_type": "text/javascript",
+      "bytes": "7068"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/gaming-room-state.js?v=water-stack-2",
+      "path": "gaming-room-state.js",
+      "content_type": "text/javascript",
+      "bytes": "14602"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/gift-art.js?v=hud-1",
+      "path": "gift-art.js",
+      "content_type": "text/javascript",
+      "bytes": "3752"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/visits.js?v=wardrobe-1",
+      "path": "visits.js",
+      "content_type": "text/javascript",
+      "bytes": "1095"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/gaming-platform-renderer.js?v=lilac-star-1",
+      "path": "gaming-platform-renderer.js",
+      "content_type": "text/javascript",
+      "bytes": "13578"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/dressing-room.js?v=anchors-tabs-1",
+      "path": "dressing-room.js",
+      "content_type": "text/javascript",
+      "bytes": "22140"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/app.js?v=cast-shop-1",
+      "path": "app.js",
+      "content_type": "text/javascript",
+      "bytes": "81279"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/gaming-room.js?v=lassa-host-1",
+      "path": "gaming-room.js",
+      "content_type": "text/javascript",
+      "bytes": "12325"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/gaming-seated-registration.js?v=seated-water-5",
+      "path": "gaming-seated-registration.js",
+      "content_type": "text/javascript",
+      "bytes": "5873"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/gaming-seated-sprites.js?v=lilac-star-1",
+      "path": "gaming-seated-sprites.js",
+      "content_type": "text/javascript",
+      "bytes": "3778"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/baking-art-layout.js?v=hazel-idle-1",
+      "path": "baking-art-layout.js",
+      "content_type": "text/javascript",
+      "bytes": "918"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/fortune-room-motion.js?v=iris-idle-return-1",
+      "path": "fortune-room-motion.js",
+      "content_type": "text/javascript",
+      "bytes": "1188"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/gaming-seated-effects.js?v=june-room-cleanup-1",
+      "path": "gaming-seated-effects.js",
+      "content_type": "text/javascript",
+      "bytes": "11698"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/baking-cake-renderer.js?v=hazel-idle-1",
+      "path": "baking-cake-renderer.js",
+      "content_type": "text/javascript",
+      "bytes": "16003"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/workout-room.js?v=brooke-idle-exercise-1",
+      "path": "workout-room.js",
+      "content_type": "text/javascript",
+      "bytes": "13755"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/gaming-seated-room.js?v=lassa-host-1",
+      "path": "gaming-seated-room.js",
+      "content_type": "text/javascript",
+      "bytes": "12623"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/baking-room.js?v=hazel-idle-1",
+      "path": "baking-room.js",
+      "content_type": "text/javascript",
+      "bytes": "25284"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/mia-lilly-art.js?v=restore-bow-3",
+      "path": "mia-lilly-art.js",
+      "content_type": "text/javascript",
+      "bytes": "2860"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/fortune-room.js?v=fortune-reading-timeout-1",
+      "path": "fortune-room.js",
+      "content_type": "text/javascript",
+      "bytes": "18683"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/karaoke-vocals.js?v=vocal-cues-1",
+      "path": "karaoke-vocals.js",
+      "content_type": "text/javascript",
+      "bytes": "1864"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/karaoke-vocal-data.js?v=june-playlist-2",
+      "path": "karaoke-vocal-data.js",
+      "content_type": "text/javascript",
+      "bytes": "5636"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/mia-lilly-room.js?v=compact-cast-2",
+      "path": "mia-lilly-room.js",
+      "content_type": "text/javascript",
+      "bytes": "15729"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/room-music.js?v=brooke-workout-song-1",
+      "path": "room-music.js",
+      "content_type": "text/javascript",
+      "bytes": "25714"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/karaoke-room.js?v=june-fullbody-restored-1",
+      "path": "karaoke-room.js",
+      "content_type": "text/javascript",
+      "bytes": "15132"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/baking-room-v3/kitchen.webp",
+      "path": "assets\\baking-room-v3\\kitchen.webp",
+      "content_type": "image/webp",
+      "bytes": "334386"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/workout-room-v1/gym.webp",
+      "path": "assets\\workout-room-v1\\gym.webp",
+      "content_type": "image/webp",
+      "bytes": "299866"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/evening-v1/dressing-room.lossless.webp",
+      "path": "assets\\evening-v1\\dressing-room.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1480572"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/gaming-seated-v2/background.webp",
+      "path": "assets\\gaming-seated-v2\\background.webp",
+      "content_type": "image/webp",
+      "bytes": "250038"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/karaoke-room-v1/room.lossless.webp",
+      "path": "assets\\karaoke-room-v1\\room.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1639414"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/wardrobe-v1/lily-hoodie-standing.lossless.webp",
+      "path": "assets\\wardrobe-v1\\lily-hoodie-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "552642"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/wardrobe-v1/mia-hoodie-seated-actions.lossless.webp",
+      "path": "assets\\wardrobe-v1\\mia-hoodie-seated-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "889738"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/wardrobe-v1/mia-hoodie-standing.lossless.webp",
+      "path": "assets\\wardrobe-v1\\mia-hoodie-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "715682"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/fortune-room-v2/background.webp",
+      "path": "assets\\fortune-room-v2\\background.webp",
+      "content_type": "image/webp",
+      "bytes": "382532"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/rooms-v1/room-beach.lossless.webp",
+      "path": "assets\\rooms-v1\\room-beach.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1847744"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/warm-trio-room.lossless.webp",
+      "path": "assets\\warm-trio-room.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1806578"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/rooms-v1/room-cafe.lossless.webp",
+      "path": "assets\\rooms-v1\\room-cafe.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1667998"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/double-trouble-room.lossless.webp",
+      "path": "assets\\double-trouble-room.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1910554"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/swim-v2/mia-onepiece-standing.lossless.webp",
+      "path": "assets\\swim-v2\\mia-onepiece-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "539686"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/wardrobe-v1/lily-hoodie-seated-actions.lossless.webp",
+      "path": "assets\\wardrobe-v1\\lily-hoodie-seated-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "935410"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/swim-v2/mia-onepiece-actions.lossless.webp",
+      "path": "assets\\swim-v2\\mia-onepiece-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "784918"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/swim-v2/lily-twopiece-standing.lossless.webp",
+      "path": "assets\\swim-v2\\lily-twopiece-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "755258"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/swim-v2/lily-twopiece-actions.lossless.webp",
+      "path": "assets\\swim-v2\\lily-twopiece-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "901004"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/halloween-v1/room-halloween.lossless.webp",
+      "path": "assets\\halloween-v1\\room-halloween.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1589648"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/halloween-v1/lily-halloween-standing.lossless.webp",
+      "path": "assets\\halloween-v1\\lily-halloween-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "840984"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/evening-v1/lily-evening-standing.lossless.webp",
+      "path": "assets\\evening-v1\\lily-evening-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "549068"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/halloween-v1/lily-halloween-actions.lossless.webp",
+      "path": "assets\\halloween-v1\\lily-halloween-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1068194"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/halloween-v1/mia-halloween-standing.lossless.webp",
+      "path": "assets\\halloween-v1\\mia-halloween-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "773152"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/halloween-v1/mia-halloween-actions.lossless.webp",
+      "path": "assets\\halloween-v1\\mia-halloween-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "943198"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/evening-v1/mia-evening-standing.lossless.webp",
+      "path": "assets\\evening-v1\\mia-evening-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "625646"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/evening-v1/lily-evening-actions.lossless.webp",
+      "path": "assets\\evening-v1\\lily-evening-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "923982"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/nun-v1/mia-nun-standing.lossless.webp",
+      "path": "assets\\nun-v1\\mia-nun-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "613664"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/evening-v1/mia-evening-actions.lossless.webp",
+      "path": "assets\\evening-v1\\mia-evening-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "868806"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/nun-v1/mia-nun-actions.lossless.webp",
+      "path": "assets\\nun-v1\\mia-nun-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "747566"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/rezero-v1/mia-rezero-standing.lossless.webp",
+      "path": "assets\\rezero-v1\\mia-rezero-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "815450"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/rezero-v1/mia-rezero-actions.lossless.webp",
+      "path": "assets\\rezero-v1\\mia-rezero-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "995766"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/rezero-v1/lily-rezero-standing.lossless.webp",
+      "path": "assets\\rezero-v1\\lily-rezero-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "838880"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/qipao-v1/mia-qipao-standing.lossless.webp",
+      "path": "assets\\qipao-v1\\mia-qipao-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "694732"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/rezero-v1/lily-rezero-actions.lossless.webp",
+      "path": "assets\\rezero-v1\\lily-rezero-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1145272"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/swim-v1/mia-swim-standing.lossless.webp",
+      "path": "assets\\swim-v1\\mia-swim-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "575140"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/classic-duo-v2/mia-poses.lossless.webp",
+      "path": "assets\\classic-duo-v2\\mia-poses.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "906504"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/lily/full-gestures-v2.lossless.webp",
+      "path": "assets\\lily\\full-gestures-v2.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1027692"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/swim-v1/mia-swim-actions.lossless.webp",
+      "path": "assets\\swim-v1\\mia-swim-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "843348"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/qipao-v1/lily-qipao-standing.lossless.webp",
+      "path": "assets\\qipao-v1\\lily-qipao-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "890046"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/swim-v1/lily-swim-actions.lossless.webp",
+      "path": "assets\\swim-v1\\lily-swim-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "914878"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/lily/full-kneeling-v1.lossless.webp",
+      "path": "assets\\lily\\full-kneeling-v1.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1461742"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/lily/full-poses-v1.lossless.webp",
+      "path": "assets\\lily\\full-poses-v1.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1022414"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/lily/full-poses-reactions-v1.lossless.webp",
+      "path": "assets\\lily\\full-poses-reactions-v1.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1026928"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/swim-v1/lily-swim-standing.lossless.webp",
+      "path": "assets\\swim-v1\\lily-swim-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "787080"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/qipao-v1/lily-qipao-actions.lossless.webp",
+      "path": "assets\\qipao-v1\\lily-qipao-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1050982"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/classic-duo-v2/mia-reactions.lossless.webp",
+      "path": "assets\\classic-duo-v2\\mia-reactions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "939410"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/qipao-v1/mia-qipao-actions.lossless.webp",
+      "path": "assets\\qipao-v1\\mia-qipao-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "960966"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/cozy-maid-v1/mia-pajamas-standing.lossless.webp",
+      "path": "assets\\cozy-maid-v1\\mia-pajamas-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "695756"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/duo-polish-v3/mia-kneeling.lossless.webp",
+      "path": "assets\\duo-polish-v3\\mia-kneeling.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1299508"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/classic-duo-v2/mia-gestures.lossless.webp",
+      "path": "assets\\classic-duo-v2\\mia-gestures.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "938212"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/cozy-maid-v1/mia-maid-actions.lossless.webp",
+      "path": "assets\\cozy-maid-v1\\mia-maid-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "889270"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/cozy-maid-v1/mia-maid-standing.lossless.webp",
+      "path": "assets\\cozy-maid-v1\\mia-maid-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "672106"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/cozy-maid-v1/lily-maid-standing.lossless.webp",
+      "path": "assets\\cozy-maid-v1\\lily-maid-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "850396"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/cozy-maid-v1/lily-maid-actions.lossless.webp",
+      "path": "assets\\cozy-maid-v1\\lily-maid-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "959774"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/cozy-maid-v1/lily-pajamas-standing.lossless.webp",
+      "path": "assets\\cozy-maid-v1\\lily-pajamas-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "771880"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/cozy-maid-v1/lily-pajamas-actions.lossless.webp",
+      "path": "assets\\cozy-maid-v1\\lily-pajamas-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "920018"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/cozy-maid-v1/mia-pajamas-actions.lossless.webp",
+      "path": "assets\\cozy-maid-v1\\mia-pajamas-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "868774"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/hangers-v1/mia-hangers.lossless.webp",
+      "path": "assets\\hangers-v1\\mia-hangers.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "708912"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/leather-v1/lily-leather-standing.lossless.webp",
+      "path": "assets\\leather-v1\\lily-leather-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "787374"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/hangers-v1/lily-hangers.lossless.webp",
+      "path": "assets\\hangers-v1\\lily-hangers.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "613282"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/leather-v1/mia-leather-standing.lossless.webp",
+      "path": "assets\\leather-v1\\mia-leather-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "648324"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/leather-v1/lily-leather-actions.lossless.webp",
+      "path": "assets\\leather-v1\\lily-leather-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "904812"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/leather-v1/mia-leather-actions.lossless.webp",
+      "path": "assets\\leather-v1\\mia-leather-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "784892"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/leather-v1/lily-leather-hanger.lossless.webp",
+      "path": "assets\\leather-v1\\lily-leather-hanger.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "742824"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/leather-v1/mia-leather-hanger.lossless.webp",
+      "path": "assets\\leather-v1\\mia-leather-hanger.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "427540"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/lower-bows-v1/lily-holiday-bows-v3.lossless.webp",
+      "path": "assets\\lower-bows-v1\\lily-holiday-bows-v3.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "453524"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/ballet-v1/lily-ballet-hanger.lossless.webp",
+      "path": "assets\\ballet-v1\\lily-ballet-hanger.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "515588"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/yoga-v1/lily-yoga-hanger.lossless.webp",
+      "path": "assets\\yoga-v1\\lily-yoga-hanger.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "375584"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/lower-bows-v1/mia-bows-holidays-weekend-spaced.lossless.webp",
+      "path": "assets\\lower-bows-v1\\mia-bows-holidays-weekend-spaced.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "297294"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/yoga-v1/mia-yoga-standing.lossless.webp",
+      "path": "assets\\yoga-v1\\mia-yoga-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "557750"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/ballet-v1/mia-ballet-hanger.lossless.webp",
+      "path": "assets\\ballet-v1\\mia-ballet-hanger.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "573292"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/yoga-v1/lily-yoga-standing-v2.lossless.webp",
+      "path": "assets\\yoga-v1\\lily-yoga-standing-v2.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "652856"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/ballet-v1/mia-ballet-standing.lossless.webp",
+      "path": "assets\\ballet-v1\\mia-ballet-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "770648"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/ballet-v1/mia-ballet-actions.lossless.webp",
+      "path": "assets\\ballet-v1\\mia-ballet-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "944916"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/ballet-v1/lily-ballet-standing.lossless.webp",
+      "path": "assets\\ballet-v1\\lily-ballet-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1006624"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/yoga-v1/lily-yoga-actions.lossless.webp",
+      "path": "assets\\yoga-v1\\lily-yoga-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "669334"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/ballet-v1/lily-ballet-actions.lossless.webp",
+      "path": "assets\\ballet-v1\\lily-ballet-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1103344"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/yoga-v1/mia-yoga-actions.lossless.webp",
+      "path": "assets\\yoga-v1\\mia-yoga-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "736142"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/yoga-v1/mia-yoga-hanger.lossless.webp",
+      "path": "assets\\yoga-v1\\mia-yoga-hanger.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "290378"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/catgirl-v1/mia-catgirl.lossless.webp",
+      "path": "assets\\catgirl-v1\\mia-catgirl.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "871804"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/catgirl-v1/lily-catgirl.lossless.webp",
+      "path": "assets\\catgirl-v1\\lily-catgirl.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1046602"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/collection-v1/lily-stage-actions.lossless.webp",
+      "path": "assets\\collection-v1\\lily-stage-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "723264"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/collection-v1/lily-stage-standing.lossless.webp",
+      "path": "assets\\collection-v1\\lily-stage-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "678082"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/collection-v1/mia-stage-standing.lossless.webp",
+      "path": "assets\\collection-v1\\mia-stage-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "560732"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/catgirl-v1/catgirl-hangers.lossless.webp",
+      "path": "assets\\catgirl-v1\\catgirl-hangers.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "981554"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/collection-v1/lily-weekend-actions.lossless.webp",
+      "path": "assets\\collection-v1\\lily-weekend-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "944554"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/collection-v1/lily-clown-standing.lossless.webp",
+      "path": "assets\\collection-v1\\lily-clown-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "889812"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/collection-v1/lily-clown-actions.lossless.webp",
+      "path": "assets\\collection-v1\\lily-clown-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1012374"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/collection-v1/mia-stage-actions.lossless.webp",
+      "path": "assets\\collection-v1\\mia-stage-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "711148"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/collection-v1/mia-weekend-actions.lossless.webp",
+      "path": "assets\\collection-v1\\mia-weekend-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "795616"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/collection-v1/mia-clown-standing.lossless.webp",
+      "path": "assets\\collection-v1\\mia-clown-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "745106"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/collection-v1/mia-clown-actions.lossless.webp",
+      "path": "assets\\collection-v1\\mia-clown-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "931786"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/collection-v1/lily-collection-hangers.lossless.webp",
+      "path": "assets\\collection-v1\\lily-collection-hangers.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "1090544"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/holidays-v1/lily-christmas-standing.lossless.webp",
+      "path": "assets\\holidays-v1\\lily-christmas-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "794398"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/collection-v1/mia-hangers.lossless.webp",
+      "path": "assets\\collection-v1\\mia-hangers.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "983586"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/holidays-v1/lily-christmas-actions-v2.lossless.webp",
+      "path": "assets\\holidays-v1\\lily-christmas-actions-v2.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "856432"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/holidays-v1/lily-valentines-standing.lossless.webp",
+      "path": "assets\\holidays-v1\\lily-valentines-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "796534"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/holidays-v1/mia-hangers.lossless.webp",
+      "path": "assets\\holidays-v1\\mia-hangers.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "471462"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/swimsuit-standing.lossless.webp",
+      "path": "assets\\stella-v1\\swimsuit-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "615018"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/holidays-v1/mia-valentines-standing.lossless.webp",
+      "path": "assets\\holidays-v1\\mia-valentines-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "642080"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/holidays-v1/mia-christmas-standing.lossless.webp",
+      "path": "assets\\holidays-v1\\mia-christmas-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "670006"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/spacesuit-standing.lossless.webp",
+      "path": "assets\\stella-v1\\spacesuit-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "717192"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/lilac-daisy-actions.lossless.webp",
+      "path": "assets\\stella-v1\\lilac-daisy-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "802682"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/holidays-v1/lily-valentines-actions-v2.lossless.webp",
+      "path": "assets\\holidays-v1\\lily-valentines-actions-v2.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "847120"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/lilac-daisy-standing.lossless.webp",
+      "path": "assets\\stella-v1\\lilac-daisy-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "664082"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/spacesuit-actions.lossless.webp",
+      "path": "assets\\stella-v1\\spacesuit-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "772122"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/holidays-v1/mia-valentines-actions.lossless.webp",
+      "path": "assets\\holidays-v1\\mia-valentines-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "779878"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/holidays-v1/mia-christmas-actions.lossless.webp",
+      "path": "assets\\holidays-v1\\mia-christmas-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "781918"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/holidays-v1/lily-holiday-hangers.lossless.webp",
+      "path": "assets\\holidays-v1\\lily-holiday-hangers.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "632376"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/swimsuit-actions.lossless.webp",
+      "path": "assets\\stella-v1\\swimsuit-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "777174"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/onepiece-hanger.lossless.webp",
+      "path": "assets\\stella-v1\\onepiece-hanger.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "406496"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/stella-hangers.lossless.webp",
+      "path": "assets\\stella-v1\\stella-hangers.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "543982"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/denim-standing.lossless.webp",
+      "path": "assets\\stella-v1\\denim-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "707864"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/casual-actions.lossless.webp",
+      "path": "assets\\stella-v1\\casual-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "803210"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/swimsuit-hanger.lossless.webp",
+      "path": "assets\\stella-v1\\swimsuit-hanger.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "391496"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/denim-actions.lossless.webp",
+      "path": "assets\\stella-v1\\denim-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "859484"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/sporty-actions.lossless.webp",
+      "path": "assets\\stella-v1\\sporty-actions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "784296"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/bikini-hanger.lossless.webp",
+      "path": "assets\\stella-v1\\bikini-hanger.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "408582"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/sporty-standing.lossless.webp",
+      "path": "assets\\stella-v1\\sporty-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "665288"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/lilac-daisy-hanger.lossless.webp",
+      "path": "assets\\stella-v1\\lilac-daisy-hanger.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "529834"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/bikini-standing.lossless.webp",
+      "path": "assets\\stella-v1\\bikini-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "652898"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/bikini-bow.lossless.webp",
+      "path": "assets\\stella-v1\\bikini-bow.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "352028"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/bikini-gestures.lossless.webp",
+      "path": "assets\\stella-v1\\bikini-gestures.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "417628"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/bikini-reactions.lossless.webp",
+      "path": "assets\\stella-v1\\bikini-reactions.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "517020"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/bikini-dance2.lossless.webp",
+      "path": "assets\\stella-v1\\bikini-dance2.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "355320"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/onepiece-standing.lossless.webp",
+      "path": "assets\\stella-v1\\onepiece-standing.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "636664"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/hud-v1/gifts.lossless.webp",
+      "path": "assets\\hud-v1\\gifts.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "455592"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stella-v1/onepiece-actions-v2.lossless.webp",
+      "path": "assets\\stella-v1\\onepiece-actions-v2.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "686816"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-dance1.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-dance1.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "167186"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-heart.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-heart.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "185644"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-heartLow.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-heartLow.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "176060"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-neutral.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-neutral.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "164560"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-sad.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-sad.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "170504"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-surprised.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-surprised.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "171972"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-wave.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-wave.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "174186"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-angry.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-angry.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "168186"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-dance2.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-dance2.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "163768"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-celebrate.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-celebrate.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "177704"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-gesturePrepare.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-gesturePrepare.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "158400"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-happy.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-happy.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "168008"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-gestureExtend.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-gestureExtend.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "160978"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-kneelCry.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-kneelCry.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "132400"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-kneelHappy.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-kneelHappy.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "132164"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-kneelWorried.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-kneelWorried.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "131972"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-bow.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-bow.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "147996"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/mia-kneelAngry.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\mia-kneelAngry.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "126098"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-happy.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-happy.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "184092"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-neutral.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-neutral.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "195104"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-sad.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-sad.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "178470"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-angry.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-angry.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "182134"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-surprised.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-surprised.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "183730"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-wave.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-wave.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "190056"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-heartLow.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-heartLow.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "184228"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-celebrate.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-celebrate.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "185714"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-dance1.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-dance1.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "194562"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-heart.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-heart.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "206548"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-dance2.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-dance2.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "190144"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-kneelWorried.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-kneelWorried.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "167246"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-gesturePrepare.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-gesturePrepare.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "173360"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-bow.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-bow.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "181424"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-kneelCry.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-kneelCry.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "174284"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-kneelHappy.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-kneelHappy.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "175130"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-gestureExtend.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-gestureExtend.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "176300"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/lilly-kneelAngry.lossless.webp",
+      "path": "assets\\mia-lilly-v1\\lilly-kneelAngry.lossless.webp",
+      "content_type": "image/webp",
+      "bytes": "167080"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/audio/karaoke/your-recipe-v2.mp3",
+      "path": "audio\\karaoke\\your-recipe-v2.mp3",
+      "content_type": "audio/mpeg",
+      "bytes": "3855806"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/audio/karaoke/no-plans-today-v2.mp3",
+      "path": "audio\\karaoke\\no-plans-today-v2.mp3",
+      "content_type": "audio/mpeg",
+      "bytes": "4056601"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/audio/karaoke/i-almost-called-you-v2.mp3",
+      "path": "audio\\karaoke\\i-almost-called-you-v2.mp3",
+      "content_type": "audio/mpeg",
+      "bytes": "3791224"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/audio/karaoke/a-little-less-each-night.mp3",
+      "path": "audio\\karaoke\\a-little-less-each-night.mp3",
+      "content_type": "audio/mpeg",
+      "bytes": "4143823"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/audio/karaoke/come-on-in.mp3",
+      "path": "audio\\karaoke\\come-on-in.mp3",
+      "content_type": "audio/mpeg",
+      "bytes": "3099304"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/audio/karaoke/sweet-little-disaster.mp3",
+      "path": "audio\\karaoke\\sweet-little-disaster.mp3",
+      "content_type": "audio/mpeg",
+      "bytes": "4526510"
+    }
+  ],
+  "failed": [
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/audio/${folder}/${id}.mp3",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/stream-controls-v1/${id}-yoga-tree-v1.lossless.webp",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/baking-room-v3/${key}.webp",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/baking-room-v1/${key}.webp",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/baking-room-v2/${key}.webp",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/baking-room-v4/baker-idle-${action}.webp",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://roomwave-live.sagan1122.chatgpt.site/assets/mia-lilly-v1/${id}-${pose}.lossless.webp",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ]
+}

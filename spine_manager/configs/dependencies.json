@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "node": {
+    "package": "@esotericsoftware/spine-canvas",
+    "version": "4.3.13",
+    "activeBaseline": "4.3.26",
+    "targetVersion": "4.3.13",
+    "targetBaseline": "4.3.26",
+    "migrationStatus": "target-runtime-active-round-trip-pass",
+    "runtimeFile": "src/spine-audit/c010/vendor/spine-canvas-4.3.13.min.js",
+    "rollbackVersion": "4.0.31"
+  },
+  "python": {
+    "package": "Pillow",
+    "minimumVersion": "10.0.0",
+    "maximumMajorExclusive": 13
+  },
+  "installPolicy": "install-only-when-missing-or-out-of-range; record-command-and-version",
+  "evidence": "artifacts/dependency-check.json"
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "model": "c010_00",
+  "requiredEditorVersion": "4.3.26",
+  "decision": "full-license-installer-required",
+  "options": [
+    {
+      "id": "license-page-full-editor",
+      "status": "recommended",
+      "canSave": true,
+      "canExport": true,
+      "canRunCli": true,
+      "source": "personal Spine license page",
+      "workflow": [
+        "download current official launcher or installer from license page",
+        "activate with license code locally",
+        "choose specific editor version 4.3.26",
+        "open derived c010_roomwave_4.3.26.spine",
+        "use the project-local Portable CLI bridge for export and readback"
+      ]
+    },
+    {
+      "id": "public-trial",
+      "status": "rejected-for-mutation",
+      "canSave": false,
+      "canExport": false,
+      "canRunCli": false,
+      "observedVersion": "4.3.26",
+      "reason": "public trial downloads current editor and cannot save or export"
+    },
+    {
+      "id": "runtime-only",
+      "status": "already-installed",
+      "canSave": false,
+      "canExport": false,
+      "canRunCli": false,
+      "observedVersion": "4.0.31",
+      "reason": "browser runtime can load exports but cannot mutate a .spine project"
+    },
+    {
+      "id": "third-party-binary-rewrite",
+      "status": "rejected",
+      "reason": "not an official editable-project workflow and cannot preserve Spine semantics safely"
+    }
+  ],
+  "officialReferences": [
+    "https://en.esotericsoftware.com/spine-getting-started",
+    "https://en.esotericsoftware.com/spine-command-line-interface",
+    "https://en.esotericsoftware.com/spine-export/",
+    "https://en.esotericsoftware.com/spine-changelog/archive",
+    "https://en.esotericsoftware.com/spine-reinstallation"
+  ]
+}

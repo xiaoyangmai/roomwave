@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "evidence_id": "mcp-1425sd-analyze-c010-20261030",
+  "observed_at": "2026-10-29T17:24:22.7348210Z",
+  "tool": "mcp__spine_1425sd__spine_analyze_json",
+  "operation": "read-only inspect",
+  "input": "runs/foundation-baseline-20261029/mutation-candidate/c010_00.mutation.json",
+  "input_sha256": "339EA627FD9D6644D272E8D18490B964F4A08316F3720C6461A3C5A8EDBBF183",
+  "result": {
+    "success": true,
+    "spine": "4.3.26",
+    "bones": 311,
+    "slots": 141,
+    "skins": 3,
+    "animations": 10,
+    "warnings": []
+  },
+  "notes": [
+    "Direct invocation through the currently loaded Codex MCP server.",
+    "No files were written by the tool.",
+    "This verifies JSON analysis only; no mutation or Portable CLI claim."
+  ]
+}

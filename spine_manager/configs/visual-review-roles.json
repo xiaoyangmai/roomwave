@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "reviewProtocol": "multi-role-visual-review",
+  "independentReviewsRequired": 5,
+  "roles": [
+    {
+      "id": "motion-animator",
+      "question": "动作的意图、节奏、重心、准备、接触、停留、回收和打断是否自然？",
+      "focus": ["semantic_intent", "action_readability", "motion_naturalness", "temporal_coherence"]
+    },
+    {
+      "id": "technical-artist",
+      "question": "骨骼、约束、衣服、背带、枪械、头发、网格和遮挡是否稳定？",
+      "focus": ["garment_structure", "occlusion_and_layer_order", "anatomy_and_artifact_risk", "anchor_plausibility"]
+    },
+    {
+      "id": "art-director",
+      "question": "角色身份、剪影、构图、材质、色彩和整体视觉审美是否成立？",
+      "focus": ["identity_and_costume_consistency", "staging_aesthetic", "material_consistency", "overall_human_view"]
+    },
+    {
+      "id": "product-reviewer",
+      "question": "按钮、反馈、效果、直播节奏和用户是否能理解动作是否清楚？",
+      "focus": ["interaction_clarity", "semantic_intent", "effect_anchor_readability", "overall_human_view"]
+    },
+    {
+      "id": "adversarial-reviewer",
+      "question": "最容易失败的姿势、边界、重复点击、快速打断和窄屏状态是否暴露问题？",
+      "focus": ["failure_visibility", "temporal_coherence", "garment_structure", "runtime_regression"]
+    }
+  ],
+  "adjudicator": {
+    "id": "review-adjudicator",
+    "input": "only-evidence-and-independent-reviews",
+    "mustSeparate": ["FACT", "INFERENCE", "UNKNOWN"],
+    "mustCite": ["frame", "time", "region"],
+    "maxDimensionDisagreement": 1,
+    "minConfidence": 0.8,
+    "unknownPolicy": "blocked_visual_uncertainty",
+    "generationRationaleVisible": false
+  },
+  "dimensions": [
+    "semantic_intent",
+    "action_readability",
+    "motion_naturalness",
+    "temporal_coherence",
+    "garment_structure",
+    "occlusion_and_layer_order",
+    "anatomy_and_artifact_risk",
+    "anchor_plausibility",
+    "identity_and_costume_consistency",
+    "material_consistency",
+    "staging_aesthetic",
+    "interaction_clarity",
+    "overall_human_view"
+  ],
+  "hardVetoLabels": [
+    "runtime_error",
+    "version_mismatch",
+    "shared_target",
+    "semantic_action_missing",
+    "unreachable_contact",
+    "severe_garment_break",
+    "identity_drift",
+    "blocked_visual_uncertainty"
+  ],
+  "decisionStates": ["pass", "review", "fail", "blocked_visual_uncertainty", "not-run"]
+}

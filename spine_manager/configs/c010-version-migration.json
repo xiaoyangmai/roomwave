@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 2,
+  "model": "c010_00",
+  "sourceEditor": "4.0.47",
+  "sourceRuntime": "4.0.31",
+  "targetEditor": "4.3.26",
+  "targetRuntimeFamily": "4.3",
+  "targetRuntimePackage": "@esotericsoftware/spine-canvas@4.3.13",
+  "targetRuntimeFile": "src/spine-audit/c010/vendor/spine-canvas-4.3.13.min.js",
+  "targetRuntimeStaging": "artifacts/migration-4.3-runtime/node_modules/@esotericsoftware/spine-canvas/dist/iife/spine-canvas.min.js",
+  "baselineEditor": "4.3.26",
+  "baselineRuntimeFamily": "4.3",
+  "status": "exported-4.3.26-runtime-round-trip-pass",
+  "canConvert": true,
+  "conversionMethod": "project-local-spine-4.3.26-save-as-then-export-and-round-trip",
+  "sourceProject": "source/nikke_4.0.47/derived/c010_roomwave_4.0.47/c010_roomwave_4.0.47.spine",
+  "targetProject": "source/nikke_4.3.26/derived/c010_roomwave_4.3.26/c010_roomwave_4.3.26.spine",
+  "sourceReadOnly": true,
+  "doNotDo": [
+    "overwrite-4.0.47-source-project",
+    "run-4.0-export-with-4.3-runtime-before-reexport",
+    "mark-input-copy-as-4.3-until-editor-save-completes",
+    "switch-runtime-assets-before-4.3-round-trip"
+  ],
+  "requiredEvidence": [
+    "4.3.26-project-saved",
+    "4.3.26-editor-save-hash-differs-from-4.0.47-input",
+    "4.3.26-json-export-produced",
+    "4.3-runtime-round-trip-loads-export-pass",
+    "animation-count-and-key-pose-diff-within-calibration",
+    "hand-reachability-and-strap-isolation-repass",
+    "texture-and-visual-gates-repass",
+    "gaming-c010-cold-start-with-4.3-assets"
+  ],
+  "rollback": {
+    "editor": "4.0.47",
+    "project": "source/nikke_4.0.47/derived/c010_roomwave_4.0.47/c010_roomwave_4.0.47.spine",
+    "runtimePackage": "@esotericsoftware/spine-canvas@4.0.31"
+  },
+  "evidence": [
+    "evidence/c010-migration-4.3.26-cli-probe.json",
+    "evidence/c010-editor-open-4.3.26.json",
+    "evidence/c010-editor-process-4.3.26.json",
+    "evidence/c010-migration-4.3.26-save.json",
+    "evidence/c010-migration-4.3.26-export.json",
+    "evidence/c010-migration-runtime-staged.json",
+    "evidence/c010/portable-cli-export.json"
+  ]
+}

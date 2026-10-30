@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-29T11:59:03.445Z",
+  "preset": "hand-only-string-off",
+  "model": "c010_00",
+  "entryStatus": 200,
+  "method": "same hand target displacement with string_2 transform mixes 1 versus 0",
+  "result": {
+    "rest": {
+      "x": -172.91123282016616,
+      "y": 1526.266484272998
+    },
+    "target": {
+      "x": -82.91123282016616,
+      "y": 1556.266484272998
+    },
+    "activeDelta": {
+      "hand": 94.86832980505137,
+      "strap": 82.55962808690761
+    },
+    "isolatedDelta": {
+      "hand": 94.86832980505137,
+      "strap": 12.468414198027382
+    },
+    "constraint": {
+      "name": "string_2",
+      "target": "ik_arm_r",
+      "controlledBone": "string_2"
+    }
+  },
+  "interpretation": "shared-target-confirmed",
+  "releaseStatus": "blocked-until-independent-strap-target"
+}

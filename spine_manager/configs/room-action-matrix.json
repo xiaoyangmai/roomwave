@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "room": "gaming_c010",
+  "spineBaseline": "4.3.26",
+  "runtimeBaseline": "@esotericsoftware/spine-canvas@4.3.13",
+  "migrationStatus": "4.3.26-exported-runtime-round-trip-pass",
+  "rollbackSpineBaseline": "4.0.47",
+  "rollbackRuntimeBaseline": "@esotericsoftware/spine-canvas@4.0.31",
+  "principle": "Room buttons emit semantic actions; the c010 adapter resolves bones, targets and effect anchors.",
+  "actions": [
+    {
+      "id": "idle",
+      "kind": "base",
+      "targets": ["body", "face"],
+      "effects": [],
+      "interruptible": true,
+      "acceptance": ["loads after cold start", "returns to a stable loop"]
+    },
+    {
+      "id": "delight",
+      "kind": "reaction",
+      "targets": ["face", "body"],
+      "effects": ["star_feedback"],
+      "interruptible": true,
+      "acceptance": ["star button emits delight", "speech feedback is readable", "reaction blends back to idle"]
+    },
+    {
+      "id": "banana",
+      "kind": "reaction",
+      "targets": ["face", "body"],
+      "effects": ["banana_feedback"],
+      "interruptible": true,
+      "acceptance": ["banana button emits banana", "speech feedback is readable", "reaction blends back to idle"]
+    },
+    {
+      "id": "foam_wipe",
+      "kind": "contact",
+      "targets": ["handTarget", "faceTarget", "foam_anchor_face", "foam_anchor_hand"],
+      "effects": ["foam"],
+      "interruptible": true,
+      "acceptance": ["hand and face anchors remain readable", "foam follows the semantic anchor", "interrupt returns to idle"]
+    },
+    {
+      "id": "water_splash",
+      "kind": "prop",
+      "targets": ["handTarget", "gunTarget", "water_anchor"],
+      "effects": ["water"],
+      "interruptible": true,
+      "acceptance": ["water origin follows the semantic hand/prop anchor", "no strap or gun target leakage", "interrupt returns to idle"]
+    },
+    {
+      "id": "fan_hold",
+      "kind": "hold",
+      "targets": ["handTarget", "faceTarget", "fan_anchor"],
+      "effects": ["fan"],
+      "interruptible": true,
+      "acceptance": ["hold remains stable while pressed", "release blends to idle", "hair and strap secondary motion stays bounded"]
+    },
+    {
+      "id": "interrupt_to_idle",
+      "kind": "recovery",
+      "targets": ["all"],
+      "effects": [],
+      "interruptible": false,
+      "acceptance": ["any active semantic action can be interrupted", "no stuck track or effect", "idle is restored within the recovery window"]
+    }
+  ],
+  "evidencePerAction": ["fixed-seed trace", "start/contact/release frames", "console log", "before-after anchor values", "regression comparison"],
+  "reviewLabels": ["FACT", "INFERENCE", "UNKNOWN"]
+}

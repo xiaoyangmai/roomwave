@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-29T17:20:23.169Z",
+  "model": "c010_00",
+  "requiredEditorVersion": "4.3.26",
+  "preferredProjectToolVersion": "4.3.26",
+  "projectCopy": {
+    "launcher": "D:\\awesome-games\\Roomwave\\spine_manager\\tools\\spine-4.3.26\\SpinePortable.exe",
+    "cli": "D:\\awesome-games\\Roomwave\\spine_manager\\tools\\spine-4.3.26\\app\\Spine.com",
+    "cliBridge": "D:\\awesome-games\\Roomwave\\spine_manager\\tools\\run-spine-portable-cli.ps1",
+    "directCliPresent": true,
+    "directCliInvocation": "forbidden",
+    "present": true,
+    "sourcePath": "D:\\BaiduNetdiskDownload\\Spine pro 4.3.26\\Spine pro 4.3.26\\SpinePortable.exe",
+    "expectedVersion": "4.3.26"
+  },
+  "found": [
+    {
+      "command": "SpinePortable.exe",
+      "file": "D:\\awesome-games\\Roomwave\\spine_manager\\tools\\spine-4.3.26\\SpinePortable.exe",
+      "source": "project-copy",
+      "version": "4.3.26"
+    }
+  ],
+  "cli": {
+    "present": true,
+    "facade": "D:\\awesome-games\\Roomwave\\spine_manager\\tools\\run-spine-portable-cli.ps1",
+    "directExecutable": "D:\\awesome-games\\Roomwave\\spine_manager\\tools\\spine-4.3.26\\app\\Spine.com",
+    "directInvocation": "forbidden",
+    "policyEnforced": true,
+    "activated": true,
+    "help": true,
+    "output": {
+      "launcher": "D:\\awesome-games\\Roomwave\\spine_manager\\tools\\spine-4.3.26\\SpinePortable.exe",
+      "profile": "D:\\awesome-games\\Roomwave\\spine_manager\\tools\\spine-4.3.26\\portable-data",
+      "forwarded": [
+        "--activated"
+      ],
+      "processExitCode": 0,
+      "logActivated": true,
+      "logPath": "D:\\awesome-games\\Roomwave\\spine_manager\\tools\\spine-4.3.26\\portable-data\\home\\Spine\\spine.log"
+    }
+  },
+  "status": "editor-present-save-export-verified",
+  "availableForRequiredVersion": true,
+  "mutationImpact": "migration-save-export-round-trip-verified"
+}

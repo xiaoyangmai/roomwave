@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-28T23:38:25Z",
+  "model": "c010_00",
+  "launcher": "tools/spine-4.3.26/app/Spine.com",
+  "command": "Spine.com --update 4.0.47 --version",
+  "exitCode": 0,
+  "output": [
+    "Spine Launcher 4.3.08",
+    "WARNING: Not activated.",
+    "Complete."
+  ],
+  "downloadedEditor": false,
+  "status": "blocked-activation-required",
+  "sourceUnmodified": true,
+  "interpretation": "The launcher accepts a version request, but the project copy is not activated and no 4.0.47 editor was downloaded. This does not establish a 4.0.47 export path.",
+  "historical": true,
+  "directCliPolicy": "forbidden-after-portable-bridge-adoption",
+  "supersededBy": "evidence/c010/portable-cli-export.json"
+}

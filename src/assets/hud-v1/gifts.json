@@ -1,0 +1,98 @@
+{
+  "image": "gifts.lossless.webp",
+  "width": 1024,
+  "height": 1536,
+  "frames": [
+    {
+      "name": "rose",
+      "crop": [
+        119,
+        114,
+        295,
+        334
+      ],
+      "alphaBounds": [
+        126,
+        121,
+        281,
+        320
+      ]
+    },
+    {
+      "name": "heart",
+      "crop": [
+        569,
+        149,
+        375,
+        245
+      ],
+      "alphaBounds": [
+        576,
+        156,
+        361,
+        231
+      ]
+    },
+    {
+      "name": "sunglasses",
+      "crop": [
+        71,
+        647,
+        397,
+        196
+      ],
+      "alphaBounds": [
+        78,
+        654,
+        383,
+        182
+      ]
+    },
+    {
+      "name": "dance",
+      "crop": [
+        610,
+        576,
+        332,
+        344
+      ],
+      "alphaBounds": [
+        617,
+        583,
+        318,
+        330
+      ]
+    },
+    {
+      "name": "gg",
+      "crop": [
+        80,
+        1094,
+        386,
+        259
+      ],
+      "alphaBounds": [
+        87,
+        1101,
+        372,
+        245
+      ]
+    },
+    {
+      "name": "sparkle",
+      "crop": [
+        582,
+        1052,
+        349,
+        345
+      ],
+      "alphaBounds": [
+        589,
+        1059,
+        335,
+        331
+      ]
+    }
+  ],
+  "alphaBoundsThreshold": 16
+}

@@ -1,0 +1,107 @@
+schema_version: 1
+
+stages:
+  - id: intake
+    command: studio:intake
+    input: raw-source-directory
+    output:
+      - source-manifest.json
+      - run-state.json
+    gate: all-inputs-hashed
+
+  - id: forensics
+    input: source-manifest.json
+    reference:
+      - configs/spine-4.3-capability-contract.json
+    output:
+      - skeleton-facts.json
+      - constraint-graph.json
+      - asset-facts.json
+    gate: facts-have-evidence-and-capability-contract
+
+  - id: semantic-contract
+    command: studio:contract
+    input:
+      - skeleton-facts.json
+      - constraint-graph.json
+      - configs/spine-4.3-capability-contract.json
+      - expert-patterns
+    output:
+      - rig-contract.json
+      - isolation-matrix.json
+    gate: every-target-has-boundary
+
+  - id: rig-plan
+    command: studio:plan
+    input:
+      - rig-contract.json
+      - isolation-matrix.json
+    output:
+      - plan.json
+    gate: reversible-and-preconditioned
+
+  - id: derived-mutation
+    command: studio:prepare
+    input: plan.json
+    output:
+      - derived-manifest.json
+      - derived-project
+    gate: derived-only
+
+  - id: mutation-execution
+    command: studio:execute
+    input:
+      - plan.json
+      - derived-manifest.json
+    output:
+      - execution-report.json
+      - derived-project
+    gate: editor-or-validated-json-roundtrip
+
+  - id: structural-gate
+    command: studio:structural
+    input:
+      - mutation-diff.json
+      - derived-project
+    output:
+      - structural-report.json
+    gate: export-readback-and-invariants
+
+  - id: motion-build
+    command: studio:motion
+    input:
+      - rig-contract.json
+      - structural-verdict.json
+      - expert-action-patterns
+    output:
+      - motion-spec.json
+      - motion-candidates
+    gate: blocking-and-contact-defined
+
+  - id: visual-gate
+    command: studio:visual
+    input:
+      - motion-candidates
+      - golden-poses
+    output:
+      - visual-verdict.json
+    gate: independent-review-and-metrics
+
+  - id: adversarial-gate
+    command: studio:adversarial
+    input:
+      - structural-verdict.json
+      - visual-verdict.json
+    output:
+      - adversarial-verdict.json
+    gate: isolation-replay-and-failure-injection
+
+  - id: promote
+    command: studio:promote
+    input:
+      - structural-verdict.json
+      - visual-verdict.json
+      - adversarial-verdict.json
+    output:
+      - release-manifest.json
+    gate: all-hard-gates-pass
