@@ -1,45 +1,49 @@
-# Roomwave 本地整理版
+# Roomwave
 
-这是从公开页面整理出的 Roomwave 前端文件，并配了一个本地 Node.js 服务，入口对应：
+以虚拟人物为核心的多房间互动空间。用户进入主题房间、与人物互动，并保留自己的外观与进度。
 
-- `together/`：一起观看页面
-- `solo/`：单人页面入口（使用同一套公开前端资源）
+## 项目结构
 
-## 运行
+| 目录 | 职责 |
+|---|---|
+| [roomwave/](roomwave/README.md) | 产品前端、后台、房间玩法与共用状态模型 |
+| [spine_runtime/](spine_runtime/README.md) | 人物演出、对话编排适配、动作、声音与旧 Canvas 产品适配 |
+| [spine_manager/](spine_manager/README.md) | 资源检查、制作、打包、验证与候选推广 |
+| [resources/](resources/README.md) | 图片、声音、人物包、注册表和来源索引 |
+| airi/ | 固定版本的 AIRI 上游子项目，由运行时准备脚本获取并应用补丁 |
+| rigby2d/ | 独立的 Rigby2D 编辑器子项目，供资源生产调用 |
+| [docs/](docs/ARCHITECTURE.md) | 跨模块目标、架构、状态与验证说明 |
 
-在这个目录执行：
+模块拥有自己的代码、测试和操作说明；根目录提供统一命令。上游项目保留各自 Git 仓库，不混入本项目的业务目录。
+
+## 本地运行
+
+在本目录执行：
 
 ```powershell
-node server.cjs
+npm start
 ```
 
-然后打开：
+访问 [Solo](http://127.0.0.1:4173/solo/) 或 [Together](http://127.0.0.1:4173/together/)。两种模式使用同一份前端页面。
 
-- http://127.0.0.1:4173/together/
-- http://127.0.0.1:4173/solo/
+端口被其他项目占用时，可在 PowerShell 设置 `$env:PORT='4174'` 后执行 `npm start`。当前目录迁移的浏览器验收使用 4174。
 
-也可以执行：
+人物演出页单独启动：
 
 ```powershell
-.\start-roomwave.ps1
+npm run runtime:start
 ```
 
-产品代码和运行资源位于 `src/`，资源生产工作台位于外层 `spine_manager/`。根目录只保留服务器、启动脚本和项目说明。服务器会把 `src/` 作为静态资源根目录，所以产品 URL 仍然使用 `/solo/`、`/together/`、`/assets/` 和 `/spine-audit/`。
+访问 [c010 演出页](http://127.0.0.1:5180/)。首次准备和验证命令见 [spine_runtime/README.md](spine_runtime/README.md)。
 
-Spine Portable、原始 `.spine` 工程、NIKKE 源压缩包和本地 MCP 配置不属于这个产品目录。需要运行 Spine 工作台时，通过 `SPINE_BIN`、`SPINE_BRIDGE`、`SPINE_PROFILE_ROOT`、`C010_SPINE_ARCHIVE`、`C010_SPINE_PROJECT` 和 `ROOMWAVE_C010_PROJECT` 指向外部 Spine Lab。其中 `C010_SPINE_PROJECT` 直接指向可编辑的 `.spine` 文件；未设置时，普通验证会标记为待提供，严格验证会阻断。
+目前人物演出页使用固定脚本和固定测试声音，真实模型与 TTS 尚未接入。它与多房间产品独立运行。
 
-要直接打开 c010 Spine 试作，可执行 `start-roomwave-spine.cmd`；桌面上的 `Roomwave Spine - 启动.cmd` 也是同一个入口。
+## 阅读入口
 
-本地服务提供 `/api/rooms`、`/api/wardrobe` 和 `/api/visits`，用于房间同步、衣柜状态和访问人数。衣柜状态会保存在 `src/data/wardrobe-state.json`。
+- [业务目标](docs/GOAL.md)
+- [模块架构与资源路径](docs/ARCHITECTURE.md)
+- [当前状态](docs/STATUS.md)
+- [验证命令](docs/VALIDATION.md)
+- [来源与许可](SOURCE-NOTICE.md)
 
-## 文件来源
-
-资源来自公开页面：
-
-`https://roomwave-live.sagan1122.chatgpt.site/together/`
-
-`mirror-report.json` 记录了本次下载的文件清单和原始地址。`tools/sync_public_assets.py` 可以在需要时重新抓取公开资源；`tools/fetch_gaming_assets.py` 用于补齐 Gaming 房间按运行状态动态选择的素材。
-
-## 当前范围
-
-这里保存的是浏览器端公开加载的 HTML、CSS、JavaScript 和媒体资源。页面没有提供完整工程仓库或单独的开源许可证，因此原始来源和使用权限仍以目标站点及其资源声明为准。
+资源查询从 [resources/index.json](resources/index.json) 开始。用户运行状态保存在产品模块或浏览器中，不属于资源目录。

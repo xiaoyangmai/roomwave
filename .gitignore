@@ -1,18 +1,17 @@
-node_modules/
 **/node_modules/
 **/__pycache__/
 .env
 *.log
-**/data/wardrobe-state.json
-spine_manager/tools/spine-4.3.26/
-spine_manager/runs/
-spine_manager/artifacts/
-spine_manager/source/
-spine_manager/reference-corpus/
-spine_manager/portable-data/
 
-# Keep the small contract evidence snapshot; ignore future run output.
-!spine_manager/runs/
-!spine_manager/runs/foundation-baseline-20261029/
-!spine_manager/runs/foundation-baseline-20261029/*.json
-src/spine-audit/c010/chrome-profile*/
+# Independent upstream Git projects; AIRI is prepared by spine_runtime.
+/airi/
+/rigby2d/
+
+# Rebuildable runtime output and test artifacts.
+/spine_runtime/dist/
+/spine_runtime/public/c010.zip
+/spine_runtime/public/speech.wav
+/spine_manager/artifacts/
+
+# Private/local product state.
+/roomwave/backend/data/

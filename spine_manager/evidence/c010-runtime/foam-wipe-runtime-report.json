@@ -1,0 +1,4593 @@
+{
+  "route": "http://127.0.0.1:4174/solo/?room=gaming_c010",
+  "errors": [],
+  "pack": {
+    "characterId": "c010_00",
+    "skeleton": "http://127.0.0.1:4174/character-packs/c010_00/model/c010_00.hand-strap-isolated.json",
+    "binding": "http://127.0.0.1:4174/character-packs/c010_00/semantic-binding-runtime.json",
+    "recipe": "foam_wipe@0.1.0",
+    "variant": "c010-hand-strap-isolated",
+    "string2Target": "strap_target_r",
+    "string2ConstraintData": [
+      "name",
+      "setupPose",
+      "skinRequired",
+      "bones",
+      "_source",
+      "offsets",
+      "offsetX",
+      "offsetY",
+      "localSource",
+      "localTarget",
+      "additive",
+      "clamp",
+      "properties"
+    ],
+    "string2SourceValue": "strap_target_r",
+    "constraintNames": [
+      "body_3",
+      "face_con_re",
+      "body_con_re",
+      "pelvis_con_re",
+      "r_eye",
+      "l_eye",
+      "nose",
+      "lip_3",
+      "r_brow",
+      "l_brow",
+      "r_eye5",
+      "l_eye5",
+      "r_eye3",
+      "l_eye3",
+      "r_eye7",
+      "l_eye7",
+      "f_hair_1_d4",
+      "r_hair_4",
+      "r_hair_19",
+      "r_hair_3",
+      "r_hair_r",
+      "l_hair_4_1",
+      "l_hair_3_1",
+      "l_hair_1",
+      "l_hair_15",
+      "l_hair_9",
+      "l_hair_35",
+      "l_hair_31",
+      "r_hair_34",
+      "r_hair_27",
+      "r_hair_51",
+      "r_hair_45",
+      "cap2",
+      "cap3",
+      "l_hair_21",
+      "l_hair_27",
+      "cloth_3",
+      "shoulder_r5",
+      "boob_r",
+      "shoulder_l",
+      "boob_l",
+      "acc_1_2",
+      "r_arm_1",
+      "main_string",
+      "shoulder_r2",
+      "belt",
+      "center4",
+      "center3",
+      "acc_3",
+      "acc_3_1",
+      "acc_2",
+      "l_leg",
+      "r_foot",
+      "necktie_1",
+      "ik_boob",
+      "face_top",
+      "f_hair_1",
+      "ik_arm_r",
+      "ik_l_leg",
+      "ik_l_leg2",
+      "ik_r_leg",
+      "l_leg_con_re",
+      "r_leg_con_re",
+      "string_2",
+      "ik_r_leg2",
+      "ik_boob"
+    ]
+  },
+  "completion": {
+    "summary": {
+      "frameCount": 50,
+      "actionFrameCount": 49,
+      "phases": [
+        "notice",
+        "reach",
+        "contact",
+        "recover"
+      ],
+      "actionIds": [
+        "foam_wipe-0001"
+      ],
+      "handTravel": 517.2352064297661,
+      "strapControlTravel": 25.13118464234728,
+      "idleAfterAction": true,
+      "handTargetBone": "ik_arm_r",
+      "strapControlBone": "strap_target_r",
+      "strapVisualBone": "string_2",
+      "targetsDistinct": true
+    },
+    "capture": {
+      "model": "c010_00",
+      "animation": "idle",
+      "action": "foam_wipe",
+      "actionId": "foam_wipe-0001",
+      "recipeId": "foam_wipe@0.1.0",
+      "status": "completed",
+      "lastAction": {
+        "actionId": "foam_wipe-0001",
+        "recipeId": "foam_wipe@0.1.0",
+        "type": "foam_wipe",
+        "status": "completed",
+        "reason": null
+      },
+      "patch": "runtime-model-variant+runtime-two-bone-fallback",
+      "elapsed": 2.4999999999999996,
+      "frames": [
+        {
+          "t": 0.05,
+          "phase": "notice",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.23211489005297,
+            "y": 225.27260744691316,
+            "worldX": 225.69666270852065,
+            "worldY": 1805.5796497204383,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.09676468940222,
+            "y": 284.2868501843515,
+            "worldX": -161.18489464958247,
+            "worldY": 1530.9489170481825,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.11824573881313,
+            "y": 270.87697237198154,
+            "worldX": -109.89494708218128,
+            "worldY": 1593.35359086636,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.5769490056582,
+              "y": 287.2930270226562
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.1,
+          "phase": "notice",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.5526207311226,
+            "y": 285.42889148538717,
+            "worldX": -173.0244114657963,
+            "worldY": 1525.6342739265074,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.079721133405,
+            "y": 224.91214390135522,
+            "worldX": 224.98747782193112,
+            "worldY": 1807.257115413909,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.0579664105564,
+            "y": 284.2664205080748,
+            "worldX": -161.3654476695248,
+            "worldY": 1531.043989300301,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.07186253548363,
+            "y": 270.8503122937825,
+            "worldX": -110.11079757052428,
+            "worldY": 1593.477657133574,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.5526207311226,
+              "y": 287.42889148538717
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.15000000000000002,
+          "phase": "notice",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.57694900565824,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121646,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.61700431685682,
+            "y": 285.45054914530374,
+            "worldX": -172.72479377179442,
+            "worldY": 1525.5334870870097,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.93474217678386,
+            "y": 224.5867333675749,
+            "worldX": 224.3127987066527,
+            "worldY": 1808.7714571925364,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.02269495158265,
+            "y": 284.27032368116227,
+            "worldX": -161.52958815783842,
+            "worldY": 1531.025825358259,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.02992647896133,
+            "y": 270.84874696403693,
+            "worldX": -110.30595266180185,
+            "worldY": 1593.4849416065244,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.61700431685682,
+              "y": 287.45054914530374
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.1999000000000001,
+          "phase": "notice",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.57694900565824,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121646,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.68313931742784,
+            "y": 285.47825450012704,
+            "worldX": -172.41702563278938,
+            "worldY": 1525.4045564841394,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.79928234600607,
+            "y": 224.32937670445983,
+            "worldX": 223.68241812649904,
+            "worldY": 1809.969101111545,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 204.99085824519645,
+            "y": 284.32754942563645,
+            "worldX": -161.6777445620409,
+            "worldY": 1530.759517643313,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 215.99257733732256,
+            "y": 270.9014537723499,
+            "worldX": -110.4797619264327,
+            "worldY": 1593.239663370079,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.68313931742784,
+              "y": 287.47825450012704
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.24990000000000012,
+          "phase": "notice",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.57694900565824,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121646,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.7468799950514,
+            "y": 285.5091371211765,
+            "worldX": -172.12039979833332,
+            "worldY": 1525.2608400446456,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.6769157677103,
+            "y": 224.09935610893265,
+            "worldX": 223.11296876151286,
+            "worldY": 1811.0395329556065,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 204.96535546832067,
+            "y": 284.3957404475313,
+            "worldX": -161.79642517156316,
+            "worldY": 1530.4421815319618,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 215.96286445276158,
+            "y": 270.96619601698114,
+            "worldX": -110.61803483951732,
+            "worldY": 1592.9383766085589,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.7468799950514,
+              "y": 287.5091371211765
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.2999000000000001,
+          "phase": "notice",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.9111965612165,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.9111965612165,
+            "worldY": 1526.2665375159927,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.57223045179666,
+            "y": 223.89923093709348,
+            "worldX": 222.6258015341487,
+            "worldY": 1811.970842416153,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 204.9491238448946,
+            "y": 284.4758377740807,
+            "worldX": -161.87196121891688,
+            "worldY": 1530.0694378271376,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 215.94409869894528,
+            "y": 271.0442185330951,
+            "worldX": -110.70536380419864,
+            "worldY": 1592.5752883137443,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.5769490056582,
+              "y": 287.2930270226562
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.3499000000000001,
+          "phase": "notice",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.6370723777162,
+            "y": 285.3750088463295,
+            "worldX": -172.6314043457598,
+            "worldY": 1525.885024049805,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.4969530277926,
+            "y": 223.78339999708325,
+            "worldX": 222.2754878954583,
+            "worldY": 1812.5098773074867,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 204.9460264737132,
+            "y": 284.6077300232747,
+            "worldX": -161.8863752531813,
+            "worldY": 1529.4556594687315,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 215.94134591114673,
+            "y": 271.17639286182,
+            "worldX": -110.71817427324723,
+            "worldY": 1591.9601972602222,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.6370723777162,
+              "y": 287.3750088463295
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.3999000000000001,
+          "phase": "notice",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.9111965612165,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.7099134710132,
+            "y": 285.4390545848123,
+            "worldX": -172.29242850038958,
+            "worldY": 1525.5869785735233,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.449041933559,
+            "y": 223.7092322129605,
+            "worldX": 222.05252716086008,
+            "worldY": 1812.8550270874293,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 204.95625904178223,
+            "y": 284.75284582467833,
+            "worldX": -161.83875661849984,
+            "worldY": 1528.7803435278136,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 215.9543682019469,
+            "y": 271.3237929029033,
+            "worldX": -110.65757328783033,
+            "worldY": 1591.274251302079,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.7099134710132,
+              "y": 287.4390545848123
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.4499000000000001,
+          "phase": "notice",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.9111965612165,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.77487092158617,
+            "y": 285.5023424247921,
+            "worldX": -171.99014024901368,
+            "worldY": 1525.2924600800773,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.40512941847135,
+            "y": 223.65253976870986,
+            "worldX": 221.84817435325627,
+            "worldY": 1813.1188530179052,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 204.96648460548454,
+            "y": 284.8979648323791,
+            "worldX": -161.79117057958297,
+            "worldY": 1528.1050126659595,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 215.9673830138375,
+            "y": 271.47119672971616,
+            "worldX": -110.5970071065271,
+            "worldY": 1590.5882877265328,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.77487092158617,
+              "y": 287.5023424247921
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.49990000000000007,
+          "phase": "notice",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.9111965612165,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.9111965612165,
+            "worldY": 1526.2665375159927,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.38770834919904,
+            "y": 223.65974700065883,
+            "worldX": 221.7671030593405,
+            "worldY": 1813.0853131926212,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 204.9878846338915,
+            "y": 285.07246421482034,
+            "worldX": -161.69158266303953,
+            "worldY": 1527.2929562702875,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 215.9938524943952,
+            "y": 271.64985124546615,
+            "worldX": -110.47382781112606,
+            "worldY": 1589.7568948579687,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.5769490056582,
+              "y": 287.2930270226562
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.5499,
+          "phase": "notice",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.9111965612165,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.62853319992894,
+            "y": 285.3512772461647,
+            "worldX": -172.67114256052537,
+            "worldY": 1525.9954622497787,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.3920202370949,
+            "y": 223.72112555474047,
+            "worldX": 221.78716901083152,
+            "worldY": 1812.7996798184406,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.01736973786848,
+            "y": 285.2611282859756,
+            "worldX": -161.55436975760347,
+            "worldY": 1526.4149825865306,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.02993798897498,
+            "y": 271.84393006937506,
+            "worldX": -110.305899098402,
+            "worldY": 1588.8537228924583,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.62853319992894,
+              "y": 287.3512772461647
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.5999000000000001,
+          "phase": "reach",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 204.54737389981847,
+            "y": 283.86487818037216,
+            "worldX": -163.74155873723424,
+            "worldY": 1532.912620643188,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 204.54737389981847,
+            "y": 283.86487818037216,
+            "worldX": -163.74155873723427,
+            "worldY": 1532.912620643188,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.40598778173285,
+            "y": 223.8095906941956,
+            "worldX": 221.8521688623861,
+            "worldY": 1812.3879953684238,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.0468155533664,
+            "y": 285.44981026570406,
+            "worldX": -161.41733968640006,
+            "worldY": 1525.5369255628148,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.06598153110832,
+            "y": 272.0380300475105,
+            "worldX": -110.13816561704196,
+            "worldY": 1587.9504524829035,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 219.54737389981847,
+              "y": 285.86487818037216
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.6499000000000001,
+          "phase": "reach",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 207.9891615514317,
+            "y": 281.3800075424467,
+            "worldX": -147.7247360073339,
+            "worldY": 1544.4763010741208,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 207.9891615514317,
+            "y": 281.3800075424467,
+            "worldX": -147.7247360073339,
+            "worldY": 1544.4763010741208,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.4392959068048,
+            "y": 223.93770999620332,
+            "worldX": 222.00717271176433,
+            "worldY": 1811.7917749282772,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.08167799737038,
+            "y": 285.64614609331824,
+            "worldX": -161.25510260437636,
+            "worldY": 1524.6232503263573,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.108495784062,
+            "y": 272.2406562864456,
+            "worldX": -109.94031981074004,
+            "worldY": 1587.0075039695262,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 222.9891615514317,
+              "y": 283.3800075424467
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.6999000000000002,
+          "phase": "reach",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 212.84259651922056,
+            "y": 277.9020976474156,
+            "worldX": -125.13862222610236,
+            "worldY": 1560.6612235324167,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 213.11459294838497,
+            "y": 277.99090419577647,
+            "worldX": -123.87285018259746,
+            "worldY": 1560.247950290041,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.5035401576771,
+            "y": 224.14866798877713,
+            "worldX": 222.30614199220634,
+            "worldY": 1810.8100534763664,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.12254108031686,
+            "y": 285.85855651665617,
+            "worldX": -161.06494074025204,
+            "worldY": 1523.6347697921233,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.15822388668113,
+            "y": 272.4603636363896,
+            "worldX": -109.70890338271847,
+            "worldY": 1585.9850662038318,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 228.11459294838497,
+              "y": 279.99090419577647
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.7499000000000002,
+          "phase": "reach",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 218.8553826915583,
+            "y": 273.6288847193038,
+            "worldX": -97.15731135412275,
+            "worldY": 1580.5471958481708,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 218.8553826915583,
+            "y": 273.6288847193038,
+            "worldX": -97.15731135412278,
+            "worldY": 1580.5471958481708,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.57744838199596,
+            "y": 224.3868035055626,
+            "worldX": 222.65008387561753,
+            "worldY": 1809.701857752479,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.1633330428146,
+            "y": 286.0709991384836,
+            "worldX": -160.87510984472166,
+            "worldY": 1522.6461394178784,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.20787604015857,
+            "y": 272.68010904723883,
+            "worldX": -109.47784039426443,
+            "worldY": 1584.9624513165852,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 233.8553826915583,
+              "y": 275.6288847193038
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.7999000000000003,
+          "phase": "reach",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 225.77421917273784,
+            "y": 268.75602530588696,
+            "worldX": -64.95957325012375,
+            "worldY": 1603.2237039052097,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 225.77421917273784,
+            "y": 268.75602530588696,
+            "worldX": -64.95957325012378,
+            "worldY": 1603.2237039052097,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.65570504223666,
+            "y": 224.641600173554,
+            "worldX": 223.01426179168445,
+            "worldY": 1808.5161271158215,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.20427898388488,
+            "y": 286.283679438433,
+            "worldX": -160.68456238915036,
+            "worldY": 1521.6564029764584,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.25771823917322,
+            "y": 272.9001317741512,
+            "worldX": -109.24589300328817,
+            "worldY": 1583.9385459016617,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 240.77421917273784,
+              "y": 270.75602530588696
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.8499000000000003,
+          "phase": "reach",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 233.3574149873013,
+            "y": 263.50539409150804,
+            "worldX": -29.670149444138573,
+            "worldY": 1627.6582239550944,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 233.3574149873013,
+            "y": 263.50539409150804,
+            "worldX": -29.670149444138588,
+            "worldY": 1627.6582239550944,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.77128991161214,
+            "y": 224.98909827196672,
+            "worldX": 223.55215156015353,
+            "worldY": 1806.8989978781576,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.25175419806004,
+            "y": 286.50448961561085,
+            "worldX": -160.46363008115304,
+            "worldY": 1520.6288330555894,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.3153485008493,
+            "y": 273.129335465032,
+            "worldX": -108.97770281302154,
+            "worldY": 1582.8719156334762,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 248.3574149873013,
+              "y": 265.50539409150804
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.8997999999999999,
+          "phase": "reach",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 241.33198316059395,
+            "y": 258.0802464398398,
+            "worldX": 7.440578383380455,
+            "worldY": 1652.9048797676853,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 241.33198316059395,
+            "y": 258.0802464398398,
+            "worldX": 7.440578383380455,
+            "worldY": 1652.9048797676853,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.8984155641918,
+            "y": 225.38250445211233,
+            "worldX": 224.14374791876,
+            "worldY": 1805.0682291945388,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.29891358454594,
+            "y": 286.7255372780919,
+            "worldX": -160.2441675198758,
+            "worldY": 1519.6001579648532,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.3726362701774,
+            "y": 273.3587675364441,
+            "worldX": -108.71110645705832,
+            "worldY": 1581.804222565707,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 256.33198316059395,
+              "y": 260.0802464398398
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.9498,
+          "phase": "reach",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 249.47360370718073,
+            "y": 252.64297028375793,
+            "worldX": 45.32870694577821,
+            "worldY": 1678.207977210277,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 249.47360370718073,
+            "y": 252.64297028375793,
+            "worldX": 45.32870694577821,
+            "worldY": 1678.207977210277,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.0308936010072,
+            "y": 225.79888703850432,
+            "worldX": 224.760252318816,
+            "worldY": 1803.1305367076325,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.3460738141307,
+            "y": 286.9470698507488,
+            "worldX": -160.02470103512425,
+            "worldY": 1518.5692262792563,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.42993880682957,
+            "y": 273.58870901327356,
+            "worldX": -108.44444137936205,
+            "worldY": 1580.734158911169,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 264.4736037071807,
+              "y": 254.64297028375793
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.9998,
+          "phase": "reach",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 257.5130563705357,
+            "y": 247.39114063054254,
+            "worldX": 82.74138349310303,
+            "worldY": 1702.6480743568159,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 257.5130563705357,
+            "y": 247.39114063054254,
+            "worldX": 82.74138349310303,
+            "worldY": 1702.6480743568159,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.17290415056385,
+            "y": 226.23809351637672,
+            "worldX": 225.42111755173013,
+            "worldY": 1801.0866301654585,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.39443970743918,
+            "y": 287.16984277111305,
+            "worldX": -159.7996238317321,
+            "worldY": 1517.5325224684261,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.48867770506766,
+            "y": 273.8200955567066,
+            "worldX": -108.17109199942915,
+            "worldY": 1579.6573704444215,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 272.5130563705357,
+              "y": 249.39114063054254
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.0498,
+          "phase": "reach",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 265.1996808483934,
+            "y": 242.5325448388925,
+            "worldX": 118.51212652411309,
+            "worldY": 1725.2582047274748,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 265.1996808483934,
+            "y": 242.5325448388925,
+            "worldX": 118.51212652411309,
+            "worldY": 1725.2582047274748,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.33300131202094,
+            "y": 226.73649269571223,
+            "worldX": 226.16615127088374,
+            "worldY": 1798.767262408879,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.44468581409396,
+            "y": 287.39024017811255,
+            "worldX": -159.56579680211274,
+            "worldY": 1516.5068734292165,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.54965149480518,
+            "y": 274.0494154411367,
+            "worldX": -107.88734225067915,
+            "worldY": 1578.5901994538938,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 280.1996808483934,
+              "y": 244.5325448388925
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.0998,
+          "phase": "reach",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 272.2619355636107,
+            "y": 238.20439043163802,
+            "worldX": 151.3772807104903,
+            "worldY": 1745.3998546215753,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 272.2619355636107,
+            "y": 238.20439043163802,
+            "worldX": 151.3772807104903,
+            "worldY": 1745.3998546215753,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.49309230305425,
+            "y": 227.23641757395663,
+            "worldX": 226.91115627513867,
+            "worldY": 1796.4407946067895,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.4948266467169,
+            "y": 287.6078042352117,
+            "worldX": -159.33245967938973,
+            "worldY": 1515.4944097656544,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.61051283466304,
+            "y": 274.2759105962899,
+            "worldX": -107.60411580260035,
+            "worldY": 1577.5361737217804,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 287.2619355636107,
+              "y": 240.20439043163802
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.1498000000000002,
+          "phase": "reach",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 278.43710343369526,
+            "y": 234.57245529731716,
+            "worldX": 180.11425669916375,
+            "worldY": 1762.3015542908295,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 278.43710343369526,
+            "y": 234.57245529731716,
+            "worldX": 180.11425669916375,
+            "worldY": 1762.3015542908295,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.6541172353737,
+            "y": 227.74129623556757,
+            "worldX": 227.66050750104753,
+            "worldY": 1794.0912737061199,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.54486216830668,
+            "y": 287.82541484499285,
+            "worldX": -159.09961263575352,
+            "worldY": 1514.481729462912,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.6712616807126,
+            "y": 274.5024609189775,
+            "worldX": -107.32141285962085,
+            "worldY": 1576.4818912601102,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 293.43710343369526,
+              "y": 236.57245529731716
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.1998000000000002,
+          "phase": "reach",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 283.46738620648927,
+            "y": 231.8238279443184,
+            "worldX": 203.52335557699513,
+            "worldY": 1775.0926621451742,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 283.46738620648927,
+            "y": 231.8238279443184,
+            "worldX": 203.5233555769951,
+            "worldY": 1775.0926621451742,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.82409497373465,
+            "y": 228.28300238579888,
+            "worldX": 228.4515218165531,
+            "worldY": 1791.5703711234505,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.59491720764726,
+            "y": 288.04244773639334,
+            "worldX": -158.86667476363326,
+            "worldY": 1513.4717376505205,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.73202286057344,
+            "y": 274.72844213717696,
+            "worldX": -107.03865251958811,
+            "worldY": 1575.430257202881,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 298.46738620648927,
+              "y": 233.8238279443184
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.2498000000000002,
+          "phase": "reach",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 287.078323992101,
+            "y": 230.06794529576416,
+            "worldX": 220.32734125395396,
+            "worldY": 1783.2638987126652,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 287.078323992101,
+            "y": 230.06794529576416,
+            "worldX": 220.32734125395396,
+            "worldY": 1783.2638987126652,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.9947677595603,
+            "y": 228.81547143128662,
+            "worldX": 229.24577062911646,
+            "worldY": 1789.0924546527062,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.64521729793387,
+            "y": 288.2428500188107,
+            "worldX": -158.63259651390723,
+            "worldY": 1512.5391386185488,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.7930218976858,
+            "y": 274.93780135215036,
+            "worldX": -106.7547852787763,
+            "worldY": 1574.455975878021,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 302.078323992101,
+              "y": 232.06794529576416
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.2998000000000003,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 289.16409381912575,
+            "y": 229.34777829397206,
+            "worldX": 230.03375226951204,
+            "worldY": 1786.615292921492,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 289.16409381912575,
+            "y": 229.34777829397206,
+            "worldX": 230.03375226951204,
+            "worldY": 1786.615292921492,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 289.16409381912575,
+            "y": 229.34777829397206,
+            "worldX": 230.033752269512,
+            "worldY": 1786.615292921492,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.69541196676963,
+            "y": 288.44271967313875,
+            "worldX": -158.39900885711154,
+            "worldY": 1511.6090182431801,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.8539083098061,
+            "y": 275.1466365365539,
+            "worldX": -106.4714421535451,
+            "worldY": 1573.4841332000483,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 304.16409381912575,
+              "y": 231.34777829397206
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.3498000000000003,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 289.3379696293383,
+            "y": 229.89115275060797,
+            "worldX": 230.84290678777162,
+            "worldY": 1784.08662665011,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 289.37235709353007,
+            "y": 230.04320378276228,
+            "worldX": 231.00293348722005,
+            "worldY": 1783.3790366781452,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 289.33542729432935,
+            "y": 229.8918791320391,
+            "worldX": 230.83107568914485,
+            "worldY": 1784.0832463362167,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.74550117771247,
+            "y": 288.64263534321736,
+            "worldX": -158.16591196283454,
+            "worldY": 1510.6786837273137,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.9146820535833,
+            "y": 275.35552632843417,
+            "worldX": -106.18862334563417,
+            "worldY": 1572.5120363988221,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 304.37235709353007,
+              "y": 232.04320378276228
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.3998000000000004,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 289.62166188189326,
+            "y": 230.39315642582568,
+            "worldX": 232.16310692181793,
+            "worldY": 1781.7504848861195,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 289.4835912047331,
+            "y": 230.67665942352107,
+            "worldX": 231.52057641612697,
+            "worldY": 1780.4311654750704,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 289.50400676201446,
+            "y": 230.4267721743625,
+            "worldX": 231.61558296359783,
+            "worldY": 1781.594049469485,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.793129359769,
+            "y": 288.82223874867003,
+            "worldX": -157.94426779818372,
+            "worldY": 1509.842875072624,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.97243413186592,
+            "y": 275.54364649581527,
+            "worldX": -105.91986626537025,
+            "worldY": 1571.6365938445874,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 304.4835912047331,
+              "y": 232.67665942352107
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.4498000000000004,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 290.39446642974593,
+            "y": 230.74032438905522,
+            "worldX": 235.75945704586326,
+            "worldY": 1780.134891977027,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 290.39446642974593,
+            "y": 230.74032438905522,
+            "worldX": 235.75945704586326,
+            "worldY": 1780.134891977027,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 289.6710604571576,
+            "y": 230.94701180979473,
+            "worldX": 232.39298984987911,
+            "worldY": 1779.173044206746,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.84081758816257,
+            "y": 288.9870602244339,
+            "worldX": -157.72234419981052,
+            "worldY": 1509.0758561200887,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.03019770611957,
+            "y": 275.71695698530004,
+            "worldX": -105.65105568705559,
+            "worldY": 1570.8300701225303,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 305.39446642974593,
+              "y": 232.74032438905522
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.4998000000000005,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 292.0699105996743,
+            "y": 230.82959688322973,
+            "worldX": 243.55636231136086,
+            "worldY": 1779.7194503930064,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 292.0699105996743,
+            "y": 230.82959688322973,
+            "worldX": 243.55636231136086,
+            "worldY": 1779.7194503930064,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 289.83661900304327,
+            "y": 231.46768019655286,
+            "worldX": 233.163438857571,
+            "worldY": 1776.7500436919236,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.88841170422631,
+            "y": 289.1519223782474,
+            "worldX": -157.5008585658487,
+            "worldY": 1508.3086478667665,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.08786072190725,
+            "y": 275.890315797663,
+            "worldX": -105.38271307111592,
+            "worldY": 1570.0233215234462,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 307.0699105996743,
+              "y": 232.82959688322973
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.5498000000000005,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 294.6546637600923,
+            "y": 230.64001228931036,
+            "worldX": 255.5848595231398,
+            "worldY": 1780.6017078535162,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 294.6546637600923,
+            "y": 230.64001228931036,
+            "worldX": 255.5848595231398,
+            "worldY": 1780.6017078535162,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 289.99876616004985,
+            "y": 231.97026874646534,
+            "worldX": 233.91801250731802,
+            "worldY": 1774.41118013471,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.93419247037104,
+            "y": 289.29521275018897,
+            "worldX": -157.28781160014313,
+            "worldY": 1507.641826807886,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.1433213288042,
+            "y": 276.04178686744194,
+            "worldX": -105.12461966179572,
+            "worldY": 1569.318430484564,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 309.6546637600923,
+              "y": 232.64001228931036
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.5998000000000006,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 297.4287033918887,
+            "y": 230.3511201123463,
+            "worldX": 268.49422684200255,
+            "worldY": 1781.9461065366597,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 297.4287033918887,
+            "y": 230.3511201123463,
+            "worldX": 268.49422684200255,
+            "worldY": 1781.9461065366597,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 290.15256051401917,
+            "y": 232.43001807745188,
+            "worldX": 234.6337152623183,
+            "worldY": 1772.27167465675,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.97641213051182,
+            "y": 289.3993559399331,
+            "worldX": -157.0913367212022,
+            "worldY": 1507.1571824377208,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.19430538690145,
+            "y": 276.1533475494927,
+            "worldX": -104.88735847567588,
+            "worldY": 1568.799267814201,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 312.4287033918887,
+              "y": 232.3511201123463
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.6498000000000006,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 299.1939947406207,
+            "y": 230.35041727784866,
+            "worldX": 276.70924806390013,
+            "worldY": 1781.9493772717244,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 299.1939947406207,
+            "y": 230.35041727784866,
+            "worldX": 276.70924806390013,
+            "worldY": 1781.9493772717244,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 290.3048970305837,
+            "y": 232.89015948071642,
+            "worldX": 235.34263377446442,
+            "worldY": 1770.1303446175998,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.01856024597257,
+            "y": 289.50352978179683,
+            "worldX": -156.8951947850726,
+            "worldY": 1506.672395423786,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.2452129918934,
+            "y": 276.26494467949664,
+            "worldX": -104.65045307438606,
+            "worldY": 1568.2799355283753,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 314.1939947406207,
+              "y": 232.35041727784866
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.6998000000000006,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 299.07091338833607,
+            "y": 230.84288323924136,
+            "worldX": 276.13647240181757,
+            "worldY": 1779.6576205445365,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 299.07091338833607,
+            "y": 230.84288323924136,
+            "worldX": 276.13647240181757,
+            "worldY": 1779.6576205445365,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 290.45541402622314,
+            "y": 233.30445448555935,
+            "worldX": 236.04308490074592,
+            "worldY": 1768.2023669728017,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.0608254734945,
+            "y": 289.56302952005467,
+            "worldX": -156.69850785218165,
+            "worldY": 1506.3955053722732,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.29623279668846,
+            "y": 276.33187349848026,
+            "worldX": -104.41302553618979,
+            "worldY": 1567.9684732483943,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 314.07091338833607,
+              "y": 232.84288323924136
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.7498000000000007,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 297.19773107072785,
+            "y": 231.76339350096958,
+            "worldX": 267.4193660144287,
+            "worldY": 1775.3739019728098,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 297.19773107072785,
+            "y": 231.76339350096958,
+            "worldX": 267.4193660144287,
+            "worldY": 1775.3739019728098,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 290.5872489280583,
+            "y": 233.65210268458947,
+            "worldX": 236.65659638548783,
+            "worldY": 1766.5845392216838,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.09540125139137,
+            "y": 289.5761793234037,
+            "worldX": -156.537604809525,
+            "worldY": 1506.3343109900236,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.33762289827666,
+            "y": 276.35081279444495,
+            "worldX": -104.22041111978324,
+            "worldY": 1567.8803366819348,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 312.19773107072785,
+              "y": 233.76339350096958
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.7998000000000007,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 294.64867449844013,
+            "y": 232.87240740623497,
+            "worldX": 255.5569876867931,
+            "worldY": 1770.2129562888701,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 294.64867449844013,
+            "y": 232.87240740623497,
+            "worldX": 255.5569876867931,
+            "worldY": 1770.2129562888701,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 290.71487601533465,
+            "y": 233.99634982997938,
+            "worldX": 237.25052623804027,
+            "worldY": 1764.9825387320836,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.12827321859587,
+            "y": 289.5877560761061,
+            "worldX": -156.38463067956945,
+            "worldY": 1506.2804370109782,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.37699821795076,
+            "y": 276.3679204769136,
+            "worldX": -104.0371727625715,
+            "worldY": 1567.800723775749,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 309.64867449844013,
+              "y": 234.87240740623497
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.8498000000000008,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 292.56339267927757,
+            "y": 233.80033966126612,
+            "worldX": 245.8528476815967,
+            "worldY": 1765.8946984709526,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 292.56339267927757,
+            "y": 233.80033966126612,
+            "worldX": 245.8528476815967,
+            "worldY": 1765.8946984709526,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 290.8426569230495,
+            "y": 234.29197844875986,
+            "worldX": 237.84517191473535,
+            "worldY": 1763.6067911089922,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.16249608468937,
+            "y": 289.55042585894836,
+            "worldX": -156.22536995955613,
+            "worldY": 1506.4541582079855,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.41772171541683,
+            "y": 276.33612438743614,
+            "worldX": -103.84766047829393,
+            "worldY": 1567.948691163692,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 307.56339267927757,
+              "y": 235.80033966126612
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.8998000000000008,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 291.4258883559586,
+            "y": 234.3865809336843,
+            "worldX": 240.5593179972317,
+            "worldY": 1763.1665456946266,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 291.4258883559586,
+            "y": 234.3865809336843,
+            "worldX": 240.5593179972317,
+            "worldY": 1763.1665456946266,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 290.9428409803213,
+            "y": 234.52459446958068,
+            "worldX": 238.31139192831822,
+            "worldY": 1762.5242811035084,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.1847724799225,
+            "y": 289.48159498771463,
+            "worldX": -156.1217037518682,
+            "worldY": 1506.774471944476,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.44375871750955,
+            "y": 276.27049752084406,
+            "worldX": -103.72649377972036,
+            "worldY": 1568.2540946327388,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 306.4258883559586,
+              "y": 236.3865809336843
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.9498000000000009,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 291.08701724706583,
+            "y": 234.71436260812183,
+            "worldX": 238.9823356180671,
+            "worldY": 1761.6411694933624,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 291.08701724706583,
+            "y": 234.71436260812183,
+            "worldX": 238.9823356180671,
+            "worldY": 1761.6411694933624,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 291.02958313486374,
+            "y": 234.73077235446527,
+            "worldX": 238.71505823581546,
+            "worldY": 1761.5648045270048,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.20156770882508,
+            "y": 289.4075111115887,
+            "worldX": -156.04354489046517,
+            "worldY": 1507.1192312472463,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.46329790925768,
+            "y": 276.19875264347087,
+            "worldX": -103.63556551737724,
+            "worldY": 1568.5879690895565,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 306.08701724706583,
+              "y": 236.71436260812183
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 1.999800000000001,
+          "phase": "contact",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 291.1183931883469,
+            "y": 234.90220772738542,
+            "worldX": 239.1283477897498,
+            "worldY": 1760.767006912614,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 291.1183931883469,
+            "y": 234.90220772738542,
+            "worldX": 239.1283477897498,
+            "worldY": 1760.767006912614,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 291.11816513580385,
+            "y": 234.90227288525486,
+            "worldX": 239.1272865165033,
+            "worldY": 1760.7667036916864,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.22103648605258,
+            "y": 289.2985621389744,
+            "worldX": -155.95294431158447,
+            "worldY": 1507.6262399757336,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.4855101634153,
+            "y": 276.0921432395341,
+            "worldX": -103.5321977988291,
+            "worldY": 1569.0840903198698,
+            "bone": "string_2"
+          },
+          "foam": 0.7224999999999999,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 306.1183931883469,
+              "y": 236.90220772738542
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 2.0498000000000007,
+          "phase": "recover",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 298.0472140420812,
+            "y": 233.57868202694235,
+            "worldX": 271.3725495171522,
+            "worldY": 1766.9262121478725,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 298.0472140420812,
+            "y": 233.57868202694235,
+            "worldX": 271.3725495171522,
+            "worldY": 1766.9262121478725,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 291.15753653299157,
+            "y": 235.00053966600564,
+            "worldX": 239.31050661989593,
+            "worldY": 1760.3094059828097,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.21384832788155,
+            "y": 289.15739135378743,
+            "worldX": -155.986395374472,
+            "worldY": 1508.283197251968,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.47607949928965,
+            "y": 275.9490600277642,
+            "worldX": -103.57608466542735,
+            "worldY": 1569.7499473309697,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 313.0472140420812,
+              "y": 235.57868202694235
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 2.0998000000000006,
+          "phase": "recover",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 288.2937877810179,
+            "y": 238.92805311957363,
+            "worldX": 225.98366581905913,
+            "worldY": 1742.032192766122,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 288.2937877810179,
+            "y": 238.92805311957363,
+            "worldX": 225.98366581905913,
+            "worldY": 1742.032192766122,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 291.1886915101476,
+            "y": 235.0589944171942,
+            "worldX": 239.45549050524048,
+            "worldY": 1760.0373789194698,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.20694083891163,
+            "y": 289.0141527497407,
+            "worldX": -156.01854030540295,
+            "worldY": 1508.9497774019721,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.46690915147187,
+            "y": 275.803892306542,
+            "worldX": -103.61876011500092,
+            "worldY": 1570.4255048877612,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 303.2937877810179,
+              "y": 240.92805311957363
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 2.1498000000000004,
+          "phase": "recover",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 272.9143535444723,
+            "y": 247.25035586632507,
+            "worldX": 154.4133957190275,
+            "worldY": 1703.3032352324396,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 272.9143535444723,
+            "y": 247.25035586632507,
+            "worldX": 154.4133957190275,
+            "worldY": 1703.3032352324396,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 291.19097113150207,
+            "y": 235.06252931365756,
+            "worldX": 239.46609903046695,
+            "worldY": 1760.020928802335,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.18521112931106,
+            "y": 288.84269380632827,
+            "worldX": -156.11966243781615,
+            "worldY": 1509.7476847048256,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.43990482421017,
+            "y": 275.6279392791805,
+            "worldX": -103.7444283916268,
+            "worldY": 1571.244326015996,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 287.9143535444723,
+              "y": 249.25035586632507
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 2.1998,
+          "phase": "recover",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 254.5213812050214,
+            "y": 257.18610095147505,
+            "worldX": 68.81921988459914,
+            "worldY": 1657.0659063130522,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 254.5213812050214,
+            "y": 257.18610095147517,
+            "worldX": 68.81921988459916,
+            "worldY": 1657.065906313052,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 291.1894947965117,
+            "y": 235.04025807388663,
+            "worldX": 239.45922870660507,
+            "worldY": 1760.1245710183848,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.16179386255914,
+            "y": 288.6597724079194,
+            "worldX": -156.22863784488646,
+            "worldY": 1510.5989340869446,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.41090294554908,
+            "y": 275.4402636341543,
+            "worldX": -103.87939254292502,
+            "worldY": 1572.1176999255385,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 269.5213812050214,
+              "y": 259.18610095147517
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 2.2498,
+          "phase": "recover",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 235.69687868215792,
+            "y": 267.3386740855491,
+            "worldX": -18.783139821103532,
+            "worldY": 1609.819538843347,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 235.69687868215792,
+            "y": 267.3386740855491,
+            "worldX": -18.783139821103532,
+            "worldY": 1609.819538843347,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 291.1647233549607,
+            "y": 234.95554623473458,
+            "worldX": 239.34395146458797,
+            "worldY": 1760.5187889795616,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.13202547525458,
+            "y": 288.46917803464004,
+            "worldX": -156.3671690474692,
+            "worldY": 1511.4858906918068,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.37432517135,
+            "y": 275.24387785180323,
+            "worldX": -104.04961214520836,
+            "worldY": 1573.0316076330973,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 250.69687868215792,
+              "y": 269.3386740855491
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 2.2998,
+          "phase": "recover",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 219.040876229463,
+            "y": 276.3413985669189,
+            "worldX": -96.29409217418032,
+            "worldY": 1567.9241470586014,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 219.040876229463,
+            "y": 276.3413985669189,
+            "worldX": -96.29409217418029,
+            "worldY": 1567.9241470586014,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 291.1264478797587,
+            "y": 234.8191576603916,
+            "worldX": 239.165831381867,
+            "worldY": 1761.1534915930745,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.09780785849935,
+            "y": 288.26939889742334,
+            "worldX": -156.5264053389793,
+            "worldY": 1512.415589833598,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.33232383542872,
+            "y": 275.03748602929466,
+            "worldX": -104.2450710229677,
+            "worldY": 1573.9920797971693,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 234.040876229463,
+              "y": 278.3413985669189
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 2.3497999999999997,
+          "phase": "recover",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 207.14164076156425,
+            "y": 282.80268248808176,
+            "worldX": -151.66878823404508,
+            "worldY": 1537.8556914627677,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 207.14164076156425,
+            "y": 282.80268248808176,
+            "worldX": -151.66878823404502,
+            "worldY": 1537.8556914627677,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 291.08374284190705,
+            "y": 234.6614313994198,
+            "worldX": 238.967097732328,
+            "worldY": 1761.8874920072637,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.06353360227024,
+            "y": 288.0644445618811,
+            "worldX": -156.68590520991515,
+            "worldY": 1513.3693724583238,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.2902619704741,
+            "y": 274.825923589549,
+            "worldX": -104.44081158074192,
+            "worldY": 1574.9766141254631,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 222.14164076156425,
+              "y": 284.80268248808176
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 2.3997999999999995,
+          "phase": "recover",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.57702829633155,
+            "y": 285.2929835594823,
+            "worldX": -172.91082757138122,
+            "worldY": 1526.2667397777302,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.57702829633155,
+            "y": 285.2929835594823,
+            "worldX": -172.91082757138116,
+            "worldY": 1526.2667397777302,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 291.0179674980287,
+            "y": 234.4455577907626,
+            "worldX": 238.66100330421781,
+            "worldY": 1762.8920889411581,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 206.02144413537962,
+            "y": 287.8498684878481,
+            "worldX": -156.88177421701874,
+            "worldY": 1514.3679311399594,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.23893620585386,
+            "y": 274.6035203480642,
+            "worldX": -104.67966294422263,
+            "worldY": 1576.0115975858018,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.57702829633155,
+              "y": 287.2929835594823
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 2.4,
+          "phase": "recover",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "completed",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.57694900565824,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121646,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.54131928456556,
+            "y": 285.2124196330861,
+            "worldX": -173.07700427058793,
+            "worldY": 1526.6416548678314,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 290.93607566040055,
+            "y": 234.1499918912725,
+            "worldX": 238.27990860021958,
+            "worldY": 1764.2675446915782,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.9798068228755,
+            "y": 287.6324989946748,
+            "worldX": -157.07553906274222,
+            "worldY": 1515.3794893740687,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.18805189098555,
+            "y": 274.37832569386404,
+            "worldX": -104.91645996178299,
+            "worldY": 1577.0595712614452,
+            "bone": "string_2"
+          },
+          "foam": 0.2975,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.54131928456556,
+              "y": 287.2124196330861
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 2.4499999999999997,
+          "phase": "idle",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "completed",
+          "interruptReason": null,
+          "hand": {
+            "x": 204.3649208479801,
+            "y": 290.15510718898724,
+            "worldX": -164.59062860546237,
+            "worldY": 1503.6401921381225,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 275.2475396174023,
+            "y": 226.66912911642237,
+            "worldX": 165.27119158231272,
+            "worldY": 1799.0807479045434,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 290.8495536238347,
+            "y": 233.84113148148913,
+            "worldX": 237.8772666413947,
+            "worldY": 1765.7048682375168,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.9367421138096,
+            "y": 287.41388787678653,
+            "worldX": -157.27594649075422,
+            "worldY": 1516.3968256761384,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.13548607022835,
+            "y": 274.1516859028813,
+            "worldX": -105.16108209363503,
+            "worldY": 1578.1142700758855,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": null,
+          "fanAnchor": {
+            "expected": {
+              "x": 290.2475396174023,
+              "y": 228.66912911642237
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 2.4999999999999996,
+          "phase": "idle",
+          "actionId": "foam_wipe-0001",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "completed",
+          "interruptReason": null,
+          "hand": {
+            "x": 204.28901472923786,
+            "y": 289.87690459346373,
+            "worldX": -164.94386795985417,
+            "worldY": 1504.9348454132628,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 274.9699364510857,
+            "y": 226.18926138745994,
+            "worldX": 163.97932783177936,
+            "worldY": 1801.3138770590945,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 290.74695325503706,
+            "y": 233.48312219575783,
+            "worldX": 237.39980199644947,
+            "worldY": 1767.370912702093,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.89001257241705,
+            "y": 287.1919314561673,
+            "worldX": -157.49340870995394,
+            "worldY": 1517.4297297953553,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 217.07858973787887,
+            "y": 273.9211512072824,
+            "worldX": -105.42585684485942,
+            "worldY": 1579.1870943539227,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": null,
+          "fanAnchor": {
+            "expected": {
+              "x": 289.9699364510857,
+              "y": 228.18926138745994
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        }
+      ]
+    },
+    "state": {
+      "active": true,
+      "liveRoom": "gaming-c010",
+      "traceLength": 52,
+      "lastTrace": {
+        "t": 2.5499999999999994,
+        "phase": "idle",
+        "actionId": "foam_wipe-0001",
+        "recipeId": "foam_wipe@0.1.0",
+        "interrupted": false,
+        "status": "completed",
+        "interruptReason": null,
+        "hand": {
+          "x": 204.20740648830994,
+          "y": 289.58748532317685,
+          "worldX": -165.3236429083838,
+          "worldY": 1506.281696996227,
+          "bone": "ik_arm_r"
+        },
+        "handVisual": {
+          "x": 274.6288801630225,
+          "y": 225.62603241763117,
+          "worldX": 162.39217642682095,
+          "worldY": 1803.9349389836625,
+          "bone": "l_hand_1"
+        },
+        "face": {
+          "x": 290.6342627404568,
+          "y": 233.07430297130142,
+          "worldX": 236.8753814981285,
+          "worldY": 1769.2734080648224,
+          "bone": "face_con"
+        },
+        "strapControl": {
+          "x": 205.84336062524469,
+          "y": 286.9691488523155,
+          "worldX": -157.71050983399178,
+          "worldY": 1518.4664786696003,
+          "bone": "strap_target_r"
+        },
+        "strap": {
+          "x": 217.02176442876555,
+          "y": 273.68979812230026,
+          "worldX": -105.69030107988169,
+          "worldY": 1580.2637271172594,
+          "bone": "string_2"
+        },
+        "foam": 0,
+        "type": null,
+        "fanAnchor": {
+          "expected": {
+            "x": 289.6288801630225,
+            "y": 227.62603241763117
+          },
+          "actual": null,
+          "gapPx": null,
+          "offset": {
+            "x": 15,
+            "y": 2
+          }
+        }
+      }
+    }
+  },
+  "interruption": {
+    "interruptedActionId": "foam_wipe-0002",
+    "interruptAccepted": true,
+    "summary": {
+      "frameCount": 23,
+      "actionFrameCount": 22,
+      "phases": [
+        "notice",
+        "recover"
+      ],
+      "actionIds": [
+        "foam_wipe-0002"
+      ],
+      "handTravel": 5.684341886080802e-14,
+      "strapControlTravel": 15.56926371743716,
+      "idleAfterAction": true,
+      "handTargetBone": "ik_arm_r",
+      "strapControlBone": "strap_target_r",
+      "strapVisualBone": "string_2",
+      "targetsDistinct": true
+    },
+    "capture": {
+      "model": "c010_00",
+      "animation": "idle",
+      "action": "foam_wipe",
+      "actionId": "foam_wipe-0002",
+      "recipeId": "foam_wipe@0.1.0",
+      "status": "interrupted",
+      "lastAction": {
+        "actionId": "foam_wipe-0002",
+        "recipeId": "foam_wipe@0.1.0",
+        "type": "foam_wipe",
+        "status": "interrupted",
+        "reason": "test-interrupt"
+      },
+      "patch": "runtime-model-variant+runtime-two-bone-fallback",
+      "elapsed": 0.6833000000000011,
+      "frames": [
+        {
+          "t": 0.05,
+          "phase": "notice",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.57694900565824,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121646,
+            "worldY": 1526.2665375159927,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.23211489005297,
+            "y": 225.27260744691316,
+            "worldX": 225.69666270852065,
+            "worldY": 1805.5796497204383,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.09676468940222,
+            "y": 284.2868501843515,
+            "worldX": -161.18489464958247,
+            "worldY": 1530.9489170481825,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.11824573881313,
+            "y": 270.87697237198154,
+            "worldX": -109.89494708218128,
+            "worldY": 1593.35359086636,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.57694900565824,
+              "y": 287.2930270226562
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.1,
+          "phase": "notice",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.5580382928358,
+            "y": 285.18076803487463,
+            "worldX": -172.99920011217088,
+            "worldY": 1526.7889498461932,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.079721133405,
+            "y": 224.91214390135522,
+            "worldX": 224.98747782193112,
+            "worldY": 1807.257115413909,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.0579664105564,
+            "y": 284.2664205080748,
+            "worldX": -161.3654476695248,
+            "worldY": 1531.043989300301,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.07186253548363,
+            "y": 270.8503122937825,
+            "worldX": -110.11079757052428,
+            "worldY": 1593.477657133574,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.5580382928358,
+              "y": 287.18076803487463
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.15000000000000002,
+          "phase": "notice",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.57694900565824,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121646,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.48536470457347,
+            "y": 285.1243297261012,
+            "worldX": -173.33739645028544,
+            "worldY": 1527.051593122973,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.93474217678386,
+            "y": 224.5867333675749,
+            "worldX": 224.3127987066527,
+            "worldY": 1808.7714571925364,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.02269495158265,
+            "y": 284.27032368116227,
+            "worldX": -161.52958815783842,
+            "worldY": 1531.025825358259,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.02992647896133,
+            "y": 270.84874696403693,
+            "worldX": -110.30595266180185,
+            "worldY": 1593.4849416065244,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.48536470457347,
+              "y": 287.1243297261012
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.2,
+          "phase": "notice",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.9111965612165,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.41512063832022,
+            "y": 285.0740494316313,
+            "worldX": -173.66428668027342,
+            "worldY": 1527.285579250198,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.79901910478986,
+            "y": 224.32888852772757,
+            "worldX": 223.68119309801895,
+            "worldY": 1809.9713729077662,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 204.99079784551702,
+            "y": 284.3276773165662,
+            "worldX": -161.67802564008997,
+            "worldY": 1530.758922485634,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 215.9925068179393,
+            "y": 270.9015733709169,
+            "worldX": -110.48009009788747,
+            "worldY": 1593.2391068020277,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.41512063832022,
+              "y": 287.0740494316313
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.25,
+          "phase": "notice",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.57694900565824,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121646,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.6766942200244,
+            "y": 224.09892798803133,
+            "worldX": 223.11193775949562,
+            "worldY": 1811.041525273924,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 204.96531653464825,
+            "y": 284.3958877237206,
+            "worldX": -161.79660635465524,
+            "worldY": 1530.4414961623645,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 215.96281928135397,
+            "y": 270.9663381850658,
+            "worldX": -110.61824505075094,
+            "worldY": 1592.937715010215,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.5769490056582,
+              "y": 287.2930270226562
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.3,
+          "phase": "notice",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.54852838597344,
+            "y": 285.229163052173,
+            "worldX": -173.0434557455249,
+            "worldY": 1526.5637371103887,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.57203951002475,
+            "y": 223.89891546633106,
+            "worldX": 222.6249129608775,
+            "worldY": 1811.9723105018656,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 204.94909755249932,
+            "y": 284.4760503801182,
+            "worldX": -161.87208357412212,
+            "worldY": 1530.0684484362864,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 215.94406845336374,
+            "y": 271.044427903099,
+            "worldX": -110.70550455608893,
+            "worldY": 1592.5743139822116,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.54852838597344,
+              "y": 287.229163052173
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.35,
+          "phase": "notice",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.9111965612165,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.5028681195977,
+            "y": 285.1924191079743,
+            "worldX": -173.25594194931418,
+            "worldY": 1526.7347300071622,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.4968506375573,
+            "y": 223.78322784268116,
+            "worldX": 222.2750114086981,
+            "worldY": 1812.5106784512002,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 204.94604694583924,
+            "y": 284.6080202516762,
+            "worldX": -161.88627998338353,
+            "worldY": 1529.4543088517478,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 215.94137196319173,
+            "y": 271.17668765812243,
+            "worldX": -110.71805303654443,
+            "worldY": 1591.9588253858954,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.5028681195977,
+              "y": 287.1924191079743
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.39999999999999997,
+          "phase": "notice",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.4550764068822,
+            "y": 285.15589513155817,
+            "worldX": -173.4783471259275,
+            "worldY": 1526.9046992542114,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.44895099668804,
+            "y": 223.70910425088934,
+            "worldX": 222.05210397387432,
+            "worldY": 1812.8556225761745,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 204.95627949990023,
+            "y": 284.75313605949464,
+            "worldX": -161.83866141389038,
+            "worldY": 1528.7789928809773,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 215.95439423903488,
+            "y": 271.32408770677955,
+            "worldX": -110.65745212073199,
+            "worldY": 1591.2728793925062,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.4550764068822,
+              "y": 287.15589513155817
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.44999999999999996,
+          "phase": "notice",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.40489529351268,
+            "y": 285.11881636566204,
+            "worldX": -173.71187170053395,
+            "worldY": 1527.0772502888817,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.4050470532207,
+            "y": 223.6524423630112,
+            "worldX": 221.8477910554609,
+            "worldY": 1813.1193063084525,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 204.96650504959314,
+            "y": 284.8982550736058,
+            "worldX": -161.79107544016819,
+            "worldY": 1528.1036619892918,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 215.96740903596688,
+            "y": 271.4714915411615,
+            "worldX": -110.59688600904069,
+            "worldY": 1590.5869157817363,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.40489529351268,
+              "y": 287.11881636566204
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.49999999999999994,
+          "phase": "notice",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "running",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.3573259959499,
+            "y": 285.0835627496426,
+            "worldX": -173.9332418382563,
+            "worldY": 1527.2413077426024,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.38771720236736,
+            "y": 223.6598459806343,
+            "worldX": 221.7671442587524,
+            "worldY": 1813.0848525759645,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 204.9879436433035,
+            "y": 285.07284152506946,
+            "worldX": -161.6913080547873,
+            "worldY": 1527.2912004061882,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 215.993924707246,
+            "y": 271.6502393819807,
+            "worldX": -110.47349175889185,
+            "worldY": 1589.755088612384,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.3573259959499,
+              "y": 287.0835627496426
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.05,
+          "phase": "recover",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": true,
+          "status": "interrupting",
+          "interruptReason": "test-interrupt",
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.9111965612165,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121657,
+            "worldY": 1526.2665375159927,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.39202865102743,
+            "y": 223.72124842978803,
+            "worldX": 221.7872081662003,
+            "worldY": 1812.7991080028453,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.0174286687123,
+            "y": 285.2615056320726,
+            "worldX": -161.55409551497883,
+            "worldY": 1526.4132265556086,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.03001011793125,
+            "y": 271.84431824823014,
+            "worldX": -110.30556343658223,
+            "worldY": 1588.8519164498364,
+            "bone": "string_2"
+          },
+          "foam": 0.291646412037037,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.5769490056582,
+              "y": 287.2930270226562
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.1,
+          "phase": "recover",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": true,
+          "status": "interrupting",
+          "interruptReason": "test-interrupt",
+          "hand": {
+            "x": 202.57694900565824,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121646,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.55592652390175,
+            "y": 285.27066759649097,
+            "worldX": -173.00902751353513,
+            "worldY": 1526.3705901193143,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.4060193860095,
+            "y": 223.80977927166413,
+            "worldX": 221.8523159371473,
+            "worldY": 1812.3871177977571,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.04687440562446,
+            "y": 285.45018764758737,
+            "worldX": -161.41706580948494,
+            "worldY": 1525.5351693653563,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.06605357614927,
+            "y": 272.0384182686419,
+            "worldX": -110.13783034573345,
+            "worldY": 1587.948645843543,
+            "bone": "string_2"
+          },
+          "foam": 0.27546296296296297,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.55592652390175,
+              "y": 287.27066759649097
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.15000000000000002,
+          "phase": "recover",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": true,
+          "status": "interrupting",
+          "interruptReason": "test-interrupt",
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121654,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.54746848922915,
+            "y": 285.2653331858957,
+            "worldX": -173.04838811788005,
+            "worldY": 1526.395414518005,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.43940115005387,
+            "y": 223.9380816678084,
+            "worldX": 222.00766247540886,
+            "worldY": 1811.790045304368,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.08175979450039,
+            "y": 285.64657088198123,
+            "worldX": -161.2547219504071,
+            "worldY": 1524.6212735150598,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.1085953160478,
+            "y": 272.24109566310904,
+            "worldX": -109.93985662522894,
+            "worldY": 1587.0054592710026,
+            "bone": "string_2"
+          },
+          "foam": 0.25101562499999996,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.54746848922915,
+              "y": 287.2653331858957
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.2,
+          "phase": "recover",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": true,
+          "status": "interrupting",
+          "interruptReason": "test-interrupt",
+          "hand": {
+            "x": 202.57694900565824,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121646,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.57630368623674,
+            "y": 285.2893835196123,
+            "worldX": -172.9141996421222,
+            "worldY": 1526.2834930484883,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.5036804073014,
+            "y": 224.14911526400044,
+            "worldX": 222.30679466273622,
+            "worldY": 1810.8079720208298,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.12262273522714,
+            "y": 285.8589813697906,
+            "worldX": -161.0645607481214,
+            "worldY": 1523.6327926807992,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.1583232667937,
+            "y": 272.4608030892525,
+            "worldX": -109.70844090396994,
+            "worldY": 1585.9830211507037,
+            "bone": "string_2"
+          },
+          "foam": 0.22037037037037036,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.57630368623674,
+              "y": 287.2893835196123
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.25,
+          "phase": "recover",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": true,
+          "status": "interrupting",
+          "interruptReason": "test-interrupt",
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.9111965612165,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.61728953512954,
+            "y": 285.3236036703844,
+            "worldX": -172.72346647011994,
+            "worldY": 1526.1242449645893,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.5776036488525,
+            "y": 224.38730847108187,
+            "worldX": 222.65080643086185,
+            "worldY": 1809.6995078273746,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.16341455546274,
+            "y": 286.07142405594016,
+            "worldX": -160.87473051462712,
+            "worldY": 1522.6441620072228,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.20797526834772,
+            "y": 272.6805485761455,
+            "worldX": -109.47737862251202,
+            "worldY": 1584.9604059095773,
+            "bone": "string_2"
+          },
+          "foam": 0.18559317129629627,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.61728953512954,
+              "y": 287.3236036703844
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.3,
+          "phase": "recover",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": true,
+          "status": "interrupting",
+          "interruptReason": "test-interrupt",
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.65701949869273,
+            "y": 285.35827330054997,
+            "worldX": -172.53857772977048,
+            "worldY": 1525.9629051677503,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.65590625080154,
+            "y": 224.6422249355927,
+            "worldX": 223.0151981428606,
+            "worldY": 1808.5132197014673,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.20437472297596,
+            "y": 286.28411754100034,
+            "worldX": -160.6841168543861,
+            "worldY": 1521.6543642071126,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.25783429471633,
+            "y": 272.9005866560528,
+            "worldX": -109.24535292317606,
+            "worldY": 1583.9364290474223,
+            "bone": "string_2"
+          },
+          "foam": 0.14875,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.65701949869273,
+              "y": 287.35827330054997
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.35,
+          "phase": "recover",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": true,
+          "status": "interrupting",
+          "interruptReason": "test-interrupt",
+          "hand": {
+            "x": 202.57694900565824,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121646,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.7396782367983,
+            "y": 285.43136701468217,
+            "worldX": -172.15391415103585,
+            "worldY": 1525.6227537172747,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.77152284209956,
+            "y": 224.9897995919446,
+            "worldX": 223.55323553357158,
+            "worldY": 1806.8957341911148,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.25184879921105,
+            "y": 286.5049325550207,
+            "worldX": -160.4631898419463,
+            "worldY": 1520.6267717773453,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.31546340571083,
+            "y": 273.1297951991917,
+            "worldX": -108.97716808776129,
+            "worldY": 1582.8697761986002,
+            "bone": "string_2"
+          },
+          "foam": 0.11190682870370368,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.7396782367983,
+              "y": 287.43136701468217
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.39999999999999997,
+          "phase": "recover",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": true,
+          "status": "interrupting",
+          "interruptReason": "test-interrupt",
+          "hand": {
+            "x": 202.57694900565824,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121646,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 287.89894654999307,
+            "y": 225.38416957747626,
+            "worldX": 224.14621893275384,
+            "worldY": 1805.0604803092278,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.29910241225215,
+            "y": 286.7264233248517,
+            "worldX": -160.24328878469427,
+            "worldY": 1519.596034626833,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.37286567982375,
+            "y": 273.3596872034843,
+            "worldX": -108.71003886834859,
+            "worldY": 1581.7999427711802,
+            "bone": "string_2"
+          },
+          "foam": 0.07712962962962963,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.5769490056582,
+              "y": 287.2930270226562
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.44999999999999996,
+          "phase": "recover",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": true,
+          "status": "interrupting",
+          "interruptReason": "test-interrupt",
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.61888271704234,
+            "y": 285.24731526589665,
+            "worldX": -172.7160523833555,
+            "worldY": 1526.479263337223,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.03142243061734,
+            "y": 225.80055297630224,
+            "worldX": 224.76271329868354,
+            "worldY": 1803.1227840415504,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.34626226673976,
+            "y": 286.94795606516567,
+            "worldX": -160.0238240455079,
+            "worldY": 1518.5651021610213,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.430167815849,
+            "y": 273.5896288787632,
+            "worldX": -108.44337565502371,
+            "worldY": 1580.729878193131,
+            "bone": "string_2"
+          },
+          "foam": 0.046484375,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.61888271704234,
+              "y": 287.24731526589665
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.49999999999999994,
+          "phase": "recover",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": true,
+          "status": "interrupting",
+          "interruptReason": "test-interrupt",
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.71710617688174,
+            "y": 285.18921133592244,
+            "worldX": -172.25895627417867,
+            "worldY": 1526.7496578067573,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.1734932502619,
+            "y": 226.23988965911613,
+            "worldX": 225.42385900657533,
+            "worldY": 1801.0782715731318,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.39464090150105,
+            "y": 287.17074126276606,
+            "worldX": -159.79868754804767,
+            "worldY": 1517.5283412164176,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.48892182414696,
+            "y": 273.8210297210894,
+            "worldX": -108.16995595839055,
+            "worldY": 1579.6530231845568,
+            "bone": "string_2"
+          },
+          "foam": 0.022037037037037067,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.71710617688174,
+              "y": 287.18921133592244
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.5499999999999999,
+          "phase": "recover",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": true,
+          "status": "interrupting",
+          "interruptReason": "test-interrupt",
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.91119656121649,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.9111965612165,
+            "worldY": 1526.2665375159927,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.33364370640214,
+            "y": 226.7384917162512,
+            "worldX": 226.16914073972015,
+            "worldY": 1798.7579596973678,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.444886587155,
+            "y": 287.39111034143014,
+            "worldX": -159.5648624776125,
+            "worldY": 1516.502824006935,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.54989516419406,
+            "y": 274.0503213116781,
+            "worldX": -107.88620830233559,
+            "worldY": 1578.5859838632337,
+            "bone": "string_2"
+          },
+          "foam": 0.005853587962962964,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.5769490056582,
+              "y": 287.2930270226562
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.6,
+          "phase": "recover",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": true,
+          "status": "interrupted",
+          "interruptReason": "test-interrupt",
+          "hand": {
+            "x": 202.5769490056582,
+            "y": 285.2930270226562,
+            "worldX": -172.9111965612165,
+            "worldY": 1526.2665375159927,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 202.76186174673296,
+            "y": 285.32844070443014,
+            "worldX": -172.0506801976035,
+            "worldY": 1526.1017351747091,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.4937306196722,
+            "y": 227.23841795582575,
+            "worldX": 226.9141267675542,
+            "worldY": 1796.431485560145,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.49502699860744,
+            "y": 287.6086745850073,
+            "worldX": -159.33152731486297,
+            "worldY": 1515.4903594755724,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.61075605416417,
+            "y": 274.27681668778024,
+            "worldX": -107.60298394787011,
+            "worldY": 1577.5319571029047,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": "foam_wipe",
+          "fanAnchor": {
+            "expected": {
+              "x": 217.76186174673296,
+              "y": 287.32844070443014
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.65,
+          "phase": "idle",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "interrupted",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.78321664809758,
+            "y": 288.38720939329534,
+            "worldX": -171.95130228583406,
+            "worldY": 1511.8673428122518,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 249.84436046624884,
+            "y": 204.59603200198126,
+            "worldX": 47.05407349566491,
+            "worldY": 1901.8008803962061,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.65477286861216,
+            "y": 227.7433551880503,
+            "worldX": 227.66355857869067,
+            "worldY": 1794.0816920932307,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.54506209887893,
+            "y": 287.82628538072976,
+            "worldX": -159.09868223188835,
+            "worldY": 1514.4776783075272,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.6715044501504,
+            "y": 274.50336723085695,
+            "worldX": -107.32028309932096,
+            "worldY": 1576.477673615624,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": null,
+          "fanAnchor": {
+            "expected": {
+              "x": 264.8443604662489,
+              "y": 206.59603200198126
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        },
+        {
+          "t": 0.6833000000000011,
+          "phase": "idle",
+          "actionId": "foam_wipe-0002",
+          "recipeId": "foam_wipe@0.1.0",
+          "interrupted": false,
+          "status": "interrupted",
+          "interruptReason": null,
+          "hand": {
+            "x": 202.8531192373491,
+            "y": 288.5978673839938,
+            "worldX": -171.62600116509873,
+            "worldY": 1510.8870174595029,
+            "bone": "ik_arm_r"
+          },
+          "handVisual": {
+            "x": 250.55281216455413,
+            "y": 205.1994566275921,
+            "worldX": 50.35094896069651,
+            "worldY": 1898.992762569781,
+            "bone": "l_hand_1"
+          },
+          "face": {
+            "x": 288.7675096411957,
+            "y": 228.10229462992953,
+            "worldX": 228.1881943448647,
+            "worldY": 1792.4113190216513,
+            "bone": "face_con"
+          },
+          "strapControl": {
+            "x": 205.5783270500451,
+            "y": 287.97123994126764,
+            "worldX": -158.94387929809974,
+            "worldY": 1513.8031127227105,
+            "bone": "strap_target_r"
+          },
+          "strap": {
+            "x": 216.71190047087978,
+            "y": 274.65428044202,
+            "worldX": -107.13229477217564,
+            "worldY": 1575.7753786470005,
+            "bone": "string_2"
+          },
+          "foam": 0,
+          "type": null,
+          "fanAnchor": {
+            "expected": {
+              "x": 265.5528121645541,
+              "y": 207.1994566275921
+            },
+            "actual": null,
+            "gapPx": null,
+            "offset": {
+              "x": 15,
+              "y": 2
+            }
+          }
+        }
+      ]
+    },
+    "interruptedFrames": 12
+  },
+  "status": "pass"
+}

@@ -1,0 +1,20 @@
+{
+  "purpose": "Exploratory intermediate views for the hand turn; not accepted or in the product.",
+  "assets": [
+    {
+      "file": "left-glove-turn-study.png",
+      "generator": "image_gen.imagegen",
+      "originalOutput": "C:/Users/mi/.codex/generated_images/01a1a55b-d911-77b0-8c83-fbdaa88a6e50/exec-ac3ff39a-501a-494f-b6c0-f011f7dd2480.png",
+      "references": ["left-glove-dorsal-contact.png", "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/visual/exported/00-0.60.png"],
+      "prompt": "Create ONE isolated transparent RGBA 2D skeletal-animation attachment of the SAME character's left gloved hand for the intermediate moment of turning the forearm toward the face, consistent with both supplied images. Image 1 is the destination back-of-hand glove, image 2 is the character's initial palm-side glove, and the new image must bridge the two views. Draw only the hand, no forearm, face, body, props, text or background. Show a genuine three-quarter SIDE VIEW of a naturally relaxed left hand while it rotates: wrist at bottom, index finger gently half-extended pointing upper-left, other fingers relaxed and partly overlapped with anatomically plausible five-digit form, thumb naturally opposed. It should have a real narrow but three-dimensional hand silhouette with visible thickness, not edge-on paper, not vanishing. Both a narrow trace of the glove's red inner palm and predominantly charcoal black leather side/back are visible, so it reads as the intermediate orientation. Maintain the dark fitted leather, subtle warm light, seams and painterly finish from references. No geometric outlines, no cast shadow, no checkerboard. Full hand with transparent margin. This is a single cohesive hand asset, not a sprite sheet."
+    },
+    {
+      "file": "left-glove-curled-side-study.png",
+      "generator": "image_gen.imagegen",
+      "originalOutput": "C:/Users/mi/.codex/generated_images/01a1a55b-d911-77b0-8c83-fbdaa88a6e50/exec-5a327bc3-7954-436c-81ae-cd01e0f6a773.png",
+      "references": ["spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/visual/exported/00-1.48.png", "left-glove-turn-study.png"],
+      "prompt": "Create ONE isolated transparent RGBA 2D skeletal-animation hand texture for the SAME anime character, no face or sleeve. Image 1 is the original character and her red-and-black C-shaped curled glove pose; image 2 is the later partially turned glove. This new attachment is the intermediate beginning of the turn and must closely match the C-shaped relaxed FINGER BEND of image 1, not the straight extended index in image 2. Anatomically plausible left hand, wrist at bottom and fingers curling gently toward the thumb in a loose C, all five digits sensible and connected. A partial red palm / red inner finger area remains visible, while outer edges and the back are charcoal black leather; show a three-quarter hand view between the original red palm and the later dark side. Maintain similar character proportions, painterly game illustration line and fabric style. Small amount of depth and thickness: not paper-thin, not fully face-on red palm, no dramatic opening, no finger pointing straight. Hand only, no cuff, no forearm, no body, no props, no shadow, no text, no checkerboard, transparent background. Full hand centered with small transparent margin."
+    }
+  ],
+  "processing": "Copied generator outputs unchanged."
+}

@@ -1,0 +1,334 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roomwave.local/schemas/character-pack-loop-only.schema.json",
+  "title": "Roomwave Loop-only Character Pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "packType",
+    "packId",
+    "characterId",
+    "model",
+    "packVersion",
+    "status",
+    "sourceType",
+    "editable",
+    "format",
+    "skeleton",
+    "atlas",
+    "textures",
+    "binding",
+    "audit",
+    "patch",
+    "skin",
+    "fit",
+    "provenance",
+    "runtime",
+    "identity",
+    "animations",
+    "capabilities",
+    "anchors",
+    "integrity",
+    "validation",
+    "rollback"
+  ],
+  "properties": {
+    "schemaVersion": {"type": "integer", "const": 1},
+    "packType": {"type": "string", "const": "character"},
+    "packId": {"type": "string", "minLength": 1},
+    "characterId": {"type": "string", "minLength": 1},
+    "model": {"type": "string", "minLength": 1},
+    "packVersion": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "status": {
+      "type": "string",
+      "enum": [
+        "received",
+        "staged",
+        "inspected",
+        "mapped",
+        "runtime-usable",
+        "approved",
+        "published",
+        "degraded",
+        "blocked"
+      ]
+    },
+    "sourceType": {"type": "string", "const": "runtime-export"},
+    "editable": {"type": "boolean", "const": false},
+    "format": {"type": "string", "enum": ["json", "binary"]},
+    "skeleton": {"type": "string", "minLength": 1},
+    "atlas": {"type": "string", "minLength": 1},
+    "texture": {"type": "string", "minLength": 1},
+    "textures": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "binding": {"type": "string", "minLength": 1},
+    "audit": {"type": "string", "minLength": 1},
+    "patch": {"type": "null"},
+    "skin": {"type": ["string", "null"]},
+    "fit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scaleMultiplier", "offsetX", "offsetY"],
+      "properties": {
+        "scaleMultiplier": {"type": "number", "exclusiveMinimum": 0},
+        "offsetX": {"type": "number"},
+        "offsetY": {"type": "number"}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceId", "sourceKind", "license"],
+      "properties": {
+        "sourceId": {"type": "string", "minLength": 1},
+        "sourceKind": {"type": "string", "const": "external-export"},
+        "license": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "reference"],
+          "properties": {
+            "status": {"type": "string", "enum": ["pending", "approved", "blocked"]},
+            "reference": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["engine", "runtimeVersion", "exportVersion"],
+      "properties": {
+        "engine": {"type": "string", "const": "spine-canvas"},
+        "runtimeVersion": {"type": "string", "minLength": 1},
+        "exportVersion": {"type": "string", "minLength": 1}
+      }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["displayName", "tags"],
+      "properties": {
+        "displayName": {"type": "string", "minLength": 1},
+        "tags": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "animationInventory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "sourceName", "semantic", "duration", "sourceLoopFlag", "loopIntent"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "sourceName": {"type": "string", "minLength": 1},
+          "semantic": {"type": "string", "minLength": 1},
+          "duration": {"type": "number", "exclusiveMinimum": 0},
+          "sourceLoopFlag": {"type": ["boolean", "null"]},
+          "loopIntent": {"type": "string", "enum": ["confirmed", "pending"]}
+        }
+      }
+    },
+    "animations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "sourceName",
+          "semantic",
+          "duration",
+          "loop",
+          "phaseModel",
+          "interrupt"
+        ],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "sourceName": {"type": "string", "minLength": 1},
+          "semantic": {"type": "string", "minLength": 1},
+          "duration": {"type": "number", "exclusiveMinimum": 0},
+          "loop": {"type": "boolean", "const": true},
+          "phaseModel": {"type": "string", "const": "loop"},
+          "default": {"type": "boolean"},
+          "interrupt": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["mode", "mixSeconds"],
+            "properties": {
+              "mode": {
+                "type": "string",
+                "enum": ["crossfade-to-idle", "stop"]
+              },
+              "mixSeconds": {"type": "number", "minimum": 0}
+            }
+          }
+        }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tier",
+        "actionMode",
+        "motion",
+        "supported",
+        "loops",
+        "unsupportedActions"
+      ],
+      "properties": {
+        "tier": {"type": "string", "const": "loop-only"},
+        "actionMode": {"type": "string", "const": "authored-loop"},
+        "motion": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "mode",
+            "supportsTargetDrivenMotion",
+            "supportsPhaseActions",
+            "supportsArbitraryLayerMix"
+          ],
+          "properties": {
+            "mode": {"type": "string", "const": "fixed-authored-loop"},
+            "supportsTargetDrivenMotion": {"type": "boolean", "const": false},
+            "supportsPhaseActions": {"type": "boolean", "const": false},
+            "supportsArbitraryLayerMix": {"type": "boolean", "const": false}
+          }
+        },
+        "supported": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "play_loop",
+              "switch_loop",
+              "crossfade_to_idle",
+              "set_skin",
+              "read_anchor"
+            ]
+          }
+        },
+        "loops": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "animationId", "semantic"],
+            "properties": {
+              "id": {"type": "string", "minLength": 1},
+              "animationId": {"type": "string", "minLength": 1},
+              "semantic": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "unsupportedActions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "reason"],
+            "properties": {
+              "id": {"type": "string", "minLength": 1},
+              "reason": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    },
+    "anchors": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/anchor"
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceHash", "files"],
+      "properties": {
+        "sourceHash": {"type": "string", "minLength": 1},
+        "files": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["sha256", "bytes"],
+            "properties": {
+              "sha256": {"type": "string", "minLength": 1},
+              "bytes": {"type": "integer", "minimum": 0},
+              "path": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["overall", "runId", "checks"],
+      "properties": {
+        "overall": {
+          "type": "string",
+          "enum": ["pending", "pass", "degraded", "blocked"]
+        },
+        "runId": {"type": "string", "minLength": 1},
+        "checks": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "structure",
+            "runtimeLoad",
+            "loopPlayback",
+            "fit",
+            "anchors",
+            "visual"
+          ],
+          "properties": {
+            "structure": {"type": "string", "enum": ["pending", "pass", "fail"]},
+            "runtimeLoad": {"type": "string", "enum": ["pending", "pass", "fail"]},
+            "loopPlayback": {"type": "string", "enum": ["pending", "pass", "fail"]},
+            "fit": {"type": "string", "enum": ["pending", "pass", "fail"]},
+            "anchors": {"type": "string", "enum": ["pending", "reviewed", "fail"]},
+            "visual": {"type": "string", "enum": ["pending", "pass", "fail"]}
+          }
+        }
+      }
+    },
+    "rollback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["replaces", "rollbackTo", "rollbackAllowed"],
+      "properties": {
+        "replaces": {"type": ["string", "null"]},
+        "rollbackTo": {"type": ["string", "null"]},
+        "rollbackAllowed": {"type": "boolean"}
+      }
+    }
+  },
+  "$defs": {
+    "anchor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "mode"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["available", "missing", "needsVisualConfirmation"]
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["bone", "slot", "point", "static", "unavailable"]
+        },
+        "source": {"type": "string"}
+      }
+    }
+  }
+}
+

@@ -1,0 +1,10 @@
+{
+  "name": "roomwave-product",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Multi-room product, local API and shared room simulation.",
+  "scripts": {
+    "start": "node backend/server.cjs",
+    "check": "node tools/check.mjs"
+  }
+}

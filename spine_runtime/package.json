@@ -1,0 +1,52 @@
+{
+  "name": "roomwave-spine-runtime",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:source": "node scripts/prepare-source.mjs",
+    "start": "node scripts/start.mjs",
+    "dev": "vite --host 127.0.0.1 --port 5180 --strictPort",
+    "build": "vue-tsc --noEmit && vite build",
+    "typecheck": "vue-tsc --noEmit",
+    "test:browser": "node tests/test-browser.cjs",
+    "test:foam-wipe": "node tests/test-foam-wipe.cjs",
+    "record:foam-wipe": "node tests/record-foam-wipe.cjs",
+    "test:foam-canvas": "node tests/test-foam-canvas.cjs",
+    "test:foam-review": "node --test tests/foam-review-timing.test.cjs",
+    "test:conversation": "node --test tests/conversation.test.mjs",
+    "test:canvas": "node --test tests/action-scheduler.test.mjs tests/anchor-sampler.test.mjs"
+  },
+  "dependencies": {
+    "@esotericsoftware/spine-webgl": "~4.2.0",
+    "@esotericsoftware/spine-webgl-4-0": "npm:@esotericsoftware/spine-webgl@~4.0.31",
+    "@esotericsoftware/spine-webgl-4-1": "npm:@esotericsoftware/spine-webgl@~4.1.56",
+    "@esotericsoftware/spine-webgl-4-3": "npm:@esotericsoftware/spine-webgl@4.3.13",
+    "@moeru/eventa": "1.0.2",
+    "@moeru/std": "0.1.0-beta.17",
+    "@vueuse/core": "14.4.0",
+    "clustr": "1.0.2",
+    "es-toolkit": "1.51.0",
+    "jszip": "3.10.1",
+    "nanoid": "6.0.1",
+    "pinia": "4.0.3",
+    "rehype-parse": "9.0.1",
+    "rehype-stringify": "10.0.1",
+    "unified": "11.0.5",
+    "unist-util-visit": "5.1.0",
+    "vue": "3.5.41"
+  },
+  "devDependencies": {
+    "@types/node": "26.2.0",
+    "@vitejs/plugin-vue": "6.0.8",
+    "@xsai-ext/providers": "0.5.1",
+    "@xsai-ext/responses": "0.5.1",
+    "@xsai-transformers/shared": "0.1.0",
+    "@xsai/shared-chat": "0.5.1",
+    "model-bank": "1.0.20260904203849",
+    "playwright-core": "1.64.1",
+    "typescript": "6.0.3",
+    "vite": "8.3.4",
+    "vue-tsc": "3.3.11",
+    "zod": "4.6.7"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "runId": "c010-foam-wipe-v2-20261105",
+  "profile": "authored-spine-animation",
+  "status": "needs-visual-rework",
+  "action": {
+    "animation": "foam_wipe",
+    "duration": 3.6,
+    "source": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/authored/c010_00.foam_wipe.rigby"
+  },
+  "pack": "pack/character-pack.json",
+  "exportReport": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/exported/c010_00.foam_wipe.export-report.json",
+  "skeletonSha256": "32cdacf5a54e2a27fe4b7c4e23a9b0f7ed78cbd1a297a17d09bfcc4441e3881c",
+  "runtime": {
+    "status": "pass",
+    "evidence": "runtime/foam-wipe-runtime-report.json"
+  },
+  "visual": {
+    "status": "fail",
+    "evidence": "visual/review-manifest.json"
+  }
+}

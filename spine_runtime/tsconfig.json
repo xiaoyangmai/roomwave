@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["ES2024", "DOM", "DOM.Iterable"],
+    "types": ["vite/client", "node"],
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "paths": {
+      "@proj-airi/stage-shared": ["../airi/packages/stage-shared/src/cover-fit.ts"],
+      "@proj-airi/stage-shared/composables": ["../airi/packages/stage-shared/src/composables/use-local-storage-manual-reset/index.ts"],
+      "@proj-airi/stream-kit": ["../airi/packages/stream-kit/src/index.ts"],
+      "@proj-airi/pipelines-audio": ["../airi/packages/pipelines-audio/src/index.ts"],
+      "@proj-airi/provider-inference": ["../airi/packages/provider-inference/src/types.ts"],
+      "@proj-airi/server-shared/types": ["../airi/packages/server-shared/src/types/index.ts"],
+      "@proj-airi/plugin-protocol/types": ["../airi/packages/plugin-protocol/src/types/index.ts"]
+    }
+  },
+  "include": ["src/stage/**/*.ts", "src/stage/**/*.vue", "vite.config.ts"]
+}

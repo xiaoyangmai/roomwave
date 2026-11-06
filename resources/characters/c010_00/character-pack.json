@@ -1,0 +1,442 @@
+{
+  "schemaVersion": 1,
+  "packType": "character",
+  "packId": "character.c010_00",
+  "characterId": "c010_00",
+  "model": "c010_00",
+  "packVersion": "0.4.0",
+  "status": "candidate",
+  "sourceType": "rigby2d-authored-runtime-export",
+  "editable": true,
+  "format": "json",
+  "skeleton": "model/c010_00.foam_wipe.json",
+  "atlas": "model/c010_00.foam_wipe.atlas",
+  "textures": [
+    "model/c010_00.foam_wipe.png"
+  ],
+  "binding": "semantic-binding.json",
+  "audit": "audit-report.json",
+  "patch": "/config/c010-runtime-patch.json",
+  "skin": "00",
+  "fit": {
+    "scaleMultiplier": 1.15,
+    "offsetX": 0,
+    "offsetY": -24
+  },
+  "provenance": {
+    "sourceId": "roomwave/spine_manager/source/c010",
+    "sourceKind": "external-export",
+    "license": {
+      "status": "pending",
+      "reference": "SOURCE-NOTICE.md requires independent rights confirmation"
+    }
+  },
+  "runtime": {
+    "engine": "spine-canvas",
+    "runtimeVersion": "4.3.13",
+    "exportVersion": "4.3.26"
+  },
+  "identity": {
+    "displayName": "C010",
+    "tags": [
+      "gaming",
+      "finite-action-recipes",
+      "semantic-action-candidate"
+    ]
+  },
+  "animations": [
+    {
+      "id": "idle",
+      "sourceName": "idle",
+      "semantic": "idle",
+      "duration": 3.3333,
+      "loop": true,
+      "phaseModel": "loop",
+      "default": true,
+      "interrupt": {
+        "mode": "crossfade-to-idle",
+        "mixSeconds": 0.2
+      }
+    },
+    {
+      "id": "foam_wipe",
+      "sourceName": "foam_wipe",
+      "semantic": "foam_wipe",
+      "duration": 3.6,
+      "loop": false,
+      "phaseModel": "semantic-action",
+      "default": false,
+      "interrupt": {
+        "mode": "crossfade-to-idle",
+        "mixSeconds": 0.2
+      }
+    }
+  ],
+  "animationInventory": [
+    {
+      "id": "action",
+      "sourceName": "action",
+      "semantic": "custom_loop",
+      "duration": 3.16667,
+      "sourceLoopFlag": null,
+      "loopIntent": "pending"
+    },
+    {
+      "id": "angry",
+      "sourceName": "angry",
+      "semantic": "custom_loop",
+      "duration": 3.333333,
+      "sourceLoopFlag": null,
+      "loopIntent": "pending"
+    },
+    {
+      "id": "delight",
+      "sourceName": "delight",
+      "semantic": "custom_loop",
+      "duration": 3.333333,
+      "sourceLoopFlag": null,
+      "loopIntent": "pending"
+    },
+    {
+      "id": "expression_0",
+      "sourceName": "expression_0",
+      "semantic": "custom_loop",
+      "duration": 3.16667,
+      "sourceLoopFlag": null,
+      "loopIntent": "pending"
+    },
+    {
+      "id": "idle",
+      "sourceName": "idle",
+      "semantic": "idle",
+      "duration": 3.333333,
+      "sourceLoopFlag": null,
+      "loopIntent": "confirmed"
+    },
+    {
+      "id": "special",
+      "sourceName": "special",
+      "semantic": "custom_loop",
+      "duration": 3.333333,
+      "sourceLoopFlag": null,
+      "loopIntent": "pending"
+    },
+    {
+      "id": "talk_end",
+      "sourceName": "talk_end",
+      "semantic": "custom_loop",
+      "duration": 0.03333,
+      "sourceLoopFlag": null,
+      "loopIntent": "pending"
+    },
+    {
+      "id": "talk_start",
+      "sourceName": "talk_start",
+      "semantic": "custom_loop",
+      "duration": 0.53333,
+      "sourceLoopFlag": null,
+      "loopIntent": "pending"
+    },
+    {
+      "id": "think",
+      "sourceName": "think",
+      "semantic": "custom_loop",
+      "duration": 3.333333,
+      "sourceLoopFlag": null,
+      "loopIntent": "pending"
+    },
+    {
+      "id": "worry",
+      "sourceName": "worry",
+      "semantic": "custom_loop",
+      "duration": 3.333333,
+      "sourceLoopFlag": null,
+      "loopIntent": "pending"
+    },
+    {
+      "id": "foam_wipe",
+      "sourceName": "foam_wipe",
+      "duration": 3.6,
+      "semantic": "foam_wipe",
+      "sourceLoopFlag": false,
+      "loopIntent": "single-shot"
+    }
+  ],
+  "capabilities": {
+    "tier": "semantic-action-candidate",
+    "actionMode": "authored-animation",
+    "motion": {
+      "mode": "authored-foam-with-legacy-actions",
+      "supportsTargetDrivenMotion": true,
+      "supportsPhaseActions": true,
+      "supportsArbitraryLayerMix": false
+    },
+    "supported": [
+      "play_loop",
+      "switch_loop",
+      "crossfade_to_idle",
+      "read_anchor",
+      "play_semantic_action",
+      "foam_wipe",
+      "interrupt_to_idle"
+    ],
+    "loops": [
+      {
+        "id": "idle",
+        "animationId": "idle",
+        "semantic": "idle"
+      }
+    ],
+    "unsupportedActions": [
+      {
+        "id": "water_splash",
+        "reason": "requires a validated prop target"
+      },
+      {
+        "id": "fan_hold",
+        "reason": "requires a validated hold phase"
+      }
+    ],
+    "recipes": [
+      "idle_base",
+      "foam_wipe",
+      "interrupt_to_idle"
+    ]
+  },
+  "anchors": {
+    "head": {
+      "status": "available",
+      "mode": "bone",
+      "source": "head"
+    },
+    "faceTarget": {
+      "status": "available",
+      "mode": "bone",
+      "source": "face_con"
+    },
+    "handVisual": {
+      "status": "needsVisualConfirmation",
+      "mode": "bone",
+      "source": "l_hand_1"
+    },
+    "handTarget": {
+      "status": "available",
+      "mode": "bone",
+      "source": "ik_arm_r"
+    },
+    "gunTarget": {
+      "status": "available",
+      "mode": "bone",
+      "source": "gun"
+    },
+    "strapTarget": {
+      "status": "available",
+      "mode": "bone",
+      "source": "strapVisual"
+    },
+    "foamAnchor": {
+      "status": "available",
+      "mode": "bone",
+      "source": "foam_face_anchor"
+    },
+    "waterAnchor": {
+      "status": "missing",
+      "mode": "unavailable"
+    },
+    "fanAnchor": {
+      "status": "missing",
+      "mode": "unavailable"
+    },
+    "strapControlTarget": {
+      "status": "available",
+      "mode": "bone",
+      "source": "strap_target_r"
+    },
+    "strapVisual": {
+      "status": "available",
+      "mode": "bone",
+      "source": "string_2"
+    },
+    "foamFace": {
+      "status": "available",
+      "mode": "bone",
+      "source": "foam_face_anchor"
+    },
+    "foamPalm": {
+      "status": "available",
+      "mode": "bone",
+      "source": "foam_palm_anchor"
+    }
+  },
+  "integrity": {
+    "sourceHash": "sha256:459b18135e17e6371c473ebe3a14514e00ff8f2c79a600de5d5804ca4597bcde",
+    "files": {
+      "model/c010_00.foam_wipe.json": {
+        "sha256": "32cdacf5a54e2a27fe4b7c4e23a9b0f7ed78cbd1a297a17d09bfcc4441e3881c",
+        "bytes": 7374851,
+        "path": "model/c010_00.foam_wipe.json"
+      },
+      "model/c010_00.foam_wipe.atlas": {
+        "sha256": "9de557de7a4abc3d4f709ee448bf19b947b51fc4472055500e1de53589559c69",
+        "bytes": 11057,
+        "path": "model/c010_00.foam_wipe.atlas"
+      },
+      "model/c010_00.foam_wipe.png": {
+        "sha256": "4f7b264ed5fdddc35678d0f0cf6e47924495e59cd74f6502c2eb5ef566f9e471",
+        "bytes": 11662624,
+        "path": "model/c010_00.foam_wipe.png"
+      },
+      "semantic-binding.json": {
+        "sha256": "f75b4850f60221f08174da436110ab0ba552f19985faa5a672050070d2c33348",
+        "bytes": 6864,
+        "path": "semantic-binding.json"
+      },
+      "audit-report.json": {
+        "sha256": "8eeb70d688231fbdc91c02e41949dc5d567d5e99aebab122d6da17880b79ab88",
+        "bytes": 2749,
+        "path": "audit-report.json"
+      }
+    }
+  },
+  "validation": {
+    "overall": "needs-visual-rework",
+    "runId": "c010-foam-wipe-v2-20261105",
+    "checks": {
+      "structure": "pass",
+      "images": "pass",
+      "jsonRoundTrip": "pass",
+      "actionSource": "pass",
+      "runtimeLoad": "pass",
+      "loopPlayback": "pass",
+      "fit": "pass",
+      "anchors": "pass",
+      "visual": "fail",
+      "actionTrace": "pass",
+      "interruptRecover": "pass"
+    }
+  },
+  "rollback": {
+    "replaces": "character.c010_00@0.3.0",
+    "rollbackTo": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/rollback/c010_00",
+    "rollbackAllowed": true
+  },
+  "recipes": {
+    "foam_wipe": {
+      "id": "foam_wipe@0.3.0",
+      "type": "foam_wipe",
+      "duration": 3.6,
+      "timebase": "seconds",
+      "interruptible": true,
+      "phases": [
+        {
+          "id": "notice",
+          "from": 0,
+          "to": 0.3
+        },
+        {
+          "id": "reach",
+          "from": 0.3,
+          "to": 1.1
+        },
+        {
+          "id": "contact",
+          "from": 1.1,
+          "to": 2.15
+        },
+        {
+          "id": "recover",
+          "from": 2.15,
+          "to": 3.6
+        }
+      ],
+      "events": [
+        {
+          "name": "FoamNotice",
+          "time": 0.1
+        },
+        {
+          "name": "FoamContact",
+          "time": 1.1
+        },
+        {
+          "name": "FoamCleared",
+          "time": 2.15
+        },
+        {
+          "name": "FoamComplete",
+          "time": 3.6
+        }
+      ],
+      "recovery": {
+        "recipe": "idle_base",
+        "maxDuration": 0.6
+      },
+      "writeSet": {
+        "bones": [
+          "body_1",
+          "body_2",
+          "shoulder_l",
+          "neck_1",
+          "head",
+          "l_brow",
+          "r_brow",
+          "r_hair_1_1",
+          "r_hair_1_2",
+          "r_hair_1_3",
+          "necktie_2",
+          "necktie_3",
+          "l_arm_1",
+          "r_arm_2",
+          "r_hand_1",
+          "r_hand_3",
+          "r_hand_2",
+          "r_finger_1",
+          "r_finger_2",
+          "r_finger_3",
+          "r_finger_4",
+          "r_finger_5",
+          "r_finger_6",
+          "r_finger_7",
+          "r_finger_8",
+          "r_finger_9",
+          "r_finger_10",
+          "r_finger_11",
+          "r_finger_12"
+        ]
+      },
+      "source": {
+        "type": "authored-animation",
+        "animation": "foam_wipe",
+        "project": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/authored/c010_00.foam_wipe.rigby"
+      }
+    }
+  },
+  "runtimeVariant": {
+    "id": "c010-authored-foam-wipe-v2",
+    "sourceModel": "spine_manager/source/c010/c010_00.json",
+    "variantModel": "model/c010_00.foam_wipe.json",
+    "sourceUnmodified": true
+  },
+  "evidence": {
+    "actionSource": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/authored/c010_00.foam_wipe.rigby",
+    "export": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/exported/c010_00.foam_wipe.export-report.json",
+    "runtimeTrace": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/runtime/foam-wipe-runtime-report.json",
+    "visualReview": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/visual/review-manifest.json"
+  },
+  "blockers": [
+    "source license remains unconfirmed",
+    "water/fan remain unsupported and retain the legacy runtime path",
+    "visual review withdrawn: invalid wiping hand orientation and missing visible shoulder-to-elbow continuity"
+  ],
+  "production": {
+    "profile": "authored-spine-animation",
+    "runId": "c010-foam-wipe-v2-20261105",
+    "sourceProject": "spine_manager/source/c010/c010_00.rigby",
+    "derivedProject": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/authored/c010_00.foam_wipe.rigby",
+    "derivedJson": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/exported/c010_00.foam_wipe.json",
+    "sourcePack": "resources/characters/c010_00",
+    "materialSources": [
+      "spine_manager/source/c010-foam-wipe-v2/texture-provenance.json"
+    ]
+  }
+}

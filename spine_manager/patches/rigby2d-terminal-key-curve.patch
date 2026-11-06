@@ -1,0 +1,19 @@
+diff --git a/src/mcp/tools.js b/src/mcp/tools.js
+index cf30866..01ba9cd 100644
+--- a/src/mcp/tools.js
++++ b/src/mcp/tools.js
+@@ -334,7 +334,13 @@ function roundTripData(doc) {
+ }
+ 
+ function normalize(v) {
+-  if (Array.isArray(v)) return v.map(normalize);
++  if (Array.isArray(v)) {
++    const out = v.map(normalize);
++    const last = out.at(-1);
++    // Curves describe the outgoing segment; the final key has no segment to export.
++    if (last && typeof last === 'object' && 'time' in last) delete last.curve;
++    return out;
++  }
+   if (v === null || typeof v !== 'object') return v;
+   if ('bezier' in v || 'beziers' in v) return 'bezier';
+   const out = {};

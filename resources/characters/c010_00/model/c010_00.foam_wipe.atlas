@@ -1,0 +1,553 @@
+c010_00.foam_wipe.png
+size: 4096, 8192
+filter: Linear, Linear
+00/acc_1
+bounds: 3932, 4419, 43, 149
+00/acc_1_1
+bounds: 1954, 4880, 24, 26
+00/acc_1_2
+bounds: 556, 4880, 24, 39
+00/acc_1_3
+bounds: 692, 4880, 17, 35
+00/acc_2
+bounds: 2640, 4419, 245, 161
+00/acc_3
+bounds: 3290, 4644, 90, 104
+00/acc_3_1
+bounds: 3474, 4644, 61, 97
+00/acc_4
+bounds: 3860, 3782, 99, 262
+00/acc_5
+bounds: 2378, 3782, 185, 303
+00/acc_6
+bounds: 2620, 4790, 88, 63
+00/acc_6_back
+bounds: 2524, 4160, 143, 229
+00/acc_7
+bounds: 2156, 4790, 70, 65
+00/belt
+bounds: 1520, 4644, 385, 126
+00/belt_back
+bounds: 926, 4880, 50, 33
+00/cap
+bounds: 472, 4160, 371, 242
+00/cap_1
+bounds: 238, 4790, 95, 86
+00/cheek_01
+bounds: 432, 4790, 116, 83
+00/cheek_02
+bounds: 550, 4790, 116, 83
+00/cloth_1
+bounds: 2752, 3782, 36, 293
+00/cloth_3
+bounds: 945, 3331, 186, 398
+00/cloth_5
+bounds: 3264, 4160, 126, 227
+00/cloth_7
+bounds: 1078, 4790, 114, 81
+00/f_hair_1
+bounds: 2, 4419, 205, 223
+00/f_hair_1_d
+bounds: 458, 4644, 49, 142
+00/f_hair_1_d2
+bounds: 1550, 4880, 17, 29
+00/f_hair_1_d3
+bounds: 2820, 4644, 59, 117
+00/face
+bounds: 3406, 3782, 225, 276
+00/face_hi
+bounds: 544, 4419, 47, 194
+00/gun
+bounds: 2601, 2176, 1020, 495
+00/hair_back
+bounds: 3134, 4419, 270, 159
+00/hair_sha
+bounds: 2, 4160, 233, 257
+00/l_arm_1
+bounds: 3833, 3331, 107, 378
+00/l_arm_2
+bounds: 2110, 4419, 263, 175
+00/l_arm_2_1
+bounds: 1522, 4790, 62, 74
+00/l_arm_2_2
+bounds: 2710, 4790, 61, 63
+00/l_arm_2_acc
+bounds: 64, 4790, 51, 87
+00/l_arm_2_acc2
+bounds: 4032, 4644, 60, 88
+00/l_b_hand_01
+bounds: 3748, 4790, 58, 47
+00/l_b_hand_02
+bounds: 3600, 4644, 82, 94
+00/l_b_hand_03
+bounds: 1650, 4790, 78, 71
+00/l_b_hand_04
+bounds: 2228, 4790, 73, 65
+00/l_b_hand_05
+bounds: 2303, 4790, 83, 65
+00/l_b_hand_06
+bounds: 1414, 4644, 51, 128
+00/l_b_hand_07
+bounds: 3684, 4644, 81, 94
+00/l_brow
+bounds: 2834, 4880, 68, 13
+00/l_ear
+bounds: 1810, 4790, 44, 70
+00/l_eye
+bounds: 978, 4880, 36, 33
+00/l_eyeball
+bounds: 1569, 4880, 55, 29
+00/l_eyehi
+bounds: 3042, 4880, 7, 8
+00/l_eyelash
+bounds: 1016, 4880, 70, 33
+00/l_eyelash_2
+bounds: 2150, 4880, 43, 25
+00/l_eyeline_1
+bounds: 1398, 4880, 74, 32
+00/l_eyeline_2
+bounds: 1702, 4880, 68, 28
+00/l_gun_string
+bounds: 2980, 3782, 145, 284
+00/l_hair_1
+bounds: 1829, 2176, 384, 520
+00/l_hair_10
+bounds: 2759, 3331, 246, 384
+00/l_hair_3_1
+bounds: 1590, 2834, 374, 475
+00/l_hair_3_2
+bounds: 642, 4419, 83, 190
+00/l_hair_3_3
+bounds: 2814, 4160, 223, 228
+00/l_hair_4_1
+bounds: 1148, 3782, 202, 351
+00/l_hair_4_2
+bounds: 560, 4644, 220, 141
+00/l_hair_5
+bounds: 2952, 2834, 316, 467
+00/l_hair_6
+bounds: 1218, 4160, 310, 241
+00/l_hair_7
+bounds: 3588, 2834, 505, 449
+00/l_hair_8
+bounds: 2, 3782, 467, 376
+00/l_hair_9
+bounds: 2093, 3331, 331, 391
+00/l_hand_1
+bounds: 1096, 4644, 111, 133
+00/l_leg
+bounds: 728, 2, 317, 1527
+00/l_leg_1
+bounds: 210, 4644, 122, 143
+00/l_leg_2
+bounds: 1907, 4644, 216, 126
+00/l_leg_3
+bounds: 3007, 3331, 185, 384
+00/l_leg_4
+bounds: 3630, 4790, 57, 48
+00/l_leg_4_1
+bounds: 608, 4880, 24, 38
+00/lip_1
+bounds: 2550, 4880, 46, 22
+00/lip_2
+bounds: 2470, 4880, 38, 24
+00/lower_body
+bounds: 2856, 2, 390, 704
+00/main_string
+bounds: 2236, 2, 308, 835
+00/main_string_back
+bounds: 1842, 4880, 16, 27
+00/mouth
+bounds: 2768, 4880, 31, 19
+00/neck_1
+bounds: 1294, 4419, 135, 178
+00/neck_2
+bounds: 2195, 4880, 113, 25
+00/necktie_1
+bounds: 940, 3782, 102, 358
+00/necktie_1_back
+bounds: 2724, 4880, 20, 20
+00/necktie_2
+bounds: 416, 4419, 62, 205
+00/necktie_3
+bounds: 1004, 4644, 44, 136
+00/nose
+bounds: 70, 4880, 33, 46
+00/pant
+bounds: 3678, 4419, 125, 150
+00/r_arm_1
+bounds: 2030, 4160, 245, 235
+00/r_arm_1_acc
+bounds: 904, 4790, 85, 82
+00/r_arm_2
+bounds: 2028, 3782, 173, 326
+00/r_arm_2_1
+bounds: 3138, 4790, 89, 53
+00/r_brow
+bounds: 1980, 4880, 70, 26
+00/r_cloth_1
+bounds: 509, 3331, 216, 407
+00/r_cloth_1_1
+bounds: 634, 4880, 14, 38
+00/r_ear
+bounds: 117, 4790, 32, 87
+00/r_eye
+bounds: 711, 4880, 37, 35
+00/r_eyeball
+bounds: 750, 4880, 57, 35
+00/r_eyehi
+bounds: 3060, 4880, 7, 7
+00/r_eyelash
+bounds: 1088, 4880, 72, 33
+00/r_eyelash_2
+bounds: 1860, 4880, 36, 27
+00/r_eyeline_1
+bounds: 3808, 4790, 74, 47
+00/r_eyeline_2
+bounds: 140, 4880, 69, 44
+00/r_finger_1
+bounds: 2730, 4644, 43, 124
+00/r_finger_2
+bounds: 1322, 4644, 44, 132
+00/r_finger_3
+bounds: 1902, 4790, 71, 68
+00/r_finger_4
+bounds: 3502, 4790, 62, 49
+00/r_finger_5
+bounds: 446, 4880, 53, 41
+00/r_foot
+bounds: 1366, 2, 433, 1493
+00/r_gun_string
+bounds: 1568, 4419, 269, 177
+00/r_hair_1_1
+bounds: 3274, 3782, 64, 277
+00/r_hair_1_2
+bounds: 1975, 4790, 52, 68
+00/r_hair_1_3
+bounds: 2, 4644, 102, 144
+00/r_hair_2
+bounds: 1085, 2176, 173, 538
+00/r_hair_3
+bounds: 3640, 2, 337, 656
+00/r_hair_4
+bounds: 2828, 3782, 74, 292
+00/r_hair_5
+bounds: 341, 2176, 370, 583
+00/r_hair_6
+bounds: 1024, 2834, 281, 491
+00/r_hair_7
+bounds: 3392, 4160, 216, 227
+00/r_hair_8
+bounds: 1435, 2176, 195, 536
+00/r_hair_9
+bounds: 2342, 2834, 303, 469
+00/r_hair_back
+bounds: 3229, 4790, 89, 53
+00/r_hair_r
+bounds: 3629, 3331, 100, 379
+00/r_hand_1
+bounds: 2942, 4644, 76, 116
+00/r_hand_2
+bounds: 2773, 4790, 50, 63
+00/r_leg_1
+bounds: 3884, 4790, 66, 47
+00/r_leg_2
+bounds: 812, 4419, 239, 181
+00/r_shoulder
+bounds: 1842, 4160, 92, 240
+00/string_1
+bounds: 1352, 3782, 116, 351
+00/string_1_1
+bounds: 1470, 3782, 116, 351
+00/string_3
+bounds: 3767, 4644, 47, 94
+00/teath
+bounds: 2974, 4880, 32, 10
+00/upper_body
+bounds: 1133, 3331, 384, 398
+00/upper_body_1
+bounds: 3098, 4644, 94, 114
+00/upper_body_2_back
+bounds: 211, 4880, 80, 44
+00/upper_body_2_l
+bounds: 3030, 4790, 52, 61
+00/upper_body_2_r
+bounds: 1310, 4790, 104, 75
+00/upper_body_3
+bounds: 2646, 4880, 37, 21
+01/acc_1
+bounds: 3977, 4419, 43, 149
+01/acc_1_1
+bounds: 2052, 4880, 24, 26
+01/acc_1_2
+bounds: 582, 4880, 24, 39
+01/acc_1_3
+bounds: 809, 4880, 17, 35
+01/acc_2
+bounds: 2887, 4419, 245, 161
+01/acc_3
+bounds: 3382, 4644, 90, 104
+01/acc_3_1
+bounds: 3537, 4644, 61, 97
+01/acc_4
+bounds: 3961, 3782, 99, 262
+01/acc_5
+bounds: 2565, 3782, 185, 303
+01/acc_6
+bounds: 2825, 4790, 88, 63
+01/acc_6_back
+bounds: 2669, 4160, 143, 229
+01/acc_7
+bounds: 2388, 4790, 70, 65
+01/belt
+bounds: 2125, 4644, 385, 126
+01/belt_back
+bounds: 1162, 4880, 50, 33
+01/cap
+bounds: 845, 4160, 371, 242
+01/cap_1
+bounds: 335, 4790, 95, 86
+01/cheek_01
+bounds: 668, 4790, 116, 83
+01/cheek_02
+bounds: 786, 4790, 116, 83
+01/cloth_1
+bounds: 2790, 3782, 36, 293
+01/cloth_3
+bounds: 1519, 3331, 186, 398
+01/cloth_5
+bounds: 3610, 4160, 126, 227
+01/cloth_7
+bounds: 1194, 4790, 114, 81
+01/f_hair_1
+bounds: 209, 4419, 205, 223
+01/f_hair_1_d
+bounds: 509, 4644, 49, 142
+01/f_hair_1_d2
+bounds: 1626, 4880, 17, 29
+01/f_hair_1_d3
+bounds: 2881, 4644, 59, 117
+01/face
+bounds: 3633, 3782, 225, 276
+01/face_hi
+bounds: 593, 4419, 47, 194
+01/gun
+bounds: 2, 2834, 1020, 495
+01/hair_back
+bounds: 3406, 4419, 270, 159
+01/hair_sha
+bounds: 237, 4160, 233, 257
+01/l_arm_1
+bounds: 3942, 3331, 107, 378
+01/l_arm_2
+bounds: 2375, 4419, 263, 175
+01/l_arm_2_1
+bounds: 1586, 4790, 62, 74
+01/l_arm_2_2
+bounds: 2915, 4790, 61, 63
+01/l_arm_2_acc
+bounds: 151, 4790, 51, 87
+01/l_arm_2_acc2
+bounds: 2, 4790, 60, 88
+01/l_b_hand_01
+bounds: 3952, 4790, 58, 47
+01/l_b_hand_02
+bounds: 3816, 4644, 82, 94
+01/l_b_hand_03
+bounds: 1730, 4790, 78, 71
+01/l_b_hand_04
+bounds: 2460, 4790, 73, 65
+01/l_b_hand_05
+bounds: 2535, 4790, 83, 65
+01/l_b_hand_06
+bounds: 1467, 4644, 51, 128
+01/l_b_hand_07
+bounds: 3900, 4644, 81, 94
+01/l_brow
+bounds: 2904, 4880, 68, 13
+01/l_ear
+bounds: 1856, 4790, 44, 70
+01/l_eye
+bounds: 1214, 4880, 36, 33
+01/l_eyeball
+bounds: 1645, 4880, 55, 29
+01/l_eyehi
+bounds: 3051, 4880, 7, 8
+01/l_eyelash
+bounds: 1252, 4880, 70, 33
+01/l_eyelash_2
+bounds: 2310, 4880, 43, 25
+01/l_eyeline_1
+bounds: 1474, 4880, 74, 32
+01/l_eyeline_2
+bounds: 1772, 4880, 68, 28
+01/l_gun_string
+bounds: 3127, 3782, 145, 284
+01/l_hair_1
+bounds: 2215, 2176, 384, 520
+01/l_hair_10
+bounds: 3194, 3331, 246, 384
+01/l_hair_3_1
+bounds: 1966, 2834, 374, 475
+01/l_hair_3_2
+bounds: 727, 4419, 83, 190
+01/l_hair_3_3
+bounds: 3039, 4160, 223, 228
+01/l_hair_4_1
+bounds: 1588, 3782, 202, 351
+01/l_hair_4_2
+bounds: 782, 4644, 220, 141
+01/l_hair_5
+bounds: 3270, 2834, 316, 467
+01/l_hair_6
+bounds: 1530, 4160, 310, 241
+01/l_hair_7
+bounds: 2, 3331, 505, 449
+01/l_hair_8
+bounds: 471, 3782, 467, 376
+01/l_hair_9
+bounds: 2426, 3331, 331, 391
+01/l_hand_1
+bounds: 1209, 4644, 111, 133
+01/l_leg
+bounds: 1047, 2, 317, 1527
+01/l_leg_1
+bounds: 334, 4644, 122, 143
+01/l_leg_2
+bounds: 2512, 4644, 216, 126
+01/l_leg_3
+bounds: 3442, 3331, 185, 384
+01/l_leg_4
+bounds: 3689, 4790, 57, 48
+01/l_leg_4_1
+bounds: 650, 4880, 24, 38
+01/lip_1
+bounds: 2598, 4880, 46, 22
+01/lip_2
+bounds: 2510, 4880, 38, 24
+01/lower_body
+bounds: 3248, 2, 390, 704
+01/main_string
+bounds: 2546, 2, 308, 835
+01/main_string_back
+bounds: 1898, 4880, 16, 27
+01/mouth
+bounds: 2801, 4880, 31, 19
+01/neck_1
+bounds: 1431, 4419, 135, 178
+01/neck_2
+bounds: 2355, 4880, 113, 25
+01/necktie_1
+bounds: 1044, 3782, 102, 358
+01/necktie_1_back
+bounds: 2746, 4880, 20, 20
+01/necktie_2
+bounds: 480, 4419, 62, 205
+01/necktie_3
+bounds: 1050, 4644, 44, 136
+01/nose
+bounds: 105, 4880, 33, 46
+01/pant
+bounds: 3805, 4419, 125, 150
+01/r_arm_1
+bounds: 2277, 4160, 245, 235
+01/r_arm_1_acc
+bounds: 991, 4790, 85, 82
+01/r_arm_2
+bounds: 2203, 3782, 173, 326
+01/r_arm_2_1
+bounds: 3320, 4790, 89, 53
+01/r_brow
+bounds: 2078, 4880, 70, 26
+01/r_cloth_1
+bounds: 727, 3331, 216, 407
+01/r_cloth_1_1
+bounds: 676, 4880, 14, 38
+01/r_ear
+bounds: 204, 4790, 32, 87
+01/r_eye
+bounds: 828, 4880, 37, 35
+01/r_eyeball
+bounds: 867, 4880, 57, 35
+01/r_eyehi
+bounds: 3069, 4880, 7, 7
+01/r_eyelash
+bounds: 1324, 4880, 72, 33
+01/r_eyelash_2
+bounds: 1916, 4880, 36, 27
+01/r_eyeline_1
+bounds: 4012, 4790, 74, 47
+01/r_eyeline_2
+bounds: 293, 4880, 69, 44
+01/r_finger_1
+bounds: 2775, 4644, 43, 124
+01/r_finger_2
+bounds: 1368, 4644, 44, 132
+01/r_finger_3
+bounds: 2029, 4790, 71, 68
+01/r_finger_4
+bounds: 3566, 4790, 62, 49
+01/r_finger_5
+bounds: 501, 4880, 53, 41
+01/r_foot
+bounds: 1801, 2, 433, 1493
+01/r_gun_string
+bounds: 1839, 4419, 269, 177
+01/r_hair_1_1
+bounds: 3340, 3782, 64, 277
+01/r_hair_1_2
+bounds: 2102, 4790, 52, 68
+01/r_hair_1_3
+bounds: 106, 4644, 102, 144
+01/r_hair_2
+bounds: 1260, 2176, 173, 538
+01/r_hair_3
+bounds: 2, 2176, 337, 656
+01/r_hair_4
+bounds: 2904, 3782, 74, 292
+01/r_hair_5
+bounds: 713, 2176, 370, 583
+01/r_hair_6
+bounds: 1307, 2834, 281, 491
+01/r_hair_7
+bounds: 3738, 4160, 216, 227
+01/r_hair_8
+bounds: 1632, 2176, 195, 536
+01/r_hair_9
+bounds: 2647, 2834, 303, 469
+01/r_hair_back
+bounds: 3411, 4790, 89, 53
+01/r_hair_r
+bounds: 3731, 3331, 100, 379
+01/r_hand_1
+bounds: 3020, 4644, 76, 116
+01/r_hand_2
+bounds: 2978, 4790, 50, 63
+01/r_leg_1
+bounds: 2, 4880, 66, 47
+01/r_leg_2
+bounds: 1053, 4419, 239, 181
+01/r_shoulder
+bounds: 1936, 4160, 92, 240
+01/string_1
+bounds: 1792, 3782, 116, 351
+01/string_1_1
+bounds: 1910, 3782, 116, 351
+01/string_3
+bounds: 3983, 4644, 47, 94
+01/teath
+bounds: 3008, 4880, 32, 10
+01/upper_body
+bounds: 1707, 3331, 384, 398
+01/upper_body_1
+bounds: 3194, 4644, 94, 114
+01/upper_body_2_back
+bounds: 364, 4880, 80, 44
+01/upper_body_2_l
+bounds: 3084, 4790, 52, 61
+01/upper_body_2_r
+bounds: 1416, 4790, 104, 75
+01/upper_body_3
+bounds: 2685, 4880, 37, 21
+derived/l_arm_1_wipe
+bounds: 2, 2, 724, 2172

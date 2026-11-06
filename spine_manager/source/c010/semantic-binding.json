@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 2,
+  "model": "c010_00",
+  "source": {
+    "root": "model-4.3.26/c010_00.json",
+    "atlas": "model-4.3.26/c010_00.atlas",
+    "spineVersion": "4.3.26",
+    "runtimeBaseline": "spine-canvas-4.3.13",
+    "auditFiles": [
+      "audit-report.json",
+      "MODEL-AUDIT.md"
+    ]
+  },
+  "semantics": {
+    "note": "Names are model-specific candidates. armVisualLeft/Right and handVisual still require one visual confirmation because source bone names are mirrored relative to setup-pose screen position.",
+    "roles": {
+      "root": {
+        "candidates": [
+          "root"
+        ],
+        "resolved": "root",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "torso": {
+        "candidates": [
+          "body_2",
+          "body_1",
+          "center"
+        ],
+        "resolved": "body_2",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "neck": {
+        "candidates": [
+          "neck_1"
+        ],
+        "resolved": "neck_1",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "head": {
+        "candidates": [
+          "head"
+        ],
+        "resolved": "head",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "faceTarget": {
+        "candidates": [
+          "face_con",
+          "face_con_re"
+        ],
+        "resolved": "face_con",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "bodyTarget": {
+        "candidates": [
+          "body_con",
+          "body_con_re"
+        ],
+        "resolved": "body_con",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "pelvisTarget": {
+        "candidates": [
+          "pelvis_con",
+          "pelvis_con_re"
+        ],
+        "resolved": "pelvis_con",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "armVisualRight": {
+        "candidates": [
+          "shoulder_l",
+          "l_arm_1",
+          "r_arm_2",
+          "r_hand_1"
+        ],
+        "resolved": "shoulder_l",
+        "status": "available",
+        "needsVisualConfirmation": true
+      },
+      "armVisualLeft": {
+        "candidates": [
+          "shoulder_r",
+          "r_arm_1",
+          "r_arm_3",
+          "l_arm_2",
+          "l_hand_1"
+        ],
+        "resolved": "shoulder_r",
+        "status": "available",
+        "needsVisualConfirmation": true
+      },
+      "handTarget": {
+        "candidates": [
+          "ik_arm_r"
+        ],
+        "resolved": "ik_arm_r",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "gun": {
+        "candidates": [
+          "gun"
+        ],
+        "resolved": "gun",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "mouth": {
+        "candidates": [
+          "lip_3"
+        ],
+        "resolved": "lip_3",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "eyeLeft": {
+        "candidates": [
+          "l_eye",
+          "l_eye_ball",
+          "eye_l",
+          "eye_l_ball"
+        ],
+        "resolved": "l_eye",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "eyeRight": {
+        "candidates": [
+          "r_eye",
+          "r_eye_ball",
+          "eye_r",
+          "eye_r_ball"
+        ],
+        "resolved": "r_eye",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "browLeft": {
+        "candidates": [
+          "l_brow",
+          "r_brow"
+        ],
+        "resolved": "l_brow",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "browRight": {
+        "candidates": [
+          "r_brow",
+          "l_brow"
+        ],
+        "resolved": "r_brow",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "hairFront": {
+        "candidates": [
+          "f_hair_1",
+          "face_top"
+        ],
+        "resolved": "f_hair_1",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "hairBranches": {
+        "candidates": [],
+        "resolved": "f_hair_1",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "fingers": {
+        "candidates": [],
+        "resolved": "l_hand_1",
+        "status": "available",
+        "needsVisualConfirmation": false
+      },
+      "handVisual": {
+        "candidates": [
+          "l_hand_1",
+          "l_b_hand_07",
+          "l_b_hand_03"
+        ],
+        "resolved": "l_hand_1",
+        "status": "available",
+        "needsVisualConfirmation": true
+      }
+    },
+    "actionChannels": {
+      "base": {
+        "source": "existing animation",
+        "animation": "idle",
+        "loop": true
+      },
+      "face": {
+        "targetRole": "faceTarget",
+        "method": "transform-or-attachment",
+        "expressions": [
+          "idle",
+          "surprised",
+          "focused",
+          "relieved"
+        ]
+      },
+      "handContact": {
+        "targetRole": "handTarget",
+        "method": "IK target bone",
+        "targetCandidates": [
+          "face_con",
+          "controller_anchor",
+          "foam_anchor"
+        ]
+      },
+      "secondaryMotion": {
+        "targetRoles": [
+          "hairBranches",
+          "fingers"
+        ],
+        "method": "physics-or-procedural-spring",
+        "phase": "after initial pose proof"
+      },
+      "foam": {
+        "renderer": "Canvas/Pixi overlay in prototype",
+        "anchors": [
+          "head",
+          "hairFront",
+          "faceTarget",
+          "torso",
+          "handTarget"
+        ]
+      }
+    }
+  },
+  "prototype": {
+    "baseAnimation": "idle",
+    "generatedAction": "foam_wipe",
+    "duration": 2.4,
+    "driver": "runtime IK target + face target + overlay effect",
+    "phases": [
+      {
+        "at": 0,
+        "name": "notice",
+        "face": "surprised",
+        "handTarget": "rest"
+      },
+      {
+        "at": 0.55,
+        "name": "reach",
+        "face": "focused",
+        "handTarget": "face"
+      },
+      {
+        "at": 1.25,
+        "name": "wipe",
+        "face": "focused",
+        "handTarget": "face"
+      },
+      {
+        "at": 2,
+        "name": "recover",
+        "face": "relieved",
+        "handTarget": "rest"
+      }
+    ],
+    "acceptance": [
+      "idle animation remains active",
+      "hand target follows a generated path",
+      "face target receives expression signal",
+      "foam overlay is tied to semantic anchor",
+      "same seed produces same path"
+    ]
+  }
+}

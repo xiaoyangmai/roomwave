@@ -1,0 +1,53 @@
+schema_version: 1
+
+project:
+  id: roomwave-loop-only
+  profile: loop-only
+  source_type: runtime-export
+  editable_source_required: false
+
+authoring:
+  primary_editor: rigby2d
+  primary_mcp: rigby2d
+  mcp_preferred: true
+  official_spine_gui: not-a-production-dependency
+  gui_fallback: rigby2d-only
+  no_gui_default: true
+
+mcp_read_order:
+  - inspect_project
+  - describe_rig
+  - describe_animation
+  - validate_project
+  - sample_pose
+  - convert_project
+
+mcp_write_policy:
+  loop_only_read_only: true
+  derived_copy_only: true
+  overwrite_source_exports: false
+  allowed_future_edit_tools:
+    - batch_edit
+    - run_script
+
+fallback:
+  when_rigby2d_mcp_unavailable: roomwave-deterministic-scripts
+  when_visual_evidence_is_missing: rigby2d-gui-manual-review
+  official_spine_gui: forbidden_as_default
+
+runtime:
+  engine: spine-canvas
+  verification_required: true
+  export_and_runtime_versions_must_be_explicit: true
+
+release:
+  required_outputs:
+    - source-manifest
+    - model-manifest
+    - semantic-binding
+    - loop-profile
+    - character-pack
+    - validation-report
+    - rollback-pointer
+  publish_requires_same_run_evidence: true
+

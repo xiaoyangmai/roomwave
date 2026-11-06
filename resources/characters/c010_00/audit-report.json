@@ -1,0 +1,64 @@
+{
+  "status": "pass",
+  "generatedAt": "2026-11-04T18:45:10.605Z",
+  "scope": "JSON, atlas, texture completeness and readback; animation quality requires runtime and visual review",
+  "input": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/authored/c010_00.foam_wipe.rigby",
+  "output": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/exported/c010_00.foam_wipe.json",
+  "textures": {
+    "pages": 1,
+    "width": 4096,
+    "height": 8192,
+    "images": 275,
+    "rgbaPixelsUnchanged": true,
+    "premultipliedAlpha": false
+  },
+  "sourceValidation": {
+    "file": "D:\\Roomwave\\spine_manager\\artifacts\\runs\\c010-foam-wipe-v2-20261105\\authored\\c010_00.foam_wipe.rigby",
+    "format": "rigby",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Binary .skel export is not possible: IK softness, compress, stretch or uniform ('ik_boob') is not supported in .skel files yet; use skeleton JSON for this skeleton"
+    ],
+    "checks": {
+      "structure": "ok",
+      "images": "ok",
+      "jsonRoundTrip": "ok",
+      "binaryExport": "IK softness, compress, stretch or uniform ('ik_boob') is not supported in .skel files yet; use skeleton JSON for this skeleton"
+    }
+  },
+  "exportValidation": {
+    "file": "D:\\Roomwave\\spine_manager\\artifacts\\runs\\c010-foam-wipe-v2-20261105\\exported\\c010_00.foam_wipe.json",
+    "format": "json",
+    "valid": true,
+    "errors": [],
+    "warnings": [
+      "Binary .skel export is not possible: IK softness, compress, stretch or uniform ('ik_boob') is not supported in .skel files yet; use skeleton JSON for this skeleton"
+    ],
+    "checks": {
+      "structure": "ok",
+      "images": "ok",
+      "jsonRoundTrip": "ok",
+      "binaryExport": "IK softness, compress, stretch or uniform ('ik_boob') is not supported in .skel files yet; use skeleton JSON for this skeleton"
+    }
+  },
+  "exportWarnings": [],
+  "files": {
+    "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/authored/c010_00.foam_wipe.rigby": {
+      "bytes": 29612230,
+      "sha256": "459b18135e17e6371c473ebe3a14514e00ff8f2c79a600de5d5804ca4597bcde"
+    },
+    "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/exported/c010_00.foam_wipe.json": {
+      "bytes": 7374851,
+      "sha256": "32cdacf5a54e2a27fe4b7c4e23a9b0f7ed78cbd1a297a17d09bfcc4441e3881c"
+    },
+    "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/exported/c010_00.foam_wipe.atlas": {
+      "bytes": 11057,
+      "sha256": "9de557de7a4abc3d4f709ee448bf19b947b51fc4472055500e1de53589559c69"
+    },
+    "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/exported/c010_00.foam_wipe.png": {
+      "bytes": 11662624,
+      "sha256": "4f7b264ed5fdddc35678d0f0cf6e47924495e59cd74f6502c2eb5ef566f9e471"
+    }
+  }
+}

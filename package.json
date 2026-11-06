@@ -1,10 +1,18 @@
 {
-  "name": "roomwave-public-mirror",
+  "name": "roomwave-workspace",
   "private": true,
   "version": "0.1.0",
-  "description": "Local Roomwave frontend mirror with a small local API backend.",
+  "description": "Roomwave product, character runtime and resource production workspace.",
   "scripts": {
-    "start": "node server.cjs",
-    "serve": "node server.cjs"
+    "start": "npm --prefix roomwave start",
+    "check:product": "npm --prefix roomwave run check",
+    "runtime:start": "npm --prefix spine_runtime start",
+    "runtime:prepare": "npm --prefix spine_runtime run prepare:source",
+    "runtime:build": "npm --prefix spine_runtime run build",
+    "test:conversation": "npm --prefix spine_runtime run test:conversation",
+    "test:canvas": "npm --prefix spine_runtime run test:canvas",
+    "test:runtime-browser": "npm --prefix spine_runtime run test:browser",
+    "resources:validate": "npm --prefix spine_manager run validate",
+    "resources:validate:strict": "npm --prefix spine_manager run validate:strict"
   }
 }

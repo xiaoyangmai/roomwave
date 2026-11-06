@@ -1,0 +1,14 @@
+{
+  "asset": "left-glove-dorsal-contact.png",
+  "purpose": "候选手背/手侧视角：食指指腹轻触眼周；需在角色上验证解剖、接缝和运动，不是已验收素材。",
+  "generator": "image_gen.imagegen",
+  "originalOutput": "C:/Users/mi/.codex/generated_images/01a1a55b-d911-77b0-8c83-fbdaa88a6e50/exec-00fa94d1-1a9e-4ab0-84eb-b75f9937186d.png",
+  "references": [
+    "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/visual/exported/00-1.48.png",
+    "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/reference/r_arm_2.png",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7374951/figure/Fig2/"
+  ],
+  "prompt": "Create ONE isolated transparent RGBA character-animation attachment: the LEFT HAND of the anime character in image 1, wearing her same black and dark charcoal fitted leather glove with restrained red edge accents, as seen in her existing sleeve and glove. Image 1 is style and character reference, image 2 sleeve/material reference, image 3 is a real anatomical gesture reference, specifically pose (a): gently touch the closed eye with the pad of the index finger while the back or three-quarter back of the hand faces the camera. Draw only the hand and wrist, no face, no forearm, no cuff, no eye, no extra hands. Anatomically coherent five-digit left hand: one index finger extends softly and points diagonally toward the upper-left, fingertip pad is on its hidden face-facing side; the other three fingers curl loosely, thumb sits naturally opposite the fingers, no improbable wrist fold. Show the glove's dark back towards the viewer, a little red trim may be visible on edges, NOT the broad vivid red inner palm. Neutral realistic proportions matching the slender existing glove, same painterly detailed game art and contour shading as reference. Wrist at the bottom, index at upper-left, no cast shadow, genuinely transparent background, full hand in frame with a small transparent margin, no text or checkerboard. This is one hand-only reusable skeletal-animation bitmap attachment, not a scene.",
+  "processing": "Copied unchanged from generator output; no editor-side changes.",
+  "sourceLicense": "Original c010 source license remains unconfirmed."
+}

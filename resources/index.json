@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "modules": {
+    "roomwave": {
+      "assets": "assets/",
+      "audio": "audio/"
+    },
+    "spine_runtime": {
+      "characters": "characters/",
+      "config": "config/"
+    }
+  },
+  "publicPaths": {
+    "assets": "/assets/",
+    "audio": "/audio/",
+    "characters": "/character-packs/",
+    "config": "/config/"
+  },
+  "characterRegistry": "config/character-registry.json",
+  "sourceManifest": "mirror-report.json"
+}

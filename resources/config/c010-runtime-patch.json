@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "model": "c010_00",
+  "mode": "runtime-model-variant",
+  "sourceUnmodified": true,
+  "sourceModel": "/character-packs/c010_00/model/c010_00.json",
+  "variantModel": "/character-packs/c010_00/model/c010_00.hand-strap-isolated.json",
+  "variantManifest": "/character-packs/c010_00/model/c010_00.hand-strap-isolated.manifest.json",
+  "editableProjectRequiredForPermanentFix": true,
+  "constraints": {
+    "string_2": {
+      "controlledBone": "string_2",
+      "originalTarget": "ik_arm_r",
+      "runtimeTarget": "strap_target_r",
+      "mixRotate": 1,
+      "mixX": 1,
+      "mixY": 1,
+      "reason": "the candidate JSON variant gives the strap an independent target bone"
+    }
+  },
+  "handIk": {
+    "mode": "runtime-two-bone-fallback",
+    "constraint": "ik_arm_r",
+    "parentBone": "r_arm_1",
+    "childBone": "l_arm_2",
+    "visualEndBone": "l_hand_1",
+    "bendDirection": -1,
+    "mix": 1,
+    "reason": "the exported one-bone constraint rotates l_arm_2 while the visible hand is downstream of r_arm_1 -> r_arm_3 -> l_arm_2"
+  },
+  "releaseStatus": "candidate-runtime-model-variant",
+  "notEquivalentTo": "editable-spine-export-with-independent-strap-target"
+}

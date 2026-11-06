@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-31T05:37:02.748Z",
+  "profile": "loop-only-product-review",
+  "status": "pass",
+  "route": "/solo/?room=gaming_c010",
+  "registry": "resources/config/character-registry.json",
+  "captures": [
+    {
+      "id": "desktop-dpr1",
+      "width": 1100,
+      "height": 1200,
+      "dpr": 1,
+      "screenshot": "spine_manager/evidence/c010-loop-only-review/desktop-dpr1.png",
+      "details": {
+        "activeRoom": "gaming-c010",
+        "loaded": true,
+        "statusHidden": true,
+        "canvas": {
+          "width": 454,
+          "height": 466,
+          "cssWidth": 454,
+          "cssHeight": 465.84375
+        },
+        "shell": {
+          "width": 480,
+          "height": 853.328125
+        },
+        "pack": {
+          "characterId": "c010_00",
+          "packVersion": "0.1.0",
+          "status": "candidate",
+          "sourceRunId": "semantic-action-candidate-c010-20261031",
+          "releaseStatus": "blocked-until-license-confirmation-and-product-trace",
+          "tier": "semantic-action-candidate"
+        },
+        "manifestUrls": {
+          "skeleton": "http://127.0.0.1:61262/character-packs/c010_00/model/c010_00.hand-strap-isolated.json",
+          "atlas": "http://127.0.0.1:61262/character-packs/c010_00/model/c010_00.atlas",
+          "binding": "http://127.0.0.1:61262/character-packs/c010_00/semantic-binding-runtime.json",
+          "audit": "http://127.0.0.1:61262/character-packs/c010_00/audit-report.json"
+        },
+        "traceLength": 16
+      },
+      "errors": []
+    },
+    {
+      "id": "narrow-dpr1",
+      "width": 420,
+      "height": 760,
+      "dpr": 1,
+      "screenshot": "spine_manager/evidence/c010-loop-only-review/narrow-dpr1.png",
+      "details": {
+        "activeRoom": "gaming-c010",
+        "loaded": true,
+        "statusHidden": true,
+        "canvas": {
+          "width": 394,
+          "height": 367,
+          "cssWidth": 394,
+          "cssHeight": 366.90625
+        },
+        "shell": {
+          "width": 420,
+          "height": 712
+        },
+        "pack": {
+          "characterId": "c010_00",
+          "packVersion": "0.1.0",
+          "status": "candidate",
+          "sourceRunId": "semantic-action-candidate-c010-20261031",
+          "releaseStatus": "blocked-until-license-confirmation-and-product-trace",
+          "tier": "semantic-action-candidate"
+        },
+        "manifestUrls": {
+          "skeleton": "http://127.0.0.1:61262/character-packs/c010_00/model/c010_00.hand-strap-isolated.json",
+          "atlas": "http://127.0.0.1:61262/character-packs/c010_00/model/c010_00.atlas",
+          "binding": "http://127.0.0.1:61262/character-packs/c010_00/semantic-binding-runtime.json",
+          "audit": "http://127.0.0.1:61262/character-packs/c010_00/audit-report.json"
+        },
+        "traceLength": 15
+      },
+      "errors": []
+    },
+    {
+      "id": "desktop-dpr2",
+      "width": 1100,
+      "height": 1200,
+      "dpr": 2,
+      "screenshot": "spine_manager/evidence/c010-loop-only-review/desktop-dpr2.png",
+      "details": {
+        "activeRoom": "gaming-c010",
+        "loaded": true,
+        "statusHidden": true,
+        "canvas": {
+          "width": 908,
+          "height": 932,
+          "cssWidth": 454,
+          "cssHeight": 465.84375
+        },
+        "shell": {
+          "width": 480,
+          "height": 853.328125
+        },
+        "pack": {
+          "characterId": "c010_00",
+          "packVersion": "0.1.0",
+          "status": "candidate",
+          "sourceRunId": "semantic-action-candidate-c010-20261031",
+          "releaseStatus": "blocked-until-license-confirmation-and-product-trace",
+          "tier": "semantic-action-candidate"
+        },
+        "manifestUrls": {
+          "skeleton": "http://127.0.0.1:61262/character-packs/c010_00/model/c010_00.hand-strap-isolated.json",
+          "atlas": "http://127.0.0.1:61262/character-packs/c010_00/model/c010_00.atlas",
+          "binding": "http://127.0.0.1:61262/character-packs/c010_00/semantic-binding-runtime.json",
+          "audit": "http://127.0.0.1:61262/character-packs/c010_00/audit-report.json"
+        },
+        "traceLength": 10
+      },
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "sourceUnmodified": true,
+  "serverLog": "Roomwave server running at http://127.0.0.1:61262/together/\n"
+}

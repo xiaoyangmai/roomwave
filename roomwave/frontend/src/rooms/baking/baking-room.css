@@ -1,0 +1,173 @@
+#baking-room{overflow:clip;isolation:isolate;background:#4e392c;color:#fffaf3}
+.baking-ambient{position:absolute;inset:-24px;background:linear-gradient(#382b3266,#2d242a77),url('/assets/baking-room-v3/kitchen.webp') center/cover;filter:blur(24px)}
+.baking-shell{position:relative;isolation:isolate;width:100%;height:100%;margin:auto;overflow:clip;background:#dfc9a6;box-shadow:0 0 90px #23141b70;font-family:'Trebuchet MS','Segoe UI',sans-serif}
+.baking-stage{position:absolute;inset:0;overflow:clip;background:#dfc9a6 url('/assets/baking-room-v3/kitchen.webp') center/cover}
+.baking-scene{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none}
+.baking-kitchen,.baking-decoration{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none;user-select:none}
+.baking-header{position:absolute;z-index:5;top:max(12px,env(safe-area-inset-top));left:4%;right:4%;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.baking-profile{display:flex;align-items:center;gap:9px;padding:8px 10px;border:1px solid #b2c1da88;border-radius:19px;background:#132641ee;box-shadow:0 3px 10px #291d2d30;white-space:nowrap}
+.baking-profile>span{font-size:27px;line-height:1.1}.baking-profile strong{font-size:clamp(17px,3.8cqw,24px);letter-spacing:-.4px}
+.baking-profile>b{font-size:11px;background:#ee76a5;color:#fff;padding:7px 9px;border-radius:20px;box-shadow:inset 0 1px 0 #ffcadf;white-space:nowrap}
+.baking-sound{display:grid;place-items:center;width:41px;height:41px;flex-shrink:0;border:1px solid #d6d1cfb0;background:#152641ec;color:#fff;border-radius:50%;padding:8px;cursor:pointer}.baking-sound .ui-icon{width:22px;height:22px}
+.baking-bottom{position:absolute;bottom:max(3px,env(safe-area-inset-bottom));left:3%;right:3%;z-index:6;display:grid;gap:8px}
+.baking-speech{position:relative;z-index:6;max-width:none;margin:0;padding:9px 12px;border-radius:19px;background:#fff8edef;color:#654951;border:1px solid #d59bac;font-size:clamp(12px,3.2cqw,16px);font-weight:800;box-shadow:0 3px 10px #674d4526;text-align:center;line-height:1.35}
+.baking-gifts{padding:9px;background:linear-gradient(125deg,#182c4af7,#162239fa);border:1px solid #96a5c1;border-radius:22px;box-shadow:0 5px 15px #51332f35}
+.baking-tray-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:28px;margin-bottom:7px}.baking-gifts h2{font-size:clamp(14px,2.1cqh,20px);line-height:1.2;font-weight:700;margin:0;color:#fff7f0}
+.baking-tray-title{min-width:0}.baking-cake-count{margin:3px 0 0;color:#dbcbd5;font-size:10px;line-height:1.2}.baking-cake-count[hidden]{display:none}
+.baking-tray-navigation{display:flex;gap:5px}.baking-tray-navigation button{display:grid;place-items:center;width:29px;height:29px;padding:0;border:1px solid #8fa0b9;border-radius:8px;background:#30445f;color:#fff5ed;font:700 23px/1 system-ui;cursor:pointer}.baking-tray-navigation button:disabled{opacity:.3;cursor:default}.baking-tray-navigation[hidden]{display:none}
+.baking-actions{position:relative;display:flex;gap:7px;overflow-x:auto;overflow-y:hidden;padding:2px 2px 7px;scroll-snap-type:x proximity;overscroll-behavior-x:contain;overscroll-behavior-y:auto;scrollbar-width:thin;scrollbar-color:#ae9dad #17253b;touch-action:pan-x pan-y pinch-zoom}
+.baking-actions:focus-visible{outline:2px solid #b1eeff;outline-offset:2px;border-radius:9px}
+/* Snap only across the tray; visible-overflow layouts must not add vertical room stops. */
+.baking-actions button{display:flex;flex:0 0 92px;scroll-snap-align:none start;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:0;min-height:75px;border:2px solid #d5c5c9;border-radius:16px;background:linear-gradient(#fff8ec,#f4e8d9);color:#36384b;padding:6px 2px;box-shadow:inset 0 1px 0 #fff,0 3px 3px #08132650;cursor:pointer;font-family:inherit;touch-action:pan-x pan-y pinch-zoom}
+.baking-actions button>span{font-size:clamp(26px,4.3cqh,39px);line-height:1.1;filter:drop-shadow(0 2px 1px #5a39272e)}
+#live-room-feed #baking-room .baking-actions button>span img{display:block;width:55px;height:34px;object-fit:contain;pointer-events:none}
+.baking-actions button>b{font-size:12px;line-height:1.2;letter-spacing:-.3px}
+.baking-actions button[aria-pressed=true]{border-color:#ff70b4;background:linear-gradient(#fff1ef,#f7d9e6);box-shadow:0 0 0 1px #fd7bbe,0 0 13px #ee63a560}
+.baking-actions button:disabled:not([aria-pressed=true]){opacity:.55;cursor:default}.baking-actions button:hover:not(:disabled){border-color:#ff96bf;transform:translateY(-1px)}
+/* Preserve native hidden behavior despite the common room button display rule. */
+#live-room-feed .baking-actions button[hidden],.baking-actions button[hidden]{display:none}
+#live-room-feed #baking-room .baking-actions button{flex-basis:96px}
+#live-room-feed #baking-room .baking-actions button:is([data-baking-action='finish'],[data-baking-action='newCake']){border-color:#d5a0bc;background:#493248;color:#fff8fb}
+#live-room-feed #baking-room .baking-actions button:is([data-baking-action='finish'],[data-baking-action='newCake'])>b{color:#fff8fb}
+#live-room-feed #baking-room .baking-actions button:is([data-baking-action='finish'],[data-baking-action='newCake'])[aria-pressed=true]{border-color:#ffb8d7;background:#6a3c5a;color:#fff8fb;opacity:1}
+@media(hover:hover){#live-room-feed #baking-room .baking-actions button:is([data-baking-action='finish'],[data-baking-action='newCake']):hover:not(:disabled){border-color:#f4bfd8;background:#62445e;color:#fff8fb}}
+.baking-shell button:focus-visible{outline:3px solid #b1eeff;outline-offset:2px}
+.baking-art-status{position:absolute;z-index:10;inset:0;background:#182b40dc;backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;text-align:center;padding:20px;font-size:16px;font-weight:700}.baking-art-status[hidden]{display:none}
+.baking-art-status button{background:#f5c5d6;border:1px solid #ffe7f2;border-radius:16px;color:#53354a;padding:10px 16px;font:inherit;cursor:pointer}.baking-art-status button[hidden]{display:none}
+@container live-room (max-height:680px) and (orientation:portrait){.baking-header{top:9px;left:3%;right:3%}.baking-profile{gap:6px;padding:7px 8px}.baking-profile strong{font-size:17px}.baking-profile>span{font-size:23px}.baking-profile>b{font-size:10px;padding:6px 7px}.baking-sound{width:35px;height:35px}.baking-speech{padding:5px 9px;font-size:11px}.baking-gifts{padding:7px;border-radius:18px}.baking-gifts h2{font-size:14px}.baking-actions{gap:5px}.baking-actions button{min-height:63px;border-radius:12px;gap:2px}.baking-actions button>b{font-size:11px}.baking-actions button>span{font-size:25px}.baking-tray-navigation button{width:25px;height:25px}}
+@container live-room (orientation:landscape) and (max-height:600px){.baking-stage{right:40%;background:#c8ac91}.baking-header{top:8px;left:2%;right:2%}.baking-profile{padding:6px 9px;gap:7px}.baking-profile strong{font-size:18px}.baking-profile>span{font-size:23px}.baking-profile>b{font-size:10px;padding:6px 8px}.baking-sound{width:35px;height:35px}.baking-bottom{left:auto;right:2%;width:39%;bottom:7px}.baking-gifts{padding:7px;border-radius:17px}.baking-gifts h2{font-size:13px}.baking-tray-heading{gap:4px}.baking-tray-navigation{gap:3px}.baking-tray-navigation button{width:24px;height:24px}.baking-actions{gap:6px}.baking-actions button{min-height:62px;border-radius:12px;padding:4px 5px}.baking-actions button>span{font-size:27px}.baking-actions button>b{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.baking-shell *{animation:none!important;transition:none!important}}
+/* A compact workbench leaves every topping within reach of the cake. */
+#live-room-feed #baking-room .baking-work-surface{position:absolute;z-index:3;transform:translateY(-50%);min-height:48px;padding:0;border:0;border-radius:50%;background:transparent;pointer-events:auto;touch-action:none;cursor:crosshair;-webkit-tap-highlight-color:transparent}
+#live-room-feed #baking-room .baking-work-surface:focus-visible{outline:3px dashed #9e456a;outline-offset:4px;background:#fff4d21f}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-gifts{padding:10px;border:1px solid #eed3b6;background:linear-gradient(135deg,#fff4dfef,#edcfb4f7);color:#593b2e;box-shadow:0 8px 28px #41281640}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-tray-heading{gap:8px;margin-bottom:8px;min-height:44px}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] h2{color:#533729;font-size:16px}
+#live-room-feed #baking-room .baking-decor-hint{margin:3px 0 0;font:500 10px/1.35 'Segoe UI',sans-serif;color:#765544;max-width:220px}
+#live-room-feed #baking-room .baking-finish{flex-shrink:0;min-height:44px;border:1px solid #873653;border-radius:13px;background:#974260;color:#fff9ee;padding:8px 11px;font:700 12px/1.2 'Segoe UI',sans-serif;box-shadow:0 3px 8px #8b405128;cursor:pointer}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;overflow:visible;padding:0;scroll-snap-type:none}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button{width:auto;min-height:62px;min-width:0;margin:0;padding:5px 1px;gap:3px;flex-basis:auto;border:1px solid #c79a79;border-radius:12px;box-shadow:inset 0 1px #fff9;background:#fff4e5;color:#61412f;touch-action:manipulation;transform:none}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>b{color:inherit;font-size:10px;letter-spacing:-.2px;line-height:1.15}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>span{font-size:25px;line-height:1;height:30px;display:grid;place-items:center}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>span img{width:38px;height:30px;object-fit:contain}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button[aria-pressed='true']{border:2px solid #a54468;padding:4px 0;background:#f7d9d7;color:#703b4f;box-shadow:0 0 0 1px #a5446826}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>.baking-place{order:99;border-style:dashed;background:#f8e7cc;color:#735129}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>.baking-place>span{font-size:26px}
+#live-room-feed #baking-room .baking-arrangements{display:flex;align-items:center;gap:4px;margin-top:7px}
+#live-room-feed #baking-room .baking-arrangements>span{font-size:10px;white-space:nowrap;color:#765544;margin-right:2px}
+#live-room-feed #baking-room .baking-arrangements button{flex:1;min-width:0;min-height:36px;border:1px solid #c99e7c;border-radius:10px;background:#fff6e480;color:#61412f;padding:4px 3px;font:600 10px/1.15 'Segoe UI',sans-serif;cursor:pointer}
+#live-room-feed #baking-room .baking-edit-row{display:flex;align-items:center;gap:5px;margin-top:4px}
+#live-room-feed #baking-room .baking-decor-feedback{flex:1;min-width:0;margin:0;font:500 10px/1.3 'Segoe UI',sans-serif;color:#765544}
+#live-room-feed #baking-room .baking-edit-row button{min-height:40px;flex-shrink:0;border:0;border-radius:9px;background:#fff7e773;color:#694331;padding:5px 9px;font:700 11px/1.2 'Segoe UI',sans-serif;cursor:pointer}
+#live-room-feed #baking-room :is(.baking-finish,.baking-place,.baking-edit-row button,.baking-arrangements button):disabled{opacity:.42;cursor:default}
+#live-room-feed #baking-room .baking-shell[data-step='finished'] .baking-gifts{background:linear-gradient(135deg,#fff4dfef,#edcfb4f7);border-color:#eed3b6}
+#live-room-feed #baking-room .baking-shell[data-step='finished'] :is(h2,.baking-cake-count){color:#61412f}
+#live-room-feed #baking-room :is(.baking-work-surface,.baking-finish,.baking-decor-hint,.baking-decoration-tools,.baking-place)[hidden]{display:none}
+@container live-room (max-height:680px) and (orientation:portrait){
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-gifts{padding:8px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button{min-height:55px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>span{height:25px;font-size:23px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>span img{height:25px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>b{font-size:9px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] h2{font-size:14px}
+}
+@container live-room (orientation:landscape){
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-stage{right:40%}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-gifts{padding:8px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button{min-height:54px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] h2{font-size:14px}
+  #live-room-feed #baking-room .baking-decor-hint{font-size:9px}
+  #live-room-feed #baking-room .baking-finish{font-size:11px;padding-inline:7px}
+  #live-room-feed #baking-room .baking-arrangements>span{display:none}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>b{font-size:8px;letter-spacing:-.25px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>span img{width:30px;height:27px}
+}
+@container live-room (orientation:portrait) and (max-height:480px){
+  #live-room-feed #baking-room .baking-bottom{gap:4px}
+  #live-room-feed #baking-room .baking-speech{font-size:9px;padding:5px 7px}
+  #live-room-feed #baking-room .baking-gifts{padding:6px;border-radius:13px}
+  #live-room-feed #baking-room .baking-tray-heading{min-height:20px;margin-bottom:4px;gap:4px}
+  #live-room-feed #baking-room .baking-gifts h2{font-size:10px}
+  #live-room-feed #baking-room .baking-cake-count{font-size:7px;margin-top:2px}
+  #live-room-feed #baking-room .baking-tray-navigation{gap:3px}
+  #live-room-feed #baking-room .baking-tray-navigation button{width:20px;height:20px;font-size:17px}
+  #live-room-feed #baking-room .baking-actions{gap:4px;padding:1px 1px 4px}
+  #live-room-feed #baking-room .baking-actions>button{flex-basis:59px}
+  #live-room-feed #baking-room .baking-actions button>span img{width:38px;height:20px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-gifts{padding:6px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-tray-heading{min-height:30px;gap:4px;margin-bottom:4px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] h2{font-size:10px}
+  #live-room-feed #baking-room .baking-decor-hint{font-size:7px;line-height:1.2;margin-top:2px}
+  #live-room-feed #baking-room .baking-finish{min-height:30px;padding:4px 6px;font-size:8px;border-radius:9px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions{gap:3px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button{min-height:43px;padding:3px 0;gap:1px;border-radius:8px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button[aria-pressed='true']{padding:2px 0}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>b{font-size:7px;letter-spacing:-.2px;overflow-wrap:anywhere}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>span{height:20px;font-size:19px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>span img{width:27px;height:20px}
+  #live-room-feed #baking-room .baking-arrangements{gap:3px;margin-top:4px}
+  #live-room-feed #baking-room .baking-arrangements>span{display:none}
+  #live-room-feed #baking-room .baking-arrangements button{min-height:25px;padding:3px 2px;font-size:7px;border-radius:7px}
+  #live-room-feed #baking-room .baking-edit-row{gap:3px;margin-top:3px}
+  #live-room-feed #baking-room .baking-decor-feedback{font-size:7px;line-height:1.2}
+  #live-room-feed #baking-room .baking-edit-row button{min-height:26px;padding:3px 5px;font-size:8px;border-radius:7px}
+}
+
+/* Compact cake controls leave more room for Hazel and the work surface. */
+#live-room-feed #baking-room .baking-gifts{padding:8px;border-radius:17px}
+#live-room-feed #baking-room .baking-tray-heading{min-height:24px;margin-bottom:5px}
+#live-room-feed #baking-room .baking-actions{gap:5px;padding:0 0 3px}
+#live-room-feed #baking-room .baking-actions>button{flex-basis:84px;min-height:54px;padding:5px 3px;gap:3px;border-radius:12px}
+#live-room-feed #baking-room .baking-actions>button[aria-pressed=true]{padding:5px 3px}
+#live-room-feed #baking-room .baking-actions>button>span{font-size:24px;line-height:1}
+#live-room-feed #baking-room .baking-actions>button>span img{width:44px;height:24px}
+#live-room-feed #baking-room .baking-actions>button>b{font-size:11px;line-height:1.15;white-space:normal}
+#live-room-feed #baking-room .baking-shell[data-step='finished'] .baking-gifts{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px}
+#live-room-feed #baking-room .baking-shell[data-step='finished'] .baking-tray-heading{margin:0;min-height:0}
+#live-room-feed #baking-room .baking-shell[data-step='finished'] .baking-actions{padding:0;overflow:visible}
+#live-room-feed #baking-room .baking-shell[data-step='finished'] .baking-actions>button:not([hidden]){flex:0 0 auto;flex-direction:row;min-height:44px;padding:7px 10px;gap:6px}
+#live-room-feed #baking-room .baking-shell[data-step='finished'] .baking-actions>button>span{font-size:22px}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-gifts{padding:8px}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-tray-heading{min-height:40px;margin-bottom:5px;gap:6px}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] h2{font-size:13px}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions{gap:4px;padding:0}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button{min-height:50px;padding:4px 1px;gap:2px;border-radius:10px}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button[aria-pressed=true]{padding:3px 0}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>span{height:24px;font-size:22px}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>span img{width:32px;height:24px}
+#live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>b{font-size:10px;line-height:1.1}
+#live-room-feed #baking-room .baking-decoration-tools:not([hidden]){display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:4px 5px;margin-top:5px}
+#live-room-feed #baking-room .baking-arrangements{grid-column:1;grid-row:1;margin:0;gap:4px}
+#live-room-feed #baking-room .baking-arrangements>span{display:none}
+#live-room-feed #baking-room .baking-arrangements button{min-height:44px;padding:3px;font-size:10px}
+#live-room-feed #baking-room .baking-edit-row{display:contents}
+#live-room-feed #baking-room .baking-edit-row button{min-width:44px;min-height:44px;padding:4px 6px;font-size:10px}
+#live-room-feed #baking-room .baking-undo{grid-column:2;grid-row:1}
+#live-room-feed #baking-room .baking-clear{grid-column:3;grid-row:1}
+#live-room-feed #baking-room .baking-decor-feedback{grid-column:1/-1;grid-row:2;font-size:9px;line-height:1.2}
+@container live-room (orientation:portrait) and (max-height:480px){
+  #live-room-feed #baking-room .baking-gifts{padding:6px;border-radius:13px}
+  #live-room-feed #baking-room .baking-tray-heading{min-height:20px;margin-bottom:4px}
+  #live-room-feed #baking-room .baking-actions>button{flex-basis:59px;min-height:42px;padding:3px 1px;gap:2px}
+  #live-room-feed #baking-room .baking-actions>button[aria-pressed=true]{padding:3px 1px}
+  #live-room-feed #baking-room .baking-actions>button>span{font-size:19px}
+  #live-room-feed #baking-room .baking-actions>button>span img{width:32px;height:20px}
+  #live-room-feed #baking-room .baking-actions>button>b{font-size:8px}
+  #live-room-feed #baking-room .baking-shell[data-step='finished'] .baking-gifts{gap:5px}
+  #live-room-feed #baking-room .baking-shell[data-step='finished'] .baking-actions>button:not([hidden]){min-height:34px;padding:5px;gap:4px}
+  #live-room-feed #baking-room .baking-shell[data-step='finished'] .baking-actions>button>span{font-size:17px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-gifts{padding:6px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-tray-heading{min-height:30px;gap:4px;margin-bottom:4px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] h2{font-size:10px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions{gap:3px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button{min-height:40px;padding:3px 0;gap:1px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button[aria-pressed=true]{padding:2px 0}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>span{height:19px;font-size:18px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>span img{width:26px;height:19px}
+  #live-room-feed #baking-room .baking-shell[data-step='decorate'] .baking-actions>button>b{font-size:7px}
+  #live-room-feed #baking-room .baking-decoration-tools:not([hidden]){gap:3px;margin-top:4px}
+  #live-room-feed #baking-room .baking-arrangements{gap:3px}
+  #live-room-feed #baking-room .baking-arrangements button{min-height:28px;padding:2px;font-size:7px}
+  #live-room-feed #baking-room .baking-edit-row button{min-width:0;min-height:28px;padding:3px;font-size:7px}
+  #live-room-feed #baking-room .baking-decor-feedback{font-size:7px}
+}

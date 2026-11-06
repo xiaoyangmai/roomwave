@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "registryId": "roomwave-character-registry",
+  "generatedAt": "2026-11-04T18:54:57.962Z",
+  "characters": [
+    {
+      "id": "c010_00",
+      "displayName": "C010",
+      "manifest": "/character-packs/c010_00/character-pack.json",
+      "packVersion": "0.4.0",
+      "status": "candidate",
+      "releaseStatus": "blocked-until-license-confirmation-and-anchor-confirmation",
+      "capabilities": {
+        "tier": "semantic-action-candidate",
+        "actionMode": "authored-animation",
+        "motion": {
+          "mode": "authored-foam-with-legacy-actions",
+          "supportsTargetDrivenMotion": true,
+          "supportsPhaseActions": true,
+          "supportsArbitraryLayerMix": false
+        },
+        "supported": [
+          "play_loop",
+          "switch_loop",
+          "crossfade_to_idle",
+          "read_anchor",
+          "play_semantic_action",
+          "foam_wipe",
+          "interrupt_to_idle"
+        ],
+        "loops": [
+          {
+            "id": "idle",
+            "animationId": "idle",
+            "semantic": "idle"
+          }
+        ],
+        "unsupportedActions": [
+          {
+            "id": "water_splash",
+            "reason": "requires a validated prop target"
+          },
+          {
+            "id": "fan_hold",
+            "reason": "requires a validated hold phase"
+          }
+        ],
+        "recipes": [
+          "idle_base",
+          "foam_wipe",
+          "interrupt_to_idle"
+        ]
+      },
+      "sourceRunId": "c010-foam-wipe-v2-20261105",
+      "evidence": {
+        "actionSource": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/authored/c010_00.foam_wipe.rigby",
+        "export": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/exported/c010_00.foam_wipe.export-report.json",
+        "runtimeTrace": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/runtime/foam-wipe-runtime-report.json",
+        "visualReview": "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/visual/review-manifest.json"
+      }
+    }
+  ]
+}

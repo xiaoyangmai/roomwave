@@ -1,138 +1,134 @@
-# Spine Manager
+# Roomwave 资源生产
 
-这里是 Roomwave 的独立资源生产工作台，存放 Spine 模型构造、补图、语义绑定、动作生成和验证资料。它位于产品代码外层，和 `src/spine-audit/c010` 分工不同：
-
-- `spine-audit/c010` 保存 4.3.26 当前模型的审计结果、导出物和浏览器试作；旧 4.0.47 导出物保留在 `model/` 作回滚。
-- `spine_manager` 保存如何把模型变成可维护、可验证、可接入 Roomwave 的工作台资料。
-- 工作台可以读取 `src/spine-audit` 的产品导出物做验证，但不会把产品运行时代码放回工作台目录。
-- 原始 `.spine` 工程保持在外部 Spine Lab；需要验证可编辑源工程时，将 `C010_SPINE_PROJECT` 指向具体文件。Portable 和本地 MCP 也通过外部环境或 Codex 注册提供，不复制到本仓库。
-- 原始 `.skel/.atlas/.png` 不在这里直接改写。没有 `.spine` 工程时，先做运行时实验；需要改骨骼、IK、权重或插槽时，建立可编辑的派生工程。
-
-## 现在的判断
-
-当前产品使用 Spine 4.3.26 导出的 `c010_00.json`，并由 `@esotericsoftware/spine-canvas@4.3.13` 回读。模型有可用的 `ik_arm_r`，但它不是一个可以直接当作“手部目标”的干净接口：
-
-- IK `ik_arm_r` 控制 `l_arm_2`。
-- Transform 约束 `string_2` 又以 `ik_arm_r` 为目标，旋转、X、Y 混合都是 1。
-- 插槽 `string_3` 挂在 `string_2` 上。
-
-所以当前试作中目标一动，背带先明显移动。这是约束图和语义绑定需要隔离的问题，不是简单的左右手方向或缓动问题。
-
-## 新工作台基线
-
-本项目现在按 `Spine Studio Foundation` 的架构推进：
-
-- [架构和方法论基线](docs/SPINE-STUDIO-FOUNDATION.md)
-- [Studio 工作室架构借鉴说明](docs/STUDIO-OPERATING-SYSTEM-ADAPTATION.md)
-- [统一配置](configs/spine-studio.yaml)
-- [阶段目录](workflows/studio-catalog.yaml)
-- [参考资产入口](reference-corpus/README.md)
-- [c010 首轮派生 mutation 结果](docs/FIRST-MUTATION-RESULT.md)
-- [Codex 编排方式](docs/CODEX-ORCHESTRATION.md)
-- [外部参考落地矩阵](docs/EXTERNAL-REFERENCE-MATRIX.md)
-- [本机 MCP 接入记录](docs/LOCAL-MCP-SETUP.md)
-
-工作方式是 `assistant-operated`：大模型由当前 Codex 会话承担，项目内脚本只作为确定性取证、执行和验收工具。你不需要逐条运行下面的命令；需要推进时由我代为调用，并根据产物决定下一步。
-
-第一条已运行的纵向切片是 `foundation-baseline-20261029`：它对当前 c010 的 4.3.26 派生工程完成了素材哈希、导出 JSON 取证、约束图、语义控制契约、可回滚 rig 计划，以及首轮派生 mutation 的导入、导出和结构验收。它没有修改原始 `.spine` 工程；视觉动作验收仍在后续阶段。
+本模块把可追溯的输入整理成产品资源，负责检查、派生、验证与候选接入。用户状态和房间逻辑属于 `roomwave/`；角色行为与渲染属于 `spine_runtime/`。
 
 ## 目录
 
-| 路径 | 用途 |
-|---|---|
-| `docs/MODEL-CONSTRUCTION-PLAN.md` | 从审计到可用模型的阶段计划和素材补画方法 |
-| `docs/ASSET-RECOVERY-AND-GENERATION.md` | 缺手部角度时的原始素材、局部重绘、自动筛选和 Spine 绑定流程 |
-| `docs/DEBUG-LOOP.md` | 如何记录证据、隔离变量、回放和验收 |
-| `docs/RUNTIME-CONTRACT.md` | Roomwave 语义动作、锚点和效果层接口 |
-| `docs/AUTOMATED-EXPERT-PIPELINE.md` | 无人工修整时的 Agent 编排、补图闭环和独立验收 |
-| `docs/VISION-REVIEW-RUBRIC.md` | 大模型观感评估、分层评分、分歧门和主动校准 |
-| `docs/EVIDENCE-PACKET.md` | 四道门所需的统一证据包、逐帧记录和多角色裁决格式 |
-| `docs/PROGRESS.md` | 当前阶段、证据、阻断项和下一优先级 |
-| `configs/c010-control-plan.json` | 当前 c010 的约束风险、待确认目标和补图计划 |
-| `../src/config/c010-runtime-patch.json` | 没有 `.spine` 工程时的临时运行时隔离补丁 |
-| `configs/model-invariants.json` | 可机器检查的 Spine 领域规则 |
-| `configs/calibration.json` | 阈值校准集、已知坏样本和变更记录策略 |
-| `configs/room-action-matrix.json` / `configs/visual-review-roles.json` | 房间动作契约、视觉角色清单、评分维度和分歧规则 |
-| `tools/validate-pipeline.mjs` | 检查审计、语义绑定和约束共享风险 |
-| `../src/runtime/roomwave-spine.js` | Roomwave 的语义动作适配器和动作轨迹记录 |
-| `tools/create-model-manifest.mjs` | 生成模型文件哈希、导出版本和结构计数清单 |
-| `tools/check-texture-gates.py` | 用 Pillow 执行 mask 外泄、alpha、边缘、轮廓和闪烁检查 |
-| `tools/extract-atlas-regions.py` | 从 c010 atlas 提取带来源坐标的 region 和 alpha mask |
-| `tools/run-pipeline.mjs` | 用 runId 串起清单、素材、门槛、约束、运行时和视觉证据 |
-| `tools/analyze-room-trace.cjs` | 把 gaming_c010 固定回放的逐帧轨迹转成动作位移、接触误差和背带稳定性报告 |
-| `tools/freeze-independent-reviews.cjs` | 校验同一 run 的五角色盲审、置信度和 decision 枚举，并生成裁决状态 |
-| `configs/goal-loop.json` | Goal 目标、四级完成状态和每五轮复盘协议 |
-| `configs/dependencies.json` / `tools/ensure-dependencies.cjs` | 检查并按需安装 Node 运行库和 Pillow，记录版本证据 |
-| `tools/record-goal-turn.mjs` / `tools/checkpoint-review.mjs` | 连续轮次记录、方案重读、证据快照和 fail-closed 门禁 |
-| `tools/startup-smoke.cjs` | 临时端口冷启动 Roomwave 并检查路由和进程清理 |
-| `workflows/image-model-edit-template.md` | 不绑定具体厂商的参考图局部编辑模板 |
-| `assets/` | 原始拆分图、遮罩、生成候选、审核通过图和 Spine 导出物的分区 |
-
-## 检查命令
-
-在 `Roomwave` 目录执行：
-
-```powershell
-node spine_manager/tools/validate-pipeline.mjs
-node spine_manager/tools/create-model-manifest.mjs
-node spine_manager/tools/smoke-runtime.cjs
-node spine_manager/tools/analyze-room-trace.cjs
-node spine_manager/tools/prove-hand-strap.cjs
-node spine_manager/tools/prove-runtime-isolation.cjs
-node spine_manager/tools/capture-review-frames.cjs
-python spine_manager/tools/check-texture-gates.py --self-test
-python spine_manager/tools/extract-atlas-regions.py
-node spine_manager/tools/run-pipeline.mjs
-node spine_manager/tools/startup-smoke.cjs
-node spine_manager/tools/ensure-dependencies.cjs
-npm --prefix spine_manager run studio:intake -- --run-id foundation-baseline-20261029
-npm --prefix spine_manager run studio:forensics -- --run-id foundation-baseline-20261029
-npm --prefix spine_manager run studio:contract -- --run-id foundation-baseline-20261029
-npm --prefix spine_manager run studio:plan -- --run-id foundation-baseline-20261029
-npm --prefix spine_manager run studio:prepare -- --run-id foundation-baseline-20261029
-npm --prefix spine_manager run studio:execute -- --run-id foundation-baseline-20261029
-npm --prefix spine_manager run studio:structural -- --run-id foundation-baseline-20261029
-npm --prefix spine_manager run studio:status
+```text
+spine_manager/
+├─ source/c010/       当前 Spine 4.3.26 导出与 Rigby2D 工作文件，生产时不覆盖
+├─ tools/             loop-only、动作候选、推广、截图和校验入口
+│  └─ validation/     当前 JSON 审计与手/背带变体检查
+├─ configs/           Rigby2D 操作约定、动作需求、视觉审核角色
+├─ schemas/           现有 loop-only 包约束
+├─ patches/           固定版本 Rigby2D 的最小修补及重建说明
+├─ tests/             真实工作文件的 JSON 回读回归测试
+├─ evidence/          当前可复核的运行轨迹和视觉基线
+└─ artifacts/runs/    生产批次输出；当前保留 foam_wipe 候选源及证据
 ```
 
-这条命令不会修改模型。它会报告语义角色是否存在、`handTarget` 是否和背带约束共享目标，以及无人值守 Agent 流水线是否有完整阶段和修复上限。加 `--strict` 可以让未解决的共享目标直接返回失败，适合在提交前使用。
+产品资源统一放在 `../resources/`：`assets/` 是场景图片，`audio/` 是音频，`characters/` 是角色包，`config/` 是注册表和当前必要配置。总索引是 `resources/index.json`。浏览器 URL 仍使用 `/assets/`、`/audio/`、`/character-packs/` 和 `/config/`。
 
-Roomwave 内的运行时试作页是 `http://127.0.0.1:4173/spine/c010/`。它通过同一份语义绑定和 c010 的 4.3.26 JSON 导出加载模型；正式发布前仍要完成手部与背带的隔离证明。
+## 两条生产路径
 
-Roomwave 的正式产品入口是 `http://127.0.0.1:4173/solo/?room=gaming_c010`；`?spine=c010` 保留为兼容入口，不带参数时固定显示第一张原版 `gaming-seated` 对照画面。`smoke:runtime` 会同时回放产品房间、审计入口、默认对照和旧版 Gaming，检查语义动作轨迹。
+Loop-only：`source/c010 → Rigby2D MCP 检查 → Character Pack → 浏览器循环验证 → resources/characters → 注册表`。默认只确认 `idle`，其他动画必须明确确认语义后才对产品开放。
 
-`proof:hand-strap` 会对同一条手部位移轨迹做两次实验：背带 Transform 约束开启一次、关闭一次。结果写入 `evidence/c010-hand-only-string-off.json`，当前预期是确认共享目标并保持发布阻断。
+动作制作：`source/c010/c010_00.rigby → author 脚本制作新 .rigby → 完整 JSON/atlas/PNG 导出 → 候选 Character Pack → 运行时与视觉验收 → promote 接入 resources`。原始输入不覆盖。Rigby2D 是仓库内的独立工具项目；制作和导出脚本直接调用它的工作文件、骨骼与图集库，检查使用其 MCP 工具实现，不要求 Spine 官方 GUI。
 
-`proof:runtime-isolation` 验证 Roomwave 试作页加载的临时运行时补丁：手部目标移动时，`string_2` 不再被 `ik_arm_r` 直接带动。它是可回退的运行时措施，不等价于正式 Spine 工程导出。
+生成或编辑图片及纹理使用 Grok Build，具体约定见[项目协作约定](../AGENTS.md)。生成图片是候选素材，须记录真实来源，并在绑定和运行时画面中验证。c010 擦眼重做的制作经验与当前失败证据见 [v3 制作记录](configs/c010-foam-wipe-v3.md)。
 
-`capture:review` 会固定采集审计页和 `gaming_c010` 产品房间的 idle、foam 的注意/接触帧和 water 接触帧，写入 `evidence/c010/review-manifest.json`，供独立视觉评估器读取；随后 `trace:analyze` 生成 `evidence/c010/trace-analysis.json`，把动作目标和可见手的实际位移分开报告。它不会把视觉模型的主观判断伪装成结构通过。
+按问题加载制作/检查 skill 的详细方法；本轮可复用经验、Grok/Spine 排障和候选测试入口集中在[动作方法索引](configs/animation-method.md)，无需默认读取全部历史批次。
 
-`texture:self-test` 会运行一组小型基准图，确认纹理门槛脚本本身可用。真实候选图必须显式提供 base、candidate 和 mask；身份相似度、材质相似度仍会标为待模型复核，不会被脚本冒充通过。
+2026-11-06 已在本机复测 Grok 图片任务和 Spine 工程读取：Grok 使用 MCP 工作区内的参考图完成了完整手套生成，调用方式及限制见 [Grok 恢复记录](artifacts/runs/c010-grok-recovery-20261106/README.md)；本机 Spine 便携包装器使用 `--wait --` 向 Spine 转发参数，原始 4.0.47 工程副本可导出为 4.3.26 JSON，命令及比较结果见 [Spine 恢复记录](artifacts/runs/c010-spine-recovery-20261106/README.md)。两项复测均不证明此前超时或启动失败的唯一原因，也不代表新动作通过视觉验收。
 
-`assets:extract-c010` 会把原始 atlas 按 region 拆到 `assets/source/c010/regions`，同时生成同名 alpha mask 和 `region-manifest.json`；它不修改 `.atlas`、`.png` 或 `.skel`。
+资源目录目前是 `c010_00@0.4.0` 候选；其 `foam_wipe` 时长 3.6 秒，保留原 10 个动作，事件为 `FoamNotice@0.1`、`FoamContact@1.1`、`FoamCleared@2.15`、`FoamComplete@3.6`。0.4.0 的视觉验收已撤销：擦眼时掌向不成立，肩肘连接也不清晰。后续 0.5.0 与多组姿势试验同样尚未通过视觉验收，不能将功能测试通过当作动作完成；最新结果和证据以 [v3 制作记录](configs/c010-foam-wipe-v3.md)为准。
 
-`pipeline:c010` 是当前无人值守闭环入口。每次执行会在 `artifacts/runs/<runId>/` 保存各阶段日志、`run-summary.json` 和一份冻结的 `evidence/` 证据包；截图、轨迹和清单只从本次运行复制，缺失阶段会明确写成 `missing`。即使所有自动步骤通过，只要模型仍处于 `needs-review` 或视觉复核未独立完成，也不会标记可发布。
+0.3.0 是袖片整片单骨绑定的旧技术原型，其历史 pass 不作为自然度基线。0.4.0 的制作过程见 [重做任务单](configs/c010-foam-wipe-v2.md)，视觉结论以 v3 记录中的复审为准。`foamPalm` 为兼容原接口保留名称，实际锚点跟随弯曲食指的指节。foam 声明 `authored-animation`，Water/Fan 保留现有 patch 路径及未支持状态。新批次的功能、录像和视觉记录均按导出模型 hash 核对。
 
-房间入口现在分开：`/solo/` 固定显示原版 `gaming-seated` 对照画面，`/solo/?room=gaming_c010` 是正式的 c010 Gaming 直播间，`/solo/?spine=c010` 是兼容入口，`/solo/?room=gaming` 是旧版 Gaming 对照房间。默认轮播不会再把两套 Gaming 画面交替展示；c010 产品房间的按钮只发送语义动作，不改变原始 Spine 文件。
+## 命令
 
-流水线的第一阶段是依赖检查：只有发现缺失或超出配置范围的版本才会调用 npm 或 pip 安装；检查结果写入 `artifacts/dependency-check.json`，不会重复安装正确版本。
+首次安装：`npm install --prefix spine_manager`。本模块统一安装 `spine-core`、`spine-canvas` 4.3.13 和浏览器验证所需 `playwright-core`；旧审计目录不再有独立依赖包。
 
-Goal 开启后，每个有效往返记录一轮；第 5、10、15 轮等在本轮开始前重新读取方案和方法文档：
+`rigby2d/` 是独立 Git 项目，不随 Roomwave 根仓库提交。缺少该目录时，在仓库根目录恢复当前固定版本：
 
 ```powershell
-cd Roomwave/spine_manager
-npm run goal:turn -- --turn 1 --summary "本轮要回答的问题" --priority "当前最高优先级"
+git clone https://github.com/jaisurya-dev-art/rigby2d.git rigby2d
+git -C rigby2d checkout f0ff6918902c10f0d18262d1b97a12b5fd8df7ec
+npm ci --prefix rigby2d
+git -C rigby2d apply ../spine_manager/patches/rigby2d-terminal-key-curve.patch
 ```
 
-规则、检查点和四级完成状态见 `docs/GOAL-LOOP.md`。当前目标基线为 4.3.26；4.0.47 只作为只读源和回滚轨，迁移完成前不会把输入副本冒充为已导出 4.3 资源。
+已有 Rigby2D 工作区时先检查其本地修改，不用上述命令覆盖工作文件。普通包完整性检查和产品运行不要求启动编辑器；生产命令需要上述本地依赖。
 
-## 完成标准
+当前最小上游修补及验证见 [patches/README.md](./patches/README.md)。它只修正末帧无效曲线引起的回读误报，不修改动画或导出值。
 
-模型只有同时满足下面条件，才算“能用在 Roomwave”︰
+在仓库根目录执行：
 
-1. 角色层能稳定循环 `idle`，动作按钮可以被打断并回到 `idle`。
-2. 手部目标、脸部目标、道具目标、背带目标是独立语义接口。
-3. 泡沫、水、风扇效果绑定到语义锚点，而不是绑定到某个碰巧会动的插槽。
-4. 相同模型版本、动作版本和随机种子可以重放出相同轨迹。
-5. 结构检查、浏览器自动检查和独立视觉审查都通过。
+```powershell
+npm --prefix spine_manager run validate
+npm --prefix spine_manager run validate:strict
+npm --prefix spine_manager run test:variant
+npm --prefix spine_manager run audit:c010
+npm --prefix spine_manager run loop-only:c010
+npm --prefix spine_manager run loop-only:promote:c010 -- --run-id <run-id>
+npm --prefix spine_manager run capture:loop-only-review
+npm --prefix spine_manager run test:roundtrip
+```
 
+`audit:c010` 只读取输入，将结构报告写入 `evidence/c010-runtime/`。`build:variant` 从不可变输入重建产品隔离变体；已有输出时默认拒绝覆盖，明确重建时设置 `FORCE=1`。
+
+制作完成的 `.rigby` 用 `node spine_manager/tools/export-rigby-json.mjs INPUT.rigby OUTPUT.json` 导出。输出必须位于 `spine_manager/artifacts/`，脚本生成同名 JSON、atlas、PNG 和导出报告，重新打包工作文件里的实际纹理，并逐像素核对输出。JSON 结构、资源引用和回读必须通过；binary `.skel` 不支持的特性只作为信息记录。本命令证明文件完整性，不代替动作或视觉验收。
+
+### 0.4.0 历史 authored 动作批次
+
+以下命令对应未通过视觉验收的旧批次，只用于复现或检查其文件；不得用于推广当前制作中的新动作。
+
+以下完整命令依次执行 `tools/author-c010-foam-wipe-v2.mjs`、完整导出和候选组包；会重建同一批次的制作结果，人工调整工作文件后应改用后面的单独导出方式。
+
+```powershell
+npm --prefix spine_manager run action:c010
+```
+
+保留已调整好的 `.rigby`，只导出并更新候选：
+
+```powershell
+node spine_manager/tools/export-rigby-json.mjs spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/authored/c010_00.foam_wipe.rigby spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/exported/c010_00.foam_wipe.json
+npm --prefix spine_manager run action:c010 -- --stage-only
+```
+
+批次中的 `authored/` 保存可编辑工作文件，`exported/` 保存完整导出和像素/回读报告，`pack/` 保存 0.4.0 候选清单、绑定与实际模型。组包只写 `artifacts`，不会替换产品资源。`--stage-only` 重新核对导出报告的文件 hash，再生成候选。
+
+候选必须在 AIRI/WebGL 和 Canvas 中加载，检查完整动作、清除泡沫、重复触发、打断与回待机，并人工查看脸手接触、袖子/绑带和原动作表现。功能回归运行 `npm --prefix spine_runtime run test:foam-wipe`；`capture:action-review` 复用 `spine_runtime/tests/record-foam-wipe.cjs`，暖机后只录一次完整播放，期间不并行构建、截图或其他浏览器测试。需要 Playwright 的 FFmpeg 组件和 `ffprobe`（可设 `FFPROBE_PATH`），落盘检查真实时长、帧数和时间戳，不能自动判定视觉通过。`ROOMWAVE_AIRI_EVIDENCE_DIR` 指定视频及 `recording-report.json` 输出目录。
+
+采集前先准备运行时 ZIP 并启动 5180 服务，在另一个终端运行采集：
+
+```powershell
+# 推广前设置当前候选；不设置时默认正式 resources 包
+$env:ROOMWAVE_C010_PACK = "$PWD/spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/pack"
+npm run runtime:prepare
+npm run runtime:start
+# 另一个终端
+npm --prefix spine_manager run capture:action-review
+```
+
+默认准备正式资源包；`ROOMWAVE_C010_PACK` 指定候选目录。报告中的 `skeletonSha256` 应与当前 `pack/character-pack.json` 一致；准备和采集均不改正式资源。
+
+最终验收写入同批次的 `runtime/foam-wipe-runtime-report.json` 和 `visual/review-manifest.json`，两者必须有 `status: "pass"` 和与候选模型一致的 `skeletonSha256`。运行报告汇总两条运行路径；视觉报告保留实际检查结论及证据。导出之后任何模型调整都需要重新导出、组包和验收。
+
+```powershell
+# 只检查最终候选和同一模型的证据，不写正式资源
+npm --prefix spine_manager run action:promote:c010 -- --check
+# 验收完成后接入本地产品；前一版本完整包移到本批次 rollback/c010_00
+npm --prefix spine_manager run action:promote:c010
+```
+
+推广同步角色注册表版本，资源总索引仍指向同一注册入口。包保持 `candidate`，不意味着发布许可通过。旧配方批次的测试和自动视觉通过脚本已退休，当前命令统一复用运行时回归。
+
+Canvas 产品回归 `test:product` 复用 `spine_runtime/tests/test-foam-canvas.cjs`，需要先运行 Roomwave 服务：
+
+```powershell
+node roomwave/backend/server.cjs
+# 另一个终端；与实际服务端口一致
+$env:ROOMWAVE_BASE_URL = "http://127.0.0.1:4173"
+npm --prefix spine_manager run test:product
+```
+
+Canvas 测试默认连接 `http://127.0.0.1:4173`，用 `ROOMWAVE_BASE_URL` 与实际服务地址对齐。默认加载正式 `resources/characters/c010_00`；推广前可设置 `ROOMWAVE_C010_PACK` 为候选 `pack` 的绝对目录，测试通过浏览器路由加载该候选。两条测试均使用本机 Chrome 和 `spine_runtime` 的依赖，可用 `CHROME_PATH` 指定浏览器。测试与采集不启动或关闭服务。
+
+## 发布与来源
+
+普通 `validate` 证明当前文件和入口完整；`validate:strict` 还把 runtime patch、未确认许可、未确认锚点、未支持动作和未发布状态视为阻断。这些阻断保留，目录整理不会替它们作出批准。
+
+每批产物保留版本、输入 hash、检查与视觉证据。`promote` 只是把候选接入本地产品，并不授予发布许可。来源说明见根目录 `SOURCE-NOTICE.md`；原公开资源清单位于 `resources/mirror-report.json`。
+
+`tools/sync-public-source.py` 把公开源重新抓取到 `source/public-mirror/` 供比对，不覆盖产品；`tools/fetch-gaming-assets.py` 是定向补齐已有 Gaming 图片的人工执行工具，输出到 `resources/assets/`。两者都不会自动批准来源许可。

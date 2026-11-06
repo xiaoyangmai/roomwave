@@ -1,0 +1,15 @@
+{
+  "asset": "upper-sleeve-wipe.png",
+  "purpose": "Rounded upper sleeve for the raised wiping arm; flexible mesh and elbow correctives are authored in author-c010-foam-wipe-v2.mjs.",
+  "generator": "image_gen.imagegen",
+  "generatedAt": "2026-11-05",
+  "originalOutput": "C:/Users/mi/.codex/generated_images/01a1a55b-d911-77b0-8c83-fbdaa88a6e50/exec-955949ff-368f-47cf-a899-40fcf0ddafc5.png",
+  "references": [
+    "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/reference/l_arm_1.png",
+    "spine_manager/artifacts/runs/c010-foam-wipe-v2-20261105/reference/r_arm_2.png"
+  ],
+  "referenceSource": "Original c010_00.rigby upper-arm and forearm textures; original project remains unchanged.",
+  "prompt": "Use case: precise-object-edit. Asset type: transparent isolated 2D skeletal animation texture for this existing anime game character, one upper-arm leather jacket sleeve segment only. Image 1 is the upper-arm texture to extend/repaint; image 2 is supporting material/color reference for the adjacent forearm, NOT an extra object to include. Keep the charcoal black/dark warm-grey leather, fine painterly game illustration shading, subtle warm beige edge highlights, and modest short folds in the lower elbow end. Replace the narrow pointed shoulder at the TOP of image 1 with a full broad smoothly rounded shoulder cap of fabric, so the upper arm can be shown in front of the torso without a pointed wedge or transparent gap. The sleeve should be a supple tapered cylindrical upper-arm segment, roughly 3.0 times taller than wide, neutral straight orientation shoulder at TOP elbow at BOTTOM. It should be filled all the way across at the shoulder, no spear point, no triangular flap. Add several small shallow diagonal elbow compression folds near the BOTTOM quarter, not a metal joint. Rounded lower elbow edge with fabric overlap for joining to a separately animated forearm. Preserve material style; do not add a red cuff, buttons, straps, logos, skin, hands, bones or whole character. Single centered connected sleeve part with close framing and a small transparent margin; genuinely transparent RGBA background. No cast shadow outside asset, no checkerboard painted into image, no text. This is texture artwork for mesh deformation, not a rendered character or multi-item sheet.",
+  "processing": "Copied unchanged; mesh UVs and logical dimensions set by the authoring script.",
+  "sourceLicense": "Original c010 source license remains unconfirmed."
+}
